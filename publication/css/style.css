@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Thu Nov 10 2016 12:09:40 GMT-0500 (COT)
+ *Thu Nov 10 2016 17:53:53 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -48,8 +48,8 @@ button {
 }
 button:active,
 button:focus {
-  outline: 0;
-  outline: none;
+  outline: 0 !important;
+  outline: none !important;
 }
 h1,
 h2,
@@ -420,7 +420,7 @@ header .cart-list .price {
   text-align: right;
 }
 header .col-tools {
-  bottom: 0;
+  bottom: 30%;
   position: absolute;
   right: 0;
 }
@@ -514,6 +514,11 @@ footer .logo {
   margin: 0 auto;
   display: inline-block;
   list-style-type: none;
+  -o-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 .menu ul li {
   display: inline-block;
@@ -531,18 +536,32 @@ footer .logo {
   color: #fffd56;
   font-weight: 400;
 }
+.menu.active ul {
+  right: 0;
+}
 .menu .btn {
+  background-color: transparent;
   display: none;
   height: 4.8rem;
   width: 4.8rem;
-  padding: 1rem;
+  padding: 0;
+  position: relative;
 }
-.menu .btn .line {
+.menu .btn .sr-line {
   background-color: #fff;
   display: block;
-  height: 0.1rem;
-  margin: 1rem auto;
+  height: 0.2rem;
+  position: absolute;
   width: 100%;
+}
+.menu .btn .sr-line:nth-of-type(1) {
+  top: 20%;
+}
+.menu .btn .sr-line:nth-of-type(2) {
+  top: 50%;
+}
+.menu .btn .sr-line:nth-of-type(3) {
+  top: 80%;
 }
 .menu .logo-hidden {
   display: none;
@@ -753,8 +772,16 @@ footer .logo {
 .share-pinterest {
   background-image: url("../images/share-pin.svg");
 }
+.slider img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
 .slider-home {
   margin-bottom: 2rem;
+}
+.slider.mobile {
+  display: none;
 }
 .tabs {
   list-style-type: none;
@@ -815,5 +842,161 @@ footer .logo {
   max-width: 100%;
   padding: 0;
 }
+@media (max-width: 865px) {
+  .btn-add-cart {
+    padding: 0.8rem 1.5rem;
+  }
+  .tabs li a {
+    padding: 1rem 0.6rem;
+  }
+}
+@media (max-width: 800px) {
+  .btn-add-cart {
+    font-size: 2rem;
+  }
+  .btn-large {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  .container-home article:nth-of-type(2) a:nth-of-type(1) {
+    margin-bottom: 3.2%;
+  }
+}
+@media (max-width: 768px) {
+  header .col-tools {
+    margin-top: 2.2rem;
+    position: initial;
+    text-align: right;
+  }
+  header .logo {
+    margin-top: 1rem;
+  }
+  .cantidad {
+    max-width: 30%;
+  }
+  .cantidad,
+  .size {
+    display: block;
+    margin: 1rem auto;
+  }
+  .container-product {
+    text-align: center;
+  }
+  .container-product .col-img-big img {
+    height: auto;
+    width: 100%;
+  }
+  .container-product .col-xs-5 {
+    clear: both;
+    float: none;
+    width: 100%;
+  }
+  .container-product .slider {
+    display: none;
+  }
+  .container-product .slider.mobile {
+    display: block;
+  }
+  .tabs li a {
+    padding: 1rem 1.5rem;
+  }
+  .menu {
+    margin-top: 0;
+  }
+  .menu ul {
+    background-color: #fff;
+    -webkit-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    max-width: 30rem;
+    padding: 15rem 2rem 1rem;
+    position: fixed;
+    right: -32rem;
+    text-align: left;
+    top: 0;
+    z-index: 5;
+  }
+  .menu ul li {
+    display: block;
+  }
+  .menu ul li a {
+    border-bottom: 2px solid #cacaca;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.5rem 0;
+  }
+  .menu ul li:hover a,
+  .menu ul li.active a {
+    color: #14aab3;
+    font-weight: 700;
+  }
+  .menu ul li.active a {
+    border-color: #14aab3;
+  }
+  .menu .btn {
+    display: block;
+    margin: 1rem;
+  }
+}
+@media (max-width: 730px) {
+  .col-related {
+    clear: both;
+    float: none;
+    margin: 2rem auto;
+    width: 100%;
+  }
+  .col-related img {
+    width: 100%;
+  }
+  .col-related .product-text {
+    text-align: left;
+  }
+}
+@media (max-width: 700px) {
+  footer h3 {
+    margin-top: 2rem;
+  }
+  footer .col-xs-3 {
+    clear: both;
+    float: none;
+    width: 100%;
+  }
+  footer .icon {
+    max-width: 3.8rem;
+  }
+  .container-devoluciones .col-xs-4 {
+    clear: both;
+    float: none;
+    width: 100%;
+  }
+}
+@media (max-width: 390px) {
+  header .col-tools .icon {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+  }
+  header .col-tools .icon-search,
+  header .col-tools .icon-user,
+  header .col-tools .icon-cart {
+    margin: 0 0.3rem;
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+  .btn-add-cart {
+    padding: 0.8rem 0.5rem;
+  }
+  .col-highlights a {
+    clear: both;
+    float: none;
+    max-width: 100%;
+  }
+  .menu .btn {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+}
 
-/*# sourceMappingURL=../../maps/style.css.map */
+/*# sourceMappingURL=../maps/style.css.map */

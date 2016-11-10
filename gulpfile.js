@@ -62,7 +62,7 @@ gulp.task('coffee', function () {
     bare:true
    }))
   .on('error', onError)
-  .pipe(sourcemaps.write('../../maps')) //creamos sourcemap aparte
+  .pipe(sourcemaps.write('../maps')) //creamos sourcemap aparte
   .pipe(gulp.dest('./publication/js'))
   .pipe(browserSync.reload({
       stream: true
@@ -82,7 +82,7 @@ gulp.task('css', function () {
   .on('error', onError)
   .pipe(rename('style.css')) //renombramos el archivo
   .pipe(gulp.dest('./publication/css')) // destino del archivo
-  .pipe(sourcemaps.write('../../maps')) //creamos sourcemap aparte
+  .pipe(sourcemaps.write('../maps')) //creamos sourcemap aparte
   .pipe(gulp.dest('./publication/css'))
   .pipe(browserSync.reload({
       stream: true

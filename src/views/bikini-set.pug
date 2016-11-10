@@ -30,14 +30,28 @@ block content
 			
 			//Vista modelo grande
 
-			div.col-lg-5.col-md-5.col-sm-5.col-xs-5
+			div.col-lg-5.col-md-5.col-sm-5.col-xs-5.col-img-big
 				+image('producto.jpg')(class="img-responsive img-producto-top")
 
 			///-Vista modelo grande
 
+			//Selector de modelo
+			div.slider.slider-vista-top.col-lg-2.col-md-2.col-sm-2.col-xs-2.mobile
+				div.slide
+					a(href="")
+						+image('vista-1.jpg')
+				div.slide
+					a(href="")
+						+image('vista-2.jpg')
+
+				div.slide
+					a(href="")
+						+image('vista-3.jpg')
+			///-Selector de modelo
+
 			//Opciones de producto
 
-			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.col-lg-offset-1.col-md-offset-1.col-sm-offset-1.col-xs-offset-1
+			div.col-lg-4.col-md-5.col-sm-5.col-xs-5.col-lg-offset-1.col-md-offset-0
 				
 				h2 Top
 				h3.ref 123456789
@@ -137,7 +151,7 @@ block content
 		///-Tops
 
 		//Bottoms
-		div.row
+		div.row.row-bottom
 			//Selector de modelo
 			div.slider.slider-vista-bottom.col-lg-2.col-md-2.col-sm-2.col-xs-2
 				div.slide
@@ -154,14 +168,14 @@ block content
 			
 			//Vista modelo grande
 
-			div.col-lg-5.col-md-5.col-sm-5.col-xs-5
+			div.col-lg-5.col-md-5.col-sm-5.col-xs-5.col-img-big
 				+image('producto.jpg')(class="img-responsive img-producto-bottom")
 
 			///-Vista modelo grande
 
 			//Opciones de producto
 
-			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.col-lg-offset-1.col-md-offset-1.col-sm-offset-1.col-xs-offset-1
+			div.col-lg-4.col-md-5.col-sm-5.col-xs-5.col-lg-offset-1.col-md-offset-0
 				
 				h2 Bottom
 				h3.ref 123456789
@@ -287,7 +301,7 @@ block content
 						p REF. 123456789
 					h3.product-price $99.999
 
-					a.btn.btn-large(href="#") Compra rápida
+					a.btn.btn-large(href="#") Ver más
 
 		///-Complete the look
 
