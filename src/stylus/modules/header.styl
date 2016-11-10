@@ -1,0 +1,185 @@
+header
+	background-color rgba(#b4b4b4, 0.70)
+	color #fff
+	line-height 1
+	padding 1rem
+	position relative
+	text-align center
+	margin-bottom 2rem
+	width 100%
+	
+	p
+		margin 0
+	
+	#search-field
+		left -40%
+
+		
+		.field
+			border-bottom 1px solid lighten($Gris, 60%)
+			padding 0.25rem
+			
+
+		button
+			background-color transparent
+			color $Gris
+			
+		button, input
+			display inline-block
+			vertical-align middle
+			
+		input
+			width 80%
+		
+	#search-field,
+	.cart-list,
+	.user-menu
+		background-color #fff
+		box-shadow 0px 0px 5px 0px rgba(0, 0, 0, 0.25)
+		color $Gris
+		display none
+		max-width 30rem
+		padding 2rem 1.5rem 1rem
+		position absolute
+		top 3rem
+		transition opacity 0.3s ease-in-out
+		width 100%
+		z-index 3
+
+
+	.cart-list
+		left -30%
+
+		
+		h3
+			color $Gris
+			display inline-block
+			font-size 1.6rem
+			text-align left
+			width 60%
+
+		hr
+			border-color  lighten($Gris, 60%)
+			margin 1rem auto
+
+		a.btn
+			background-color white
+			border 1px solid $Gris
+			color $Gris
+			display block
+			margin 1rem 0
+			padding 1rem 2rem
+			width 100%
+			
+			&:hover
+				background-color $Verde
+				border-color transparent
+				color #fff
+
+		.img-item, .item-info
+			display inline-block
+			vertical-align top
+			
+		.img-item
+			max-width 5rem
+			
+		.item
+			clear both
+			margin-bottom 1rem
+			padding-bottom @margin-bottom
+			position relative
+			
+			
+			.btn
+				background-color transparent
+				border 0
+				color $Gris
+				cuadrado(2rem)
+				font-size 1.3rem
+				padding 0
+				position absolute
+				right 0
+				top 64%
+			
+			&-cant
+				font-size 1.2rem
+				margin-top 1rem
+				
+			&-info
+				text-align left
+				margin-left 1rem
+				max-width 18rem
+				
+			&-name
+				color $Gris
+				font-size 1.3rem
+				font-weight $Normal
+				text-transform uppercase
+			
+			&-price
+				color #000
+				font-weight $Normal
+				margin-top 0.5rem
+		
+		.price
+			color #000
+			display inline-block
+			font-size 1.6rem
+			text-align right
+			
+	.col
+		&-tools
+			bottom 0
+			position absolute
+			right 0
+			.cantidad
+				display none
+				
+			.icon
+				margin 0 1rem
+
+	.currency
+		
+		&-img, &-name
+			display inline-block
+			vertical-align middle
+
+		&-img
+			height auto
+			max-width 2.5rem
+			
+		&-name
+			margin 0 0.5rem
+			text-transform uppercase
+			
+	
+	.envios
+		border-left 1px solid #fff
+		border-right @border-left
+		
+		a
+			color #fff
+			display block
+			font-weight $Normal
+			
+
+	.logo
+		a
+			display block
+			margin 0 auto
+			max-width 43.5rem
+			
+
+	.user-menu
+		left -30%
+		
+		ul
+			list-style-type none
+			padding 0
+			text-align left
+			
+			li
+				margin 1rem 0
+				a
+					color $Gris
+					text-transform uppercase

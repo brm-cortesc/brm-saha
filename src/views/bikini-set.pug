@@ -1,0 +1,298 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "Producto";
+	title Saha - Tienda en línea
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Saha - Tienda en línea" )
+
+block content
+	section.container-fluid.container-product
+		//Tops
+		div.row.row-top
+			//Selector de modelo
+			div.slider.slider-vista-top.col-lg-2.col-md-2.col-sm-2.col-xs-2
+				div.slide
+					a(href="")
+						+image('vista-1.jpg')
+				div.slide
+					a(href="")
+						+image('vista-2.jpg')
+
+				div.slide
+					a(href="")
+						+image('vista-3.jpg')
+			///-Selector de modelo
+			
+			//Vista modelo grande
+
+			div.col-lg-5.col-md-5.col-sm-5.col-xs-5
+				+image('producto.jpg')(class="img-responsive img-producto-top")
+
+			///-Vista modelo grande
+
+			//Opciones de producto
+
+			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.col-lg-offset-1.col-md-offset-1.col-sm-offset-1.col-xs-offset-1
+				
+				h2 Top
+				h3.ref 123456789
+				h3.price $999.999
+				
+				//Talla
+				h4 Size
+				div.size
+					a.btn.btn-size(href="#", data-size="s") S
+					a.btn.btn-size(href="#", data-size="m") M
+					a.btn.btn-size(href="#", data-size="l") L
+					a.btn.btn-size(href="#", data-size="xl") XL
+
+				///-Talla
+				//Cantidad de productos
+				div.cantidad
+					input(type="text" maxlength="2" placeholder="0")
+
+					div.controls
+						button.controls-add(type="button"): i.glyphicon.glyphicon-triangle-top
+						button.controls-remove(type="button"): i.glyphicon.glyphicon-triangle-bottom
+					
+				///-Cantidad de productos
+					
+				//botones
+				a.btn.btn-add-cart(href="#") Add to cart	
+				a.btn.btn-comparar(href="#"): i.icon.icon-comparar
+				a.btn.btn-love(href="#"): i.icon.icon-love
+				///-botones	
+
+
+
+				//Colores
+				div.colores
+					h4 color
+					button.btn.btn-color(type="button")
+					button.btn.btn-color(type="button")
+
+				///-Colores
+
+				//Tabs de texto
+				ul.tabs.tabs-select
+					li.active
+						a(href="#descripcion") Description
+					li
+						a(href="#size-guide") Size guide
+					li
+						a(href="#shipping") Shipping 
+
+				///-Tabs de texto
+
+				//Contenido de tabs
+
+				div.tabs-content
+
+					div#descrpicion.tab.active
+						//Descripción de producto
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, numquam fugit porro ullam ab, quibusdam voluptatum culpa quis nostrum, laudantium assumenda praesentium explicabo accusamus consectetur, maiores nulla ea pariatur! Harum.
+				
+						///-Descripción de producto
+					div#size-guide.tab
+						//tabla de medidas
+						div.table-responsive
+							table.table
+								tr
+									td
+									td
+									td
+								tr
+									td
+									td
+									td
+
+						///-tabla de medidas
+					div#shipping.tab
+
+						//Información de envío
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus sapiente facere ut, dolorum ab eaque quisquam sequi. Ipsam molestiae aperiam sequi accusamus magnam quibusdam, temporibus minus, fuga beatae magni.
+
+						///-Información de envío
+
+					///-Contenido de tabs
+
+				//Social Share
+				div.social-share
+					a.share.share-fb(href="#")
+					a.share.share-pinterest(href="#")
+					a.share.share-instagram(href="#")
+				///-Social Share
+
+
+			///-Opciones de producto
+
+			div.clearfix
+		///-Tops
+
+		//Bottoms
+		div.row
+			//Selector de modelo
+			div.slider.slider-vista-bottom.col-lg-2.col-md-2.col-sm-2.col-xs-2
+				div.slide
+					a(href="")
+						+image('vista-1.jpg')
+				div.slide
+					a(href="")
+						+image('vista-2.jpg')
+
+				div.slide
+					a(href="")
+						+image('vista-3.jpg')
+			///-Selector de modelo
+			
+			//Vista modelo grande
+
+			div.col-lg-5.col-md-5.col-sm-5.col-xs-5
+				+image('producto.jpg')(class="img-responsive img-producto-bottom")
+
+			///-Vista modelo grande
+
+			//Opciones de producto
+
+			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.col-lg-offset-1.col-md-offset-1.col-sm-offset-1.col-xs-offset-1
+				
+				h2 Bottom
+				h3.ref 123456789
+				h3.price $999.999
+				
+				//Talla
+				h4 Size
+				div.size
+					a.btn.btn-size(href="#", data-size="s") S
+					a.btn.btn-size(href="#", data-size="m") M
+					a.btn.btn-size(href="#", data-size="l") L
+					a.btn.btn-size(href="#", data-size="xl") XL
+
+				///-Talla
+				//Cantidad de productos
+				div.cantidad
+					input(type="text" maxlength="2" placeholder="0")
+
+					div.controls
+						button.controls-add(type="button"): i.glyphicon.glyphicon-triangle-top
+						button.controls-remove(type="button"): i.glyphicon.glyphicon-triangle-bottom
+					
+				///-Cantidad de productos
+					
+				//botones
+				a.btn.btn-add-cart(href="#") Add to cart	
+				a.btn.btn-comparar(href="#"): i.icon.icon-comparar
+				a.btn.btn-love(href="#"): i.icon.icon-love
+				///-botones
+
+				//Colores
+				div.colores
+					h4 color
+					button.btn.btn-color(type="button")
+					button.btn.btn-color(type="button")
+
+				///-Colores
+
+				//Tabs de texto
+				ul.tabs.tabs-select
+					li.active
+						a(href="#descripcion") Description
+					li
+						a(href="#size-guide") Size guide
+					li
+						a(href="#shipping") Shipping 
+
+				///-Tabs de texto
+
+				//Contenido de tabs
+
+				div.tabs-content
+
+					div#descripcion.tab.active
+						//Descripción de producto
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, numquam fugit porro ullam ab, quibusdam voluptatum culpa quis nostrum, laudantium assumenda praesentium explicabo accusamus consectetur, maiores nulla ea pariatur! Harum.
+				
+						///-Descripción de producto
+					div#size-guide.tab
+						//tabla de medidas
+						div.table-responsive
+							table.table
+								tr
+									td
+									td
+									td
+								tr
+									td
+									td
+									td
+
+						///-tabla de medidas
+					div#shipping.tab
+
+						//Información de envío
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus sapiente facere ut, dolorum ab eaque quisquam sequi. Ipsam molestiae aperiam sequi accusamus magnam quibusdam, temporibus minus, fuga beatae magni.
+
+						///-Información de envío
+
+					///-Contenido de tabs
+
+				//Social Share
+				div.social-share
+					a.share.share-fb(href="#")
+					a.share.share-pinterest(href="#")
+					a.share.share-instagram(href="#")
+				///-Social Share
+
+
+			///-Opciones de producto
+
+			div.clearfix
+		///-Bottoms
+
+		//Match it
+		div.row
+			h2.divisor match it
+			
+			-for(b = 0; b < 3; b ++)
+				div.col-lg-4.col-md-4.col-sm-4.col-xs-4.col-related
+					+image('related.jpg')(class="img-responsive")
+
+					div.product-text
+						h3 Bottom
+						p REF. 123456789
+					h3.product-price $99.999
+
+					a.btn.btn-large(href="#") Compra rápida
+		///-Match it
+
+		//Complete the look
+		div.row
+			h2.divisor complete the look
+			
+			-for(x = 0; x < 3; x ++)
+				div.col-lg-4.col-md-4.col-sm-4.col-xs-4.col-related
+					+image('related.jpg')(class="img-responsive")
+
+					div.product-text
+						h3 Bottom
+						p REF. 123456789
+					h3.product-price $99.999
+
+					a.btn.btn-large(href="#") Compra rápida
+
+		///-Complete the look
+
+
+
+
+
+block Scripts

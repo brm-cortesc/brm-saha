@@ -1,0 +1,114 @@
+//Header
+header.container-fluid(class={'u-fixed': titulo == "Home"})
+	div.row
+		div.col-lg-4.col-md-4.col-sm-4.col-xs-4.pull-right
+
+			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.currency-selector
+				p.currency-name $COP
+				+image('flag-co.svg', 'Pesos CO')(class="currency-img")
+
+
+			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.envios
+				p
+					| Envíos Gratis
+					a(href="#") Conoce más
+
+			div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+				p.
+					Tiempo de entrega
+
+	div.row
+
+		//Logo
+
+		if titulo == "Home"
+			h1.logo.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3
+				a(href="#"): +image('logo-saha.svg', 'Saha Tienda en línea')
+
+		else
+			h2.logo.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3
+				a(href="index.html"): +image('logo-saha.svg', 'Saha Tienda en línea')
+
+		///-Logo
+
+
+		//User Tools
+		div.col-lg-3.col-md-3.col-sm-3.col-xs-12.col-tools
+
+			//Icons
+			a.icon.icon-search(href="#")
+
+			a.icon.icon-cart(href="#")
+				//- span.cantidad 
+			a.icon.icon-user(href="#")
+			///-Icons
+
+			//Containers
+
+			//Search
+			form#search-field
+				
+				div.field
+					input(type="text", name="cBuscar", id="cBuscar", placeholder="Ej. Bikini")
+					//- label.glyphicon.glyphicon-search(for="submitSearch")
+					button.glyphicon.glyphicon-search(type="button", value="" name="submitSearch")
+
+			///-Search
+
+			//Carrito
+			div.cart-list
+
+				-for(x = 1; x < 4; x++)
+
+					div.item
+						+image('vista-'+x+'.jpg', 'un producto')(class="img-responsive img-item")
+						
+						div.item-info
+							p.item-name Nombre de un producto bien bonito
+							p.item-price $ #{x}9.999
+
+							div.item-cant
+								p
+									| Cant 
+									span.cant #{x}
+						
+						button.btn.glyphicon.glyphicon-remove(type="button")							
+						
+				hr
+
+				h3 Total
+				p.price $99.999
+
+				a.btn.btn-base(href="carrito.html") Ver carrito
+				a.btn.btn-base(href="checkout.html") Checkout
+
+
+			///-Carrito
+
+			//User menu
+
+			div.user-menu
+				ul
+					li
+						a(href="#") Mi cuenta
+					li
+						a(href="#") Mi lista de deseos
+					li
+						a(href="#") Mi carrito
+					li
+						a(href="#") Checkout
+
+					li
+						a(href="#") Login
+
+			///-Containers
+
+		//User Tools
+
+	div.row
+		include menu
+
+
+
+
+///-Header

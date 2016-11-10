@@ -1,0 +1,74 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "Home";
+	title Saha - Tienda en línea
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Saha - Tienda en línea" )
+
+block content
+	//Slider
+	section.slider.slider-home
+		-for(x=0; x < 1; x++)
+			div.slide
+				+image('slide-home.jpg', 'banner home')(class="img-responsive")
+
+	///-Slider
+
+	section.container-fluid.container-home
+		div.row
+			article.col-lg-6.col-md-6.col-sm-6.col-xs-6
+				a(href="#"): +image('banner-1.jpg', 'banner')
+
+			article.col-lg-6.col-md-6.col-sm-6.col-xs-6
+
+				a(href="#"): +image('banner-2.jpg', 'banner')
+
+				a(href="#"): +image('banner-3.jpg', 'banner')
+
+			div.clearfix
+				
+			article.col-lg-12.col-md-12.col-sm-12.col-xs-12
+				a(href="#"): +image('banner-4.jpg', 'banner')
+		
+
+			div.clearfix
+
+			//Highlights
+			article.col-lg-12.col-md-12.col-sm-12.col-xs-12.col-highlights
+
+				a(href="#"): +image('highlight-1.jpg', 'highlight')
+
+				a(href="#"): +image('highlight-2.jpg', 'highlight')
+
+				a(href="#"): +image('highlight-3.jpg', 'highlight')
+
+			///-Highlights
+
+
+	section.container-fluid.u-no-border.container-devoluciones
+		div.row
+			div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+				h2 envio gratis
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore commodi harum fuga nam veritatis deserunt fugit, rerum quaerat atque doloribus hic officiis eligendi dicta aperiam. Ad illum nam tenetur. Mollitia.
+
+			div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+				h2 devolucion fácil
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore commodi harum fuga nam veritatis deserunt fugit, rerum quaerat atque doloribus hic officiis eligendi dicta aperiam. Ad illum nam tenetur. Mollitia.
+
+			div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+				h2 tiempos de entrega
+
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore commodi harum fuga nam veritatis deserunt fugit, rerum quaerat atque doloribus hic officiis eligendi dicta aperiam. Ad illum nam tenetur. Mollitia.
+			
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

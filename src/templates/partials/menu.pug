@@ -1,0 +1,31 @@
+//Menu
+nav.menu.col-lg-12.col-md-12.col-sm-12.col-xs-12
+	button.btn.btn-menu(type="button")
+		span.sr-line
+		span.sr-line
+		span.sr-line
+			
+	ul
+		li.logo-hidden
+			a(href="#")
+				+image('logo-saha.svg', 'Saha - Tienda en línea')(class="img-responsive")
+
+		li(class={active: titulo == "Bikini"})
+			a(href="bikini-set.html") Bikini set
+
+		li(class={active: titulo == "Tops"})
+			a(href="producto.html") Tops
+
+		li(class={active: titulo == "Bottoms"})
+			a(href="#") Bottoms
+
+		li(class={active: titulo == "Salidas"})
+			a(href="#") Salidas
+
+		li(class={active: titulo == "UnaPieza"})
+			a(href="#") Una pieza
+
+		li(class={active: titulo == "Sale"})
+			a(href="#") Sale
+
+///-Menu

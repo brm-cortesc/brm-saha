@@ -1,0 +1,57 @@
+//Footer
+footer.container-fluid
+	div.row
+		h2.logo
+			+image('logo-saha.svg', 'Saha - Tienda en línea')
+
+		div.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			p.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, eum facilis impedit architecto quos id, a nulla, quas, harum cum ex odio ut suscipit voluptate fugiat tenetur vitae aperiam odit.
+		
+		div.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			h3 Info
+
+			ul
+				li
+					a(href="#") mi cuenta
+				li
+					a(href="#") pagos
+				li
+					a(href="#") envios
+				li
+					a(href="#") devoluciones
+
+		div.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			h3 Ayuda
+
+			ul
+				li
+					a(href="#") compra segura
+				li
+					a(href="#") términos y condiciones
+
+		div.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			h3 Contáctenos
+				
+			p
+				a.icon(href="#")
+					+image('icon-fb.svg', 'Saha en Facebook')(class='img-responsive')
+				a.icon(href="#")
+					+image('icon-instagram.svg', 'Saha en Instagram')(class='img-responsive')
+				a.icon(href="#")
+					+image('icon-tw.svg', 'Saha en Twitter')(class='img-responsive')
+
+
+///-Footer
+
+//Scripts
+//-Estos son los scripts que van en todos los htmls del desarrollo
+if debug == true
+	script(src='js/libs/jquery.js')
+	script(src='js/libs/jquery.validate.js')
+	script(src='js/libs/bootstrap.min.js')
+	script(src='js/libs/velocity.js')
+
+else
+	script(src='js/libs/jquery.js')
+	script(src="js/libs.min.js")

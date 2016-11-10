@@ -1,0 +1,42 @@
+.tabs
+	list-style-type none
+	margin 1rem auto
+	padding 0
+	text-align center
+	text-transform uppercase
+	
+	li
+		display inline-block
+		
+		&:nth-of-type(2)
+			border-left 1px solid $Gris
+			border-right @border-left
+			
+
+		a
+			color $Gris
+			display block
+			padding 1rem 1.5rem
+			
+		&.active
+			a
+				font-weight $Normal
+				pointer-events none
+				
+
+
+	&-content
+		.tab
+			display none
+			font-size 1.2rem
+			opacity 0
+			transition opacity 0.3s ease-in-out
+			
+			p 
+				text-align justify
+				text-align-last left
+			
+
+			&.active
+				display block
+				opacity 0.99

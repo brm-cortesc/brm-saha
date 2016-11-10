@@ -1,0 +1,156 @@
+.cantidad, .size
+	display inline-block
+	margin-bottom 2rem
+	vertical-align middle
+	width 100%
+	
+
+.cantidad
+	max-width 20%
+	
+	input, .controls
+		display inline-block
+		margin 0
+		max-width 45%
+		padding 0
+		vertical-align middle
+		width 100%
+		
+	input
+		border 1px solid lighten($Gris, 60%)
+		text-align center
+		
+
+	.controls
+		button
+			color lighten($Gris, 60%)
+			display block
+			font-size 1rem
+			margin 0 auto
+			padding 0
+			
+			&:active
+				color $Verde
+	
+.container	
+	&-devoluciones
+		clear both
+		margin-top 1.5rem !important
+		
+		.col-lg-4
+			background-color lighten($Gris, 95%)
+			padding 2rem
+			text-align center
+			
+			&:nth-of-type(2)
+				background-color lighten($Gris, 80%)
+			
+
+	&-home
+		article			
+			a
+				background-color $Verde
+				display block
+				
+				&:hover
+					img
+						mix-blend-mode hard-light
+						opacity 0.5
+				
+			&:nth-of-type(2)
+				a
+					&:nth-of-type(1)
+						margin-bottom 2rem
+				
+			&:nth-of-type(3)
+				margin-top 1rem
+		img
+			height auto
+			max-width 100%
+			transitionBase(0.3s)
+			width 100%
+			
+
+	&-product
+		h2
+			margin-bottom 0rem
+			margin-top 0.5rem
+			
+		h4
+			font-size 1.3rem
+			font-weight $Light
+			
+		.ref, .price
+			margin 0
+			font-weight $Light
+			
+
+		.row-top
+			margin-bottom 2rem
+			
+.col
+
+	&-highlights
+		margin-bottom 1rem
+		margin-top @margin-bottom
+		
+		a
+			background-color transparent
+			float left
+			max-width 33%
+			
+			&:hover
+				img
+					mix-blend-mode normal
+			
+		&::after, &::before
+			clear both
+			content ''
+			display table
+
+	
+	&-related
+
+		.product
+			&-text,
+			&-price
+				display inline-block
+				margin 1rem 0
+				max-width 48%
+				padding 0
+				vertical-align middle
+				width 100%
+				
+			&-text
+				h3
+					margin 0
+				
+			&-price
+				text-align right
+
+.colores
+	margin-top 2rem
+	
+
+.divisor
+	background-color lighten($Gris, 60%)
+	color $Gris
+	font-size 2.2rem
+	font-weight $Normal
+	margin 4rem auto !important
+	padding 1rem 0.5rem
+
+.logo
+	display block
+	// margin 0 auto
+	height auto
+	// max-width 23rem
+	
+	img
+		height auto
+		max-width 100%
+		width 100%
+		
+
+.size
+	max-width 70%
