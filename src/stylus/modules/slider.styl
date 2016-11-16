@@ -1,3 +1,44 @@
+.container-product
+	.bx
+		&-wrapper
+			.bx-controls-direction
+				a
+					background none
+					color $Gris
+					cuadrado(2rem)
+					font-family $Icons
+					font-size 2.3rem
+					left 39%
+					margin 0
+					padding 0
+					text-indent 0
+					top initial
+					
+					&:hover
+						color $Verde
+						text-decoration none
+				
+			.bx-prev
+				left initial
+				top -2.5rem !important
+				
+				&::before
+					content '\e253'
+				
+			.bx-next
+				bottom -1.5rem
+				right initial
+				
+				&::before
+					content '\e252'
+				
+			.bx-viewport
+				box-shadow none
+				border 0
+				margin 2rem 0 0
+				
+
+
 .slider
 	
 	img

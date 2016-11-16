@@ -9,8 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/saha.min.css">
   <!-- Web Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"><!--[if lt IE]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,10 +19,15 @@
 <body>
   <!--Header-->
   <header class="container-fluid u-fixed">
-    <div class="row">
+    <div class="row row-envios">
       <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 pull-right">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 currency-selector">
-          <p class="currency-name">$COP</p><img class="currency-img" src="images/flag-co.svg" title="Pesos CO" alt="Pesos CO"/>
+          <div class="select">
+            <p class="currency-name">$COP</p><img class="currency-img" src="images/flag-co.svg" title="Pesos CO" alt="Pesos CO"/>
+          </div>
+          <div class="select">
+            <p class="currency-name">USD</p><img class="currency-img" src="images/flag-usa.svg" title="US Dollar" alt="US Dollar"/>
+          </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 envios">
           <p>Envíos Gratis<a href="#">Conoce más</a></p>
@@ -46,7 +50,7 @@
         <!--/-Icons-->
         <!--Containers-->
         <!--Search-->
-        <form id="search-field">
+        <form class="header-search" id="search-field">
           <div class="field">
             <input type="text" name="cBuscar" id="cBuscar" placeholder="Ej. Bikini">
             <button class="glyphicon glyphicon-search" type="button" value="" name="submitSearch"></button>
@@ -107,13 +111,13 @@
       <nav class="menu col-lg-12 col-md-12 col-sm-12 col-xs-2">
         <button class="btn btn-menu" type="button"><span class="sr-line"></span><span class="sr-line"></span><span class="sr-line"></span></button>
         <ul>
-          <li class="logo-hidden"><a href="#"><img class="img-responsive" src="images/logo-saha.svg" title="Saha - Tienda en línea" alt="Saha - Tienda en línea"/></a></li>
-          <li><a href="bikini-set.html">Bikini set</a></li>
+          <li class="logo-hidden"><a href="index.html"><img class="img-responsive" src="images/logo-saha.svg" title="Saha - Tienda en línea" alt="Saha - Tienda en línea"/></a></li>
+          <li><a href="bikini-set.html">Bikinis</a></li>
           <li><a href="producto.html">Tops</a></li>
           <li><a href="#">Bottoms</a></li>
           <li><a href="#">Salidas</a></li>
           <li><a href="#">Una pieza</a></li>
-          <li><a href="#">Sale</a></li>
+          <li><a href="#">descuentos</a></li>
         </ul>
       </nav>
       <!--/-Menu-->
@@ -122,6 +126,12 @@
   <!--/-Header-->
   <!--Slider-->
   <section class="slider slider-home">
+    <div class="slide"><img class="img-responsive" src="images/slide-home.jpg" title="banner home" alt="banner home"/>
+    </div>
+    <div class="slide"><img class="img-responsive" src="images/slide-home.jpg" title="banner home" alt="banner home"/>
+    </div>
+    <div class="slide"><img class="img-responsive" src="images/slide-home.jpg" title="banner home" alt="banner home"/>
+    </div>
     <div class="slide"><img class="img-responsive" src="images/slide-home.jpg" title="banner home" alt="banner home"/>
     </div>
   </section>
@@ -200,8 +210,24 @@
   <!--/-Footer-->
   <!--Scripts-->
   <script src="js/libs/jquery.js"></script>
-  <script src="js/libs/jquery.validate.js"></script>
-  <script src="js/libs/bootstrap.min.js"></script>
-  <script src="js/libs/velocity.min.js"></script>
+  <script src="js/libs.min.js"></script>
   <script src="js/saha.init.js"></script>
+  <script>
+    jQuery(document).ready(function(){
+    	$('.slider-home')
+    		.bxSlider({
+    			preloadImages: 'all',
+    			minSlides: 1,
+    			maxSlides: 1,
+    			slideWidth: 1920,
+    			slideMargin: 0,
+    			moveSlides: 1,
+    			nextText: '',
+    			controls: false,
+    			prevText: ''
+    
+    		});	
+    
+    });
+  </script>
 </body></html>

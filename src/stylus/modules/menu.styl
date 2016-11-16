@@ -1,10 +1,23 @@
 .menu
 	margin-top 1rem
+	
+	&::before
+		background-color rgba(0, 0, 0, .75)
+		centrarAb()
+		content ''
+		cuadrado(100%)
+		display inline
+		opacity 0
+		pointer-events none
+		position fixed
+		transition opacity ease-in-out 0.3s
+		z-index 1
+
 	ul
-		padding 0
-		margin 0 auto
 		display inline-block
 		list-style-type none
+		margin 0 auto
+		padding 0
 		transitionBase(0.3s)
 		
 		li
@@ -27,6 +40,28 @@
 	&.active
 		ul
 			right 0
+			
+
+		&::before		
+			display block
+			opacity 0.99
+			z-index 4
+			
+		.btn
+			z-index 6
+			
+
+			.sr-line
+				animation-fill-mode forwards
+				animation-iteratioun-count 1
+				animation-name menu
+				animation-play-state running
+				background-color $Gris
+				
+				&:nth-of-type(2)
+					&::before
+						right 0
+						opacity 1
 
 	.btn
 		background-color transparent
@@ -35,18 +70,36 @@
 		padding 0
 		position relative
 		
+		
 		.sr-line
+			animation 0.3s cubic-bezier(.14,.76,.83,.67) normal
+			animation-iteratioun-count 1
+			animation-play-state paused
 			background-color #fff
 			display block
 			height 0.2rem
 			position absolute
+			transition background-color 0.3s ease-in-out
 			width 100%
 			
 			&:nth-of-type(1)
 				top 20%
 				
 			&:nth-of-type(2)
-				top 50%	
+				top 50%
+				
+				&::before
+					border-right 2px solid $Gris
+					border-top @border-right
+					bottom -0.42rem
+					content ''
+					cuadrado(1rem)
+					display block
+					opacity 0
+					position absolute
+					right 50%
+					transform rotate(45deg)
+					transitionBase(0.3s)
 				
 			&:nth-of-type(3)
 				top 80%

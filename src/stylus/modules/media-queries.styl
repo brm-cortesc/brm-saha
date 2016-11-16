@@ -1,4 +1,35 @@
+@media (max-width:1100px)
+	header
+		&.affix
+			.col-tools
+				bottom 18%
+				
+			.menu
+				padding-left 0
+
+@media (max-width:1040px)
+	header
+		&.affix
+			.col-tools
+				bottom 0%
+				right -6%
+
+@media (max-width:980px)
+	header
+		&.affix
+			.menu ul li
+				a
+					padding 0 1rem
+
 @media (max-width:865px)
+	header
+		&.affix
+			.menu ul li
+				a
+					padding 0 0.5rem
+							
+				.logo-hidden
+					max-width 17rem
 	.btn
 		&-add-cart
 			padding 0.8rem 1.5rem
@@ -35,8 +66,31 @@
 				text-align right
 				
 		.logo
+			display block
 			margin-top 1rem
 			
+		.cart-list,
+		.header-search,
+		.user-menu
+			left initial
+			right 18%
+			top 6rem	
+			
+		&.affix
+			.logo
+				display block
+				
+				&-hidden
+					display none
+
+			.menu ul li
+				a
+					padding 1.5rem 0
+						
+
+			.menu
+				padding-left 0
+							
 	.cantidad
 		max-width 30%
 	.cantidad, .size
@@ -56,12 +110,43 @@
 					float none
 					width 100%
 					
-			.slider
-				display none
+			.producto
+				transform rotate(180deg)
+				// direction ltr
 				
-				&.mobile
-					display block
+				.bx-wrapper,
+				.col-img-big
+					direction ltr
+					transform rotate(-180deg)
 					
+				.bx
+					&-wrapper
+						margin-bottom 2rem !important
+
+						.bx-controls-direction
+							a
+								bottom initial
+								left initial
+								top 50% !important
+								transform rotate(-90deg)
+						
+						.bx-viewport
+							margin 2rem 0 0 0.9rem
+							
+						.bx-prev
+							left -2.3rem !important
+
+							
+						.bx-next							
+							right -1rem
+							
+						.slider
+														
+							.slide
+								max-width 5.1%
+					
+				.col-img-big
+					margin-top 2rem	
 	.tabs
 		li
 			a
@@ -70,6 +155,9 @@
 
 	.menu
 		margin-top 0
+		
+		&::before
+			display inline
 		ul
 			background-color #fff
 			box-shadow 0px -5px 5px 0px rgba(0,0,0,0.4)
@@ -144,6 +232,50 @@
 				width 100%
 	
 
+
+@media (max-width:500px)
+	.container
+		&-product
+			.producto					
+				.bx
+					&-wrapper		
+
+						.bx-controls-direction
+							a
+								cuadrado(1rem)
+								font-size 1.8rem
+													
+						.bx-viewport
+							margin 2rem 0 0 0.9rem
+							
+						.bx-prev
+							left -1.7rem !important
+
+							
+						.bx-next							
+							right -0.5rem
+							
+						// .slider
+														
+						// 	.slide
+						// 		max-width 5.1%
+
+
+@media (max-width:400px)
+	header
+		.cart-list,
+		.header-search,
+		.user-menu
+			right 0
+			
+	.menu
+		ul
+			max-width 25rem
+	
+	.nav-tabs
+		li
+			a
+				padding 1rem 1.2rem
 
 @media (max-width:390px)
 	header

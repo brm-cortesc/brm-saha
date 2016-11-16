@@ -13,7 +13,7 @@ block description
 block content
 	//Slider
 	section.slider.slider-home
-		-for(x=0; x < 1; x++)
+		-for(x=0; x < 4; x++)
 			div.slide
 				+image('slide-home.jpg', 'banner home')(class="img-responsive")
 
@@ -71,4 +71,21 @@ block content
 
 block Scripts
 	//-Acá se ponen js que solo vayan en ésta página
+	script().
+		jQuery(document).ready(function(){
+			$('.slider-home')
+				.bxSlider({
+					preloadImages: 'all',
+					minSlides: 1,
+					maxSlides: 1,
+					slideWidth: 1920,
+					slideMargin: 0,
+					moveSlides: 1,
+					nextText: '',
+					controls: false,
+					prevText: ''
+
+				});	
+
+		});
 

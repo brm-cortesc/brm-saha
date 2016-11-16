@@ -1,11 +1,16 @@
 //Header
 header.container-fluid(class={'u-fixed': titulo == "Home"})
-	div.row
+	div.row.row-envios
 		div.col-lg-4.col-md-5.col-sm-5.col-xs-12.pull-right
 
 			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.currency-selector
-				p.currency-name $COP
-				+image('flag-co.svg', 'Pesos CO')(class="currency-img")
+				div.select
+					p.currency-name $COP
+					+image('flag-co.svg', 'Pesos CO')(class="currency-img")
+
+				div.select
+					p.currency-name USD
+					+image('flag-usa.svg', 'US Dollar')(class="currency-img")
 
 
 			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.envios
@@ -46,7 +51,7 @@ header.container-fluid(class={'u-fixed': titulo == "Home"})
 			//Containers
 
 			//Search
-			form#search-field
+			form#search-field.header-search
 				
 				div.field
 					input(type="text", name="cBuscar", id="cBuscar", placeholder="Ej. Bikini")

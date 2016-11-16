@@ -9,8 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/saha.min.css">
   <!-- Web Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"><!--[if lt IE]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,10 +19,15 @@
 <body>
   <!--Header-->
   <header class="container-fluid">
-    <div class="row">
+    <div class="row row-envios">
       <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 pull-right">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 currency-selector">
-          <p class="currency-name">$COP</p><img class="currency-img" src="images/flag-co.svg" title="Pesos CO" alt="Pesos CO"/>
+          <div class="select">
+            <p class="currency-name">$COP</p><img class="currency-img" src="images/flag-co.svg" title="Pesos CO" alt="Pesos CO"/>
+          </div>
+          <div class="select">
+            <p class="currency-name">USD</p><img class="currency-img" src="images/flag-usa.svg" title="US Dollar" alt="US Dollar"/>
+          </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 envios">
           <p>Envíos Gratis<a href="#">Conoce más</a></p>
@@ -46,7 +50,7 @@
         <!--/-Icons-->
         <!--Containers-->
         <!--Search-->
-        <form id="search-field">
+        <form class="header-search" id="search-field">
           <div class="field">
             <input type="text" name="cBuscar" id="cBuscar" placeholder="Ej. Bikini">
             <button class="glyphicon glyphicon-search" type="button" value="" name="submitSearch"></button>
@@ -107,13 +111,13 @@
       <nav class="menu col-lg-12 col-md-12 col-sm-12 col-xs-2">
         <button class="btn btn-menu" type="button"><span class="sr-line"></span><span class="sr-line"></span><span class="sr-line"></span></button>
         <ul>
-          <li class="logo-hidden"><a href="#"><img class="img-responsive" src="images/logo-saha.svg" title="Saha - Tienda en línea" alt="Saha - Tienda en línea"/></a></li>
-          <li><a href="bikini-set.html">Bikini set</a></li>
+          <li class="logo-hidden"><a href="index.html"><img class="img-responsive" src="images/logo-saha.svg" title="Saha - Tienda en línea" alt="Saha - Tienda en línea"/></a></li>
+          <li><a href="bikini-set.html">Bikinis</a></li>
           <li><a href="producto.html">Tops</a></li>
           <li><a href="#">Bottoms</a></li>
           <li><a href="#">Salidas</a></li>
           <li><a href="#">Una pieza</a></li>
-          <li><a href="#">Sale</a></li>
+          <li><a href="#">descuentos</a></li>
         </ul>
       </nav>
       <!--/-Menu-->
@@ -123,24 +127,24 @@
   <section class="container-fluid container-product">
     <!--Tops-->
     <div class="row row-top">
-      <!--Selector de modelo-->
-      <div class="slider slider-vista-top col-lg-2 col-md-2 col-sm-2 col-xs-2">
-        <div class="slide"><a href=""><img src="images/vista-1.jpg"/></a></div>
-        <div class="slide"><a href=""><img src="images/vista-2.jpg"/></a></div>
-        <div class="slide"><a href=""><img src="images/vista-3.jpg"/></a></div>
+      <!--Producto-->
+      <div class="producto">
+        <!--Selector de modelo-->
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+          <div class="slider slider-vista-top" data-producto="producto">
+            <div class="slide"><a href="images/producto-1.jpg"><img src="images/vista-1.jpg"/></a></div>
+            <div class="slide"><a href="images/producto-2.jpg"><img src="images/vista-2.jpg"/></a></div>
+            <div class="slide"><a href="images/producto-3.jpg"><img src="images/vista-3.jpg"/></a></div>
+            <div class="slide"><a href="images/producto-4.jpg"><img src="images/vista-4.jpg"/></a></div>
+          </div>
+        </div>
+        <!--/-Selector de modelo-->
+        <!--Vista modelo grande-->
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-img-big"><img class="img-responsive img-producto-top" src="images/producto-1.jpg" id="producto"/>
+        </div>
       </div>
-      <!--/-Selector de modelo-->
-      <!--Vista modelo grande-->
-      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-img-big"><img class="img-responsive img-producto-top" src="images/producto.jpg"/>
-      </div>
+      <!--/-Producto-->
       <!--/-Vista modelo grande-->
-      <!--Selector de modelo-->
-      <div class="slider slider-vista-top col-lg-2 col-md-2 col-sm-2 col-xs-2 mobile">
-        <div class="slide"><a href=""><img src="images/vista-1.jpg"/></a></div>
-        <div class="slide"><a href=""><img src="images/vista-2.jpg"/></a></div>
-        <div class="slide"><a href=""><img src="images/vista-3.jpg"/></a></div>
-      </div>
-      <!--/-Selector de modelo-->
       <!--Opciones de producto-->
       <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5 col-lg-offset-1 col-md-offset-0">
         <h2>Top</h2>
@@ -159,7 +163,7 @@
           </div>
         </div>
         <!--/-Cantidad de productos-->
-        <!--botones--><a class="btn btn-add-cart" href="#">Add to cart	</a><a class="btn btn-comparar" href="#"><i class="icon icon-comparar"></i></a><a class="btn btn-love" href="#"><i class="icon icon-love"></i></a>
+        <!--botones--><a class="btn btn-add-cart" href="#">Añadir <i class="glyphicon glyphicon-shopping-cart"></i></a><a class="btn btn-comparar" href="#"><i class="icon icon-comparar"></i></a><a class="btn btn-love" href="#"><i class="icon icon-love"></i></a>
         <!--/-botones	-->
         <!--Colores-->
         <div class="colores">
@@ -169,15 +173,15 @@
         </div>
         <!--/-Colores-->
         <!--Tabs de texto-->
-        <ul class="tabs tabs-select">
-          <li class="active"><a href="#descripcion">Description</a></li>
-          <li><a href="#size-guide">Size guide</a></li>
-          <li><a href="#shipping">Shipping </a></li>
+        <ul class="nav nav-tabs tab tab-select" role="tablist">
+          <li class="active" role="presentation"><a href="#descripcion-top" aria-controls="descripcion-top" role="tab" data-toggle="tab">Descripción</a></li>
+          <li role="presentation"><a href="#size-guide-top" aria-controls="size-guide-top" role="tab" data-toggle="tab">Guía de medidas</a></li>
+          <li role="presentation"><a href="#shipping-top" aria-controls="shipping-top" role="tab" data-toggle="tab">Envío </a></li>
         </ul>
         <!--/-Tabs de texto-->
         <!--Contenido de tabs-->
-        <div class="tabs-content">
-          <div class="tab active" id="descrpicion">
+        <div class="tab-content">
+          <div class="tab-pane active" id="descripcion-top" role="tabpanel">
             <!--Descripción de producto-->
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, numquam fugit porro ullam ab, quibusdam voluptatum culpa quis nostrum, laudantium assumenda praesentium explicabo accusamus consectetur, maiores nulla ea pariatur! Harum.
@@ -185,7 +189,7 @@
             </p>
             <!--/-Descripción de producto-->
           </div>
-          <div class="tab" id="size-guide">
+          <div class="tab-pane" id="size-guide-top" role="tabpanel">
             <!--tabla de medidas-->
             <div class="table-responsive">
               <table class="table">
@@ -203,10 +207,10 @@
             </div>
             <!--/-tabla de medidas-->
           </div>
-          <div class="tab" id="shipping">
+          <div class="tab-pane" id="shipping-top" role="tabpanel">
             <!--Información de envío-->
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus sapiente facere ut, dolorum ab eaque quisquam sequi. Ipsam molestiae aperiam sequi accusamus magnam quibusdam, temporibus minus, fuga beatae magni.
+              Lorem asdf ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus sapiente facere ut, dolorum ab eaque quisquam sequi. Ipsam molestiae aperiam sequi accusamus magnam quibusdam, temporibus minus, fuga beatae magni.
               
             </p>
             <!--/-Información de envío-->
@@ -223,17 +227,24 @@
     <!--/-Tops-->
     <!--Bottoms-->
     <div class="row row-bottom">
-      <!--Selector de modelo-->
-      <div class="slider slider-vista-bottom col-lg-2 col-md-2 col-sm-2 col-xs-2">
-        <div class="slide"><a href=""><img src="images/vista-1.jpg"/></a></div>
-        <div class="slide"><a href=""><img src="images/vista-2.jpg"/></a></div>
-        <div class="slide"><a href=""><img src="images/vista-3.jpg"/></a></div>
+      <!--Producto-->
+      <div class="producto">
+        <!--Selector de modelo-->
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+          <div class="slider slider-vista-bottom" data-producto="producto2">
+            <div class="slide"><a href="images/producto-1.jpg"><img src="images/vista-1.jpg"/></a></div>
+            <div class="slide"><a href="images/producto-2.jpg"><img src="images/vista-2.jpg"/></a></div>
+            <div class="slide"><a href="images/producto-3.jpg"><img src="images/vista-3.jpg"/></a></div>
+            <div class="slide"><a href="images/producto-4.jpg"><img src="images/vista-4.jpg"/></a></div>
+          </div>
+        </div>
+        <!--/-Selector de modelo-->
+        <!--Vista modelo grande-->
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-img-big"><img class="img-responsive img-producto-bottom" src="images/producto-1.jpg" id="producto2"/>
+        </div>
+        <!--/-Vista modelo grande-->
       </div>
-      <!--/-Selector de modelo-->
-      <!--Vista modelo grande-->
-      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-img-big"><img class="img-responsive img-producto-bottom" src="images/producto.jpg"/>
-      </div>
-      <!--/-Vista modelo grande-->
+      <!--/-producto-->
       <!--Opciones de producto-->
       <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5 col-lg-offset-1 col-md-offset-0">
         <h2>Bottom</h2>
@@ -252,7 +263,7 @@
           </div>
         </div>
         <!--/-Cantidad de productos-->
-        <!--botones--><a class="btn btn-add-cart" href="#">Add to cart	</a><a class="btn btn-comparar" href="#"><i class="icon icon-comparar"></i></a><a class="btn btn-love" href="#"><i class="icon icon-love"></i></a>
+        <!--botones--><a class="btn btn-add-cart" href="#">Añadir <i class="glyphicon glyphicon-shopping-cart"></i></a><a class="btn btn-comparar" href="#"><i class="icon icon-comparar"></i></a><a class="btn btn-love" href="#"><i class="icon icon-love"></i></a>
         <!--/-botones-->
         <!--Colores-->
         <div class="colores">
@@ -262,15 +273,15 @@
         </div>
         <!--/-Colores-->
         <!--Tabs de texto-->
-        <ul class="tabs tabs-select">
-          <li class="active"><a href="#descripcion">Description</a></li>
-          <li><a href="#size-guide">Size guide</a></li>
-          <li><a href="#shipping">Shipping </a></li>
+        <ul class="nav nav-tabs tab tab-select" role="tablist">
+          <li class="active" role="presentation"><a href="#descripcion-bottom" aria-controls="descripcion-bottom" role="tab" data-toggle="tab">Descripción</a></li>
+          <li role="presentation"><a href="#size-guide-bottom" aria-controls="size-guide-bottom" role="tab" data-toggle="tab">Guía de medidas</a></li>
+          <li role="presentation"><a href="#shipping-bottom" aria-controls="shipping-bottom" role="tab" data-toggle="tab">Envío </a></li>
         </ul>
         <!--/-Tabs de texto-->
         <!--Contenido de tabs-->
-        <div class="tabs-content">
-          <div class="tab active" id="descripcion">
+        <div class="tab-content">
+          <div class="tab-pane active" id="descripcion-bottom" role="tabpanel">
             <!--Descripción de producto-->
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, numquam fugit porro ullam ab, quibusdam voluptatum culpa quis nostrum, laudantium assumenda praesentium explicabo accusamus consectetur, maiores nulla ea pariatur! Harum.
@@ -278,7 +289,7 @@
             </p>
             <!--/-Descripción de producto-->
           </div>
-          <div class="tab" id="size-guide">
+          <div class="tab-pane" id="size-guide-bottom" role="tabpanel">
             <!--tabla de medidas-->
             <div class="table-responsive">
               <table class="table">
@@ -296,10 +307,10 @@
             </div>
             <!--/-tabla de medidas-->
           </div>
-          <div class="tab" id="shipping">
+          <div class="tab-pane" id="shipping-bottom" role="tabpanel">
             <!--Información de envío-->
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus sapiente facere ut, dolorum ab eaque quisquam sequi. Ipsam molestiae aperiam sequi accusamus magnam quibusdam, temporibus minus, fuga beatae magni.
+              Lorem asdf ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus sapiente facere ut, dolorum ab eaque quisquam sequi. Ipsam molestiae aperiam sequi accusamus magnam quibusdam, temporibus minus, fuga beatae magni.
               
             </p>
             <!--/-Información de envío-->
@@ -403,8 +414,7 @@
   <!--/-Footer-->
   <!--Scripts-->
   <script src="js/libs/jquery.js"></script>
-  <script src="js/libs/jquery.validate.js"></script>
-  <script src="js/libs/bootstrap.min.js"></script>
-  <script src="js/libs/velocity.min.js"></script>
+  <script src="js/libs.min.js"></script>
   <script src="js/saha.init.js"></script>
+  <script src="js/saha.producto.js"></script>
 </body></html>

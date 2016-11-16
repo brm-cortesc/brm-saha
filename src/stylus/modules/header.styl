@@ -2,53 +2,34 @@ header
 	background-color rgba(#b4b4b4, 0.70)
 	color #fff
 	line-height 1
+	margin-bottom 2rem
 	padding 1rem
 	position relative
 	text-align center
-	margin-bottom 2rem
 	width 100%
 	
 	p
 		margin 0
 	
-	#search-field
-		left -40%
-
-		
-		.field
-			border-bottom 1px solid lighten($Gris, 60%)
-			padding 0.25rem
-			
-
-		button
-			background-color transparent
-			color $Gris
-			
-		button, input
-			display inline-block
-			vertical-align middle
-			
-		input
-			width 80%
-		
-	#search-field,
 	.cart-list,
+	.header-search,
 	.user-menu
 		background-color #fff
 		box-shadow 0px 0px 5px 0px rgba(0, 0, 0, 0.25)
 		color $Gris
 		display none
+		left -30%
 		max-width 30rem
 		padding 2rem 1.5rem 1rem
 		position absolute
-		top 3rem
+		top 4rem
 		transition opacity 0.3s ease-in-out
 		width 100%
 		z-index 3
 
 
 	.cart-list
-		left -30%
+		// left -30%
 
 		
 		h3
@@ -152,6 +133,11 @@ header
 			margin 0 0.5rem
 			text-transform uppercase
 			
+		&-selector			
+			cursor pointer
+			max-height 2rem
+			overflow hidden
+			
 	
 	.envios
 		border-left 1px solid #fff
@@ -168,10 +154,30 @@ header
 			display block
 			margin 0 auto
 			max-width 43.5rem
+	
+
+	.header-search
+		// left -30%
+
+		
+		.field
+			border-bottom 1px solid lighten($Gris, 60%)
+			padding 0.25rem
 			
 
+		button
+			background-color transparent
+			color $Gris
+			
+		button, input
+			display inline-block
+			vertical-align middle
+			
+		input
+			width 80%		
+
 	.user-menu
-		left -30%
+		// left -30%
 		
 		ul
 			list-style-type none
@@ -183,3 +189,20 @@ header
 				a
 					color $Gris
 					text-transform uppercase
+					
+
+	&.affix
+		background-color rgba(#b4b4b4, 0.90)
+		opacity 0
+		z-index 5
+		
+		.menu
+			padding-left 7rem
+			text-align left
+			
+		.logo-hidden
+			display inline-block
+			
+		.logo, .row-envios 
+			display none
+			

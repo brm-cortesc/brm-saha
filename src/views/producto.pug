@@ -13,24 +13,33 @@ block description
 block content
 	section.container-fluid.container-product
 		div.row
-			//Selector de modelo
-			div.slider.slider-vista.col-lg-2.col-md-2.col-sm-2.col-xs-2
-				div.slide
-					a(href="")
-						+image('vista-1.jpg')
-				div.slide
-					a(href="")
-						+image('vista-2.jpg')
+			//Producto
+			div.producto
+				//Selector de modelo
+				div.col-lg-2.col-md-2.col-sm-2.col-xs-12
+					div.slider.slider-vista(data-producto="producto")
+						div.slide
+							a(href="images/producto-1.jpg")
+								+image('vista-1.jpg')
+						div.slide
+							a(href="images/producto-2.jpg")
+								+image('vista-2.jpg')
 
-				div.slide
-					a(href="")
-						+image('vista-3.jpg')
-			///-Selector de modelo
-			
-			//Vista modelo grande
+						div.slide
+							a(href="images/producto-3.jpg")
+								+image('vista-3.jpg')
 
-			div.col-lg-5.col-md-5.col-sm-5.col-xs-5.col-img-big
-				+image('producto.jpg')(class="img-responsive img-producto")
+						div.slide
+							a(href="images/producto-4.jpg")
+								+image('vista-4.jpg')
+
+				///-Selector de modelo
+				
+				//Vista modelo grande
+
+				div.col-lg-5.col-md-5.col-sm-5.col-xs-5.col-img-big
+					+image('producto-1.jpg')(id="producto" class="img-responsive img-producto-top")
+			///-Producto
 
 			///-Vista modelo grande
 
@@ -62,7 +71,9 @@ block content
 				///-Cantidad de productos
 					
 				//botones
-				a.btn.btn-add-cart(href="#") Add to cart	
+				a.btn.btn-add-cart(href="#")
+					| Añadir 
+					i.glyphicon.glyphicon-shopping-cart
 				a.btn.btn-comparar(href="#"): i.icon.icon-comparar
 				a.btn.btn-love(href="#"): i.icon.icon-love
 				///-botones	
@@ -107,27 +118,27 @@ block content
 				///-Colores
 
 				//Tabs de texto
-				ul.tabs.tabs-select
-					li.active
-						a(href="#descripcion") Description
-					li
-						a(href="#size-guide") Size guide
-					li
-						a(href="#shipping") Shipping 
+				ul.nav.nav-tabs.tab.tab-select(role="tablist")
+					li.active(role="presentation")
+						a(href="#descripcion",  aria-controls="descripcion", role="tab", data-toggle="tab") Descripción
+					li(role="presentation")
+						a(href="#size-guide", aria-controls="size-guide", role="tab", data-toggle="tab") Guía de medidas
+					li(role="presentation")
+						a(href="#shipping", aria-controls="shipping", role="tab", data-toggle="tab") Envío 
 
 				///-Tabs de texto
 
 				//Contenido de tabs
 
-				div.tabs-content
+				div.tab-content
 
-					div#descrpicion.tab.active
+					div#descripcion.tab-pane.active(role="tabpanel")
 						//Descripción de producto
 						p.
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, numquam fugit porro ullam ab, quibusdam voluptatum culpa quis nostrum, laudantium assumenda praesentium explicabo accusamus consectetur, maiores nulla ea pariatur! Harum.
 				
 						///-Descripción de producto
-					div#size-guide.tab
+					div#size-guide.tab-pane(role="tabpanel")
 						//tabla de medidas
 						div.table-responsive
 							table.table
@@ -141,11 +152,11 @@ block content
 									td
 
 						///-tabla de medidas
-					div#shipping.tab
+					div#shipping.tab-pane(role="tabpanel")
 
 						//Información de envío
 						p.
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus sapiente facere ut, dolorum ab eaque quisquam sequi. Ipsam molestiae aperiam sequi accusamus magnam quibusdam, temporibus minus, fuga beatae magni.
+							Lorem asdf ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus sapiente facere ut, dolorum ab eaque quisquam sequi. Ipsam molestiae aperiam sequi accusamus magnam quibusdam, temporibus minus, fuga beatae magni.
 
 						///-Información de envío
 
@@ -177,9 +188,5 @@ block content
 
 					a.btn.btn-large(href="#") Compra rápida
 
-
-
-
-
-
 block Scripts
+	script(src="js/saha.producto.js")

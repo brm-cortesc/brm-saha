@@ -1,3 +1,47 @@
+.nav-tabs
+	border none
+	margin 1rem auto
+	
+	&>li.active>a,
+	&>.nav-tabs>li.active>a:focus,
+	&>.nav-tabs>li.active>a:hover
+		border-radius 0
+
+		
+	li
+		border-radius 0
+		&:nth-of-type(2)
+			border-left 1px solid $Gris
+			border-right @border-left
+			
+		a
+			border none
+			color $Gris
+			margin 0
+			padding 1rem 1.5rem
+			text-transform uppercase
+		
+		&:hover, &:active, &:focus
+			background-color transparent
+			
+			a
+				background-color transparent !important
+				border none !important
+				color #000
+				font-weight $Normal
+				
+		&.active
+			a
+				border none
+				color #000
+				font-weight $Normal
+
+			&:hover
+				a
+					border none !important
+					color #000 !important
+					font-weight $Normal
+
 .tabs
 	list-style-type none
 	margin 1rem auto
@@ -20,16 +64,16 @@
 			
 		&.active
 			a
+				border none 
+				color #000
 				font-weight $Normal
 				pointer-events none
 				
 
 
 	&-content
-		.tab
-			display none
+		.tab-pane
 			font-size 1.2rem
-			opacity 0
 			transition opacity 0.3s ease-in-out
 			
 			p 
@@ -37,6 +81,6 @@
 				text-align-last left
 			
 
-			&.active
-				display block
-				opacity 0.99
+			// &.active
+			// 	display block
+			// 	opacity 0.99
