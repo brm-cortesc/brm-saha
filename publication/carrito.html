@@ -126,144 +126,138 @@
     </div>
   </header>
   <!--/-Header-->
-  <section class="container-fluid container-product">
+  <section class="container-fluid">
+    <h1>Carrito de compras</h1>
     <div class="row">
-      <!--Producto-->
-      <div class="producto">
-        <!--Selector de modelo-->
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-          <div class="slider slider-vista" data-producto="producto">
-            <div class="slide"><a href="images/producto-1.jpg"><img src="images/vista-1.jpg"/></a></div>
-            <div class="slide"><a href="images/producto-2.jpg"><img src="images/vista-2.jpg"/></a></div>
-            <div class="slide"><a href="images/producto-3.jpg"><img src="images/vista-3.jpg"/></a></div>
-            <div class="slide"><a href="images/producto-4.jpg"><img src="images/vista-4.jpg"/></a></div>
-          </div>
+      <!--Lista de productos-->
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-carrito">
+        <div class="table-responsive table-carrito">
+          <table class="table">
+            <thead>
+              <tr>
+                <th colspan="3">item</th>
+                <th>precio</th>
+                <th>cant.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="middle">
+                <td><a class="glyphicon glyphicon-edit" href="#"></a><a class="glyphicon glyphicon-remove" href="#"></a></td>
+                <td><img class="img-responsive" src="images/vista-1.jpg" title="producto" alt="producto"/>
+                </td>
+                <td>
+                  <p>Ruffle Multiwearable One-piece</p>
+                  <p>Ref. 17E10</p>
+                  <p>Color: Blue and fuchsia tulip print</p>
+                  <p>Fit: Moderate coverage </p>
+                </td>
+                <td>$80.0000</td>
+                <td>
+                  <!--Cantidad de productos-->
+                  <div class="cantidad">
+                    <input type="text" maxlength="2" placeholder="0">
+                    <div class="controls">
+                      <button class="controls-add" type="button"><i class="glyphicon glyphicon-triangle-top"></i></button>
+                      <button class="controls-remove" type="button"><i class="glyphicon glyphicon-triangle-bottom"></i></button>
+                    </div>
+                  </div>
+                  <!--/-Cantidad de productos-->
+                </td>
+              </tr>
+              <tr valign="middle">
+                <td><a class="glyphicon glyphicon-edit" href="#"></a><a class="glyphicon glyphicon-remove" href="#"></a></td>
+                <td><img class="img-responsive" src="images/vista-1.jpg" title="producto" alt="producto"/>
+                </td>
+                <td>
+                  <p>Ruffle Multiwearable One-piece</p>
+                  <p>Ref. 17E11</p>
+                  <p>Color: Blue and fuchsia tulip print</p>
+                  <p>Fit: Moderate coverage </p>
+                </td>
+                <td>$80.0000</td>
+                <td>
+                  <!--Cantidad de productos-->
+                  <div class="cantidad">
+                    <input type="text" maxlength="2" placeholder="0">
+                    <div class="controls">
+                      <button class="controls-add" type="button"><i class="glyphicon glyphicon-triangle-top"></i></button>
+                      <button class="controls-remove" type="button"><i class="glyphicon glyphicon-triangle-bottom"></i></button>
+                    </div>
+                  </div>
+                  <!--/-Cantidad de productos-->
+                </td>
+              </tr>
+              <tr valign="middle">
+                <td><a class="glyphicon glyphicon-edit" href="#"></a><a class="glyphicon glyphicon-remove" href="#"></a></td>
+                <td><img class="img-responsive" src="images/vista-1.jpg" title="producto" alt="producto"/>
+                </td>
+                <td>
+                  <p>Ruffle Multiwearable One-piece</p>
+                  <p>Ref. 17E12</p>
+                  <p>Color: Blue and fuchsia tulip print</p>
+                  <p>Fit: Moderate coverage </p>
+                </td>
+                <td>$80.0000</td>
+                <td>
+                  <!--Cantidad de productos-->
+                  <div class="cantidad">
+                    <input type="text" maxlength="2" placeholder="0">
+                    <div class="controls">
+                      <button class="controls-add" type="button"><i class="glyphicon glyphicon-triangle-top"></i></button>
+                      <button class="controls-remove" type="button"><i class="glyphicon glyphicon-triangle-bottom"></i></button>
+                    </div>
+                  </div>
+                  <!--/-Cantidad de productos-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <!--/-Selector de modelo-->
-        <!--Vista modelo grande-->
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-img-big"><img class="img-responsive img-producto-top" src="images/producto-1.jpg" id="producto"/>
+        <div class="clearfix"></div>
+        <h2>Te puede interesar</h2>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-related"><img class="img-responsive" src="images/related.jpg"/>
+          <div class="product-text">
+            <h3>Bottom</h3>
+            <p>REF. 123456789</p>
+          </div>
+          <h3 class="product-price">$99.999</h3><a class="btn btn-large" href="#">Compra rápida</a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-related"><img class="img-responsive" src="images/related.jpg"/>
+          <div class="product-text">
+            <h3>Bottom</h3>
+            <p>REF. 123456789</p>
+          </div>
+          <h3 class="product-price">$99.999</h3><a class="btn btn-large" href="#">Compra rápida</a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-related"><img class="img-responsive" src="images/related.jpg"/>
+          <div class="product-text">
+            <h3>Bottom</h3>
+            <p>REF. 123456789</p>
+          </div>
+          <h3 class="product-price">$99.999</h3><a class="btn btn-large" href="#">Compra rápida</a>
         </div>
       </div>
-      <!--/-Producto-->
-      <!--/-Vista modelo grande-->
-      <!--Opciones de producto-->
-      <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5 col-lg-offset-1 col-md-offset-0">
-        <h2>Top</h2>
-        <h3 class="ref">123456789</h3>
-        <h3 class="price">$999.999</h3>
-        <!--Talla-->
-        <h4>Size</h4>
-        <div class="size"><a class="btn btn-size" href="#" data-size="s">S</a><a class="btn btn-size" href="#" data-size="m">M</a><a class="btn btn-size" href="#" data-size="l">L</a><a class="btn btn-size" href="#" data-size="xl">XL</a></div>
-        <!--/-Talla-->
-        <!--Cantidad de productos-->
-        <div class="cantidad">
-          <input type="text" maxlength="2" placeholder="0">
-          <div class="controls">
-            <button class="controls-add" type="button"><i class="glyphicon glyphicon-triangle-top"></i></button>
-            <button class="controls-remove" type="button"><i class="glyphicon glyphicon-triangle-bottom"></i></button>
+      <!--/-Lista de productos-->
+      <!--Compra total-->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-total">
+        <div class="container-orden">
+          <h2>Su orden</h2>
+          <div class="subtotal">
+            <p>subtotal</p>
+            <p class="valor">$999999</p>
           </div>
+          <div class="total">
+            <p>subtotal</p>
+            <p class="valor">$999999</p>
+          </div><a class="btn btn-go-checkout" id="go-checkout" href="#">Pagar</a><span>o</span><a class="btn btn-paypal" id="paypal" href="#">Pagar con<img src="images/paypal.svg" title="Paypal" alt="Paypal" width="90"/></a>
         </div>
-        <!--/-Cantidad de productos-->
-        <!--botones--><a class="btn btn-add-cart" href="#">Añadir <i class="glyphicon glyphicon-shopping-cart"></i></a><a class="btn btn-comparar" href="#"><i class="icon icon-comparar"></i></a><a class="btn btn-love" href="#"><i class="icon icon-love"></i></a>
-        <!--/-botones	-->
-        <h2>Bottom</h2>
-        <h3 class="ref">123456789</h3>
-        <h3 class="price">$999.999</h3>
-        <!--Talla-->
-        <h4>Size</h4>
-        <div class="size"><a class="btn btn-size" href="#" data-size="s">S</a><a class="btn btn-size" href="#" data-size="m">M</a><a class="btn btn-size" href="#" data-size="l">L</a><a class="btn btn-size" href="#" data-size="xl">XL</a></div>
-        <!--/-Talla-->
-        <!--Cantidad de productos-->
-        <div class="cantidad">
-          <input class="form-control" type="text" maxlength="2" placeholder="0">
-          <div class="controls">
-            <button class="controls-add" type="button"><i class="glyphicon glyphicon-triangle-top"></i></button>
-            <button class="controls-remove" type="button"><i class="glyphicon glyphicon-triangle-bottom"></i></button>
-          </div>
-        </div>
-        <!--/-Cantidad de productos-->
-        <!--botones--><a class="btn btn-add-cart" href="#">Add to cart	</a><a class="btn btn-comparar" href="#"><i class="icon icon-comparar"></i></a><a class="btn btn-love" href="#"><i class="icon icon-love"></i></a>
-        <!--/-botones-->
-        <!--Colores-->
-        <div class="colores">
-          <h4>color</h4>
-          <button class="btn btn-color" type="button"></button>
-          <button class="btn btn-color" type="button"></button>
-        </div>
-        <!--/-Colores-->
-        <!--Tabs de texto-->
-        <ul class="nav nav-tabs tab tab-select" role="tablist">
-          <li class="active" role="presentation"><a href="#descripcion" aria-controls="descripcion" role="tab" data-toggle="tab">Descripción</a></li>
-          <li role="presentation"><a href="#size-guide" aria-controls="size-guide" role="tab" data-toggle="tab">Guía de medidas</a></li>
-          <li role="presentation"><a href="#shipping" aria-controls="shipping" role="tab" data-toggle="tab">Envío </a></li>
-        </ul>
-        <!--/-Tabs de texto-->
-        <!--Contenido de tabs-->
-        <div class="tab-content">
-          <div class="tab-pane active" id="descripcion" role="tabpanel">
-            <!--Descripción de producto-->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, numquam fugit porro ullam ab, quibusdam voluptatum culpa quis nostrum, laudantium assumenda praesentium explicabo accusamus consectetur, maiores nulla ea pariatur! Harum.
-              
-            </p>
-            <!--/-Descripción de producto-->
-          </div>
-          <div class="tab-pane" id="size-guide" role="tabpanel">
-            <!--tabla de medidas-->
-            <div class="table-responsive">
-              <table class="table">
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </table>
-            </div>
-            <!--/-tabla de medidas-->
-          </div>
-          <div class="tab-pane" id="shipping" role="tabpanel">
-            <!--Información de envío-->
-            <p>
-              Lorem asdf ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus sapiente facere ut, dolorum ab eaque quisquam sequi. Ipsam molestiae aperiam sequi accusamus magnam quibusdam, temporibus minus, fuga beatae magni.
-              
-            </p>
-            <!--/-Información de envío-->
-          </div>
-          <!--/-Contenido de tabs-->
-        </div>
-        <!--Social Share-->
-        <div class="social-share"><a class="share share-fb" href="#"></a><a class="share share-pinterest" href="#"></a><a class="share share-instagram" href="#"></a></div>
-        <!--/-Social Share-->
+        <form id="descuentos" method="">
+          <label for="coDscto">Código de descuento</label>
+          <input class="form-control" type="text" name="coDscto" id="coDscto">
+          <input class="btn" type="submit" value="Aplicar Código">
+        </form>
       </div>
-      <!--/-Opciones de producto-->
-      <div class="clearfix"></div>
-      <h2 class="divisor">complete the look</h2>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-related"><img class="img-responsive" src="images/related.jpg"/>
-        <div class="product-text">
-          <h3>Bottom</h3>
-          <p>REF. 123456789</p>
-        </div>
-        <h3 class="product-price">$99.999</h3><a class="btn btn-large" href="#">Compra rápida</a>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-related"><img class="img-responsive" src="images/related.jpg"/>
-        <div class="product-text">
-          <h3>Bottom</h3>
-          <p>REF. 123456789</p>
-        </div>
-        <h3 class="product-price">$99.999</h3><a class="btn btn-large" href="#">Compra rápida</a>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-related"><img class="img-responsive" src="images/related.jpg"/>
-        <div class="product-text">
-          <h3>Bottom</h3>
-          <p>REF. 123456789</p>
-        </div>
-        <h3 class="product-price">$99.999</h3><a class="btn btn-large" href="#">Compra rápida</a>
-      </div>
+      <!--/-Compra total-->
     </div>
   </section>
   <!--Footer-->
@@ -307,5 +301,4 @@
   <script src="js/libs/jquery.bxslider.min.js"></script>
   <script src="js/libs/velocity.min.js"></script>
   <script src="js/saha.init.js"></script>
-  <script src="js/saha.producto.js"></script>
 </body></html>

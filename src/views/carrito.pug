@@ -1,0 +1,108 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "Carrito";
+	title Saha - Tienda en línea
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Saha - Tienda en línea" )
+
+block content
+	section.container-fluid
+		h1 Carrito de compras
+		
+		div.row
+			//Lista de productos
+			div.col-lg-8.col-md-8.col-sm-8.col-xs-12.col-carrito
+				
+				div.table-responsive.table-carrito
+					table.table
+						thead
+							tr
+								th(colspan="3") item
+								th precio
+								th cant.
+
+						tbody
+							
+							-for(x = 0; x < 3; x++)
+								tr(valign="middle")
+									td
+										a.glyphicon.glyphicon-edit(href="#")
+										a.glyphicon.glyphicon-remove(href="#")
+									td
+										+image('vista-1.jpg', 'producto')(class="img-responsive")
+
+									td
+										p Ruffle Multiwearable One-piece
+										p Ref. 17E1#{x}
+										p Color: Blue and fuchsia tulip print
+										p Fit: Moderate coverage 
+
+									td $80.0000
+
+									td
+										//Cantidad de productos
+										div.cantidad
+											input(type="text" maxlength="2" placeholder="0")
+
+											div.controls
+												button.controls-add(type="button"): i.glyphicon.glyphicon-triangle-top
+												button.controls-remove(type="button"): i.glyphicon.glyphicon-triangle-bottom
+											
+										///-Cantidad de productos
+					
+				
+				div.clearfix
+
+				h2 Te puede interesar
+
+				-for(x = 0; x < 3; x ++)
+					div.col-lg-4.col-md-4.col-sm-4.col-xs-4.col-related
+						+image('related.jpg')(class="img-responsive")
+
+						div.product-text
+							h3 Bottom
+							p REF. 123456789
+						h3.product-price $99.999
+
+						a.btn.btn-large(href="#") Compra rápida
+
+			///-Lista de productos
+			//Compra total
+			div.col-lg-4.col-md-4.col-sm-4.col-xs-12.col-total
+				
+				div.container-orden
+					h2 Su orden
+
+					div.subtotal
+						p subtotal
+						p.valor $999999
+					
+
+					div.total
+						p subtotal
+						p.valor $999999
+
+
+					a#go-checkout.btn.btn-go-checkout(href="#") Pagar
+					
+					span o
+
+					a#paypal.btn.btn-paypal(href="#")
+						| Pagar con
+						+image('paypal.svg', 'Paypal')(width="90")
+
+				form#descuentos(method="")
+					label(for="coDscto") Código de descuento
+					input.form-control(type="text", name="coDscto", id="coDscto")
+
+					input.btn(type="submit", value="Aplicar Código")
+
+			///-Compra total
+
+
+
