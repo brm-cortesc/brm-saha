@@ -31,75 +31,11 @@
 			
 			&:active
 				color $Verde
-	
-.container	
-	&-devoluciones
-		clear both
-		margin-top 1.5rem !important
-		
-		.col-lg-4
-			background-color lighten($Gris, 95%)
-			padding 2rem
-			text-align center
-			
-			&:nth-of-type(2)
-				background-color lighten($Gris, 80%)
-				
 
-	&-orden
-		background-color lighten($Gris, 95%)
-		padding 1rem
-		
-		h2
-			margin-top 0			
-
-	&-home
-		article			
-			a
-				background-color $Verde
-				display block
-				
-				&:hover
-					img
-						mix-blend-mode hard-light
-						opacity 0.5
-				
-			&:nth-of-type(2)
-				a
-					&:nth-of-type(1)
-						margin-bottom 2rem
-				
-			&:nth-of-type(3)
-				margin-top 1rem
-		img
-			height auto
-			max-width 100%
-			transitionBase(0.3s)
-			width 100%
-			
-
-	&-product
-		h2
-			margin-bottom 0rem
-			margin-top 0.5rem
-			
-		h4
-			font-size 1.3rem
-			font-weight $Light
-			
-		.ref, .price
-			margin 0
-			font-weight $Light
-			
-
-		.row-top
-			margin-bottom 2rem
-			
+//columns
 .col
 	
-	&-carrito
-		
-			
+	&-carrito			
 		.cantidad
 			display block
 			margin 1rem auto
@@ -113,7 +49,14 @@
 			&:hover
 				color $Verde
 				text-decoration none
+				
 
+	&-datos
+		path('bg-datos.jpg')
+		background-size cover
+		background-repeat no-repeat
+		padding 5rem 2rem 8rem
+		
 	&-highlights
 		margin-bottom 1rem
 		margin-top @margin-bottom
@@ -187,7 +130,98 @@
 
 .colores
 	margin-top 2rem
-	
+
+
+//containers
+.container	
+	&-datos
+		background-color lighten($Gris, 95%)
+		color lighten($Gris, 40%)
+		margin 0 auto 4rem
+		max-width 80%
+		padding 2.5rem 2rem
+		
+		a
+			color lighten($Gris, 40%)
+			display block
+			margin 0
+			
+			&:hover
+				color $Verde
+		
+		h3
+			font-size 1.7rem
+			margin 2rem 0 0
+			text-transform uppercase
+			
+		p
+			font-size 1.3rem
+			margin 0
+			text-transform uppercase
+		
+
+	&-devoluciones
+		clear both
+		margin-top 1.5rem !important
+		
+		.col-lg-4
+			background-color lighten($Gris, 95%)
+			padding 2rem
+			text-align center
+			
+			&:nth-of-type(2)
+				background-color lighten($Gris, 80%)
+				
+
+	&-orden
+		background-color lighten($Gris, 95%)
+		padding 1rem
+		
+		h2
+			margin-top 0			
+
+	&-home
+		article			
+			a
+				background-color $Verde
+				display block
+				
+				&:hover
+					img
+						mix-blend-mode hard-light
+						opacity 0.5
+				
+			&:nth-of-type(2)
+				a
+					&:nth-of-type(1)
+						margin-bottom 2rem
+				
+			&:nth-of-type(3)
+				margin-top 1rem
+		img
+			height auto
+			max-width 100%
+			transitionBase(0.3s)
+			width 100%
+			
+
+	&-product
+		h2
+			margin-bottom 0rem
+			margin-top 0.5rem
+			
+		h4
+			font-size 1.3rem
+			font-weight $Light
+			
+		.ref, .price
+			margin 0
+			font-weight $Light
+			
+
+		.row-top
+			margin-bottom 2rem
+			
 
 .divisor
 	background-color lighten($Gris, 60%)

@@ -1,0 +1,100 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "Contacto";
+	title Saha - Tienda en línea
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Saha - Tienda en línea" )
+
+block content
+	section.container-fluid
+		h1 Contacto
+		
+		div.row
+			//Formulario de contacto
+			form#contacto.col-lg-8.col-md-8.col-sm-8.col-xs-12(method="#")
+				p Todos los campos son obligatorios
+
+				//Asunto
+				div.form-group
+					label(for="asunto") asunto
+					select.form-control(name="asunto", id="asunto")
+						option(value="")
+						option(value="") este
+						option(value="") otro
+				///-Asunto
+
+
+				//Nombre
+				div.form-group
+					label(for="nombres") nombres
+					input.form-control(type="text", id="nombres", name="nombres")
+				///-Nombre
+
+				//email
+				div.form-group
+					label(for="email") email
+					input.form-control(type="email", id="email", name="email")
+				///-email
+
+				//Teléfono
+				div.form-group
+					label(for="phone") teléfono
+					input.form-control(type="number", name="phone", id="phone", min="0", maxlenght="10")
+				///-Teléfono
+
+				//País
+				div.form-group
+					label(for="pais") país
+					select.form-control(name="pais", id="pais")
+						option(value="") 
+						option(value="") este
+						option(value="") otro
+				///-País
+
+				//Ciudad
+				div.form-group
+					label(for="ciudad") ciudad
+					select.form-control(name="ciudad", id="ciudad")
+						option(value="") 
+						option(value="") este
+						option(value="") otro
+				///-Ciudad
+
+				//Comentario
+				div.form-group
+					label(for="comentario") comentario
+					textarea.form-control(name="comentario", id="comentario")
+				///-Comentario
+
+				button#submit-contact.btn.btn-large(type="submit") enviar
+
+
+			///-Formulario de contacto
+
+			//Dirección y datos de contacto
+			article.col-lg-4.col-md-4.col-sm-4.col-xs-12.col-datos
+				div.container-datos
+					h3 oficinas
+					p Cra 49 #104-16
+					
+					h3 PBX
+					p (571) 6171598 
+					p (571) 2562776
+
+					h3 USA
+					p (786)4670205
+
+					a(href="mailto:info@sahaswimwear.com" target="_blank") info@sahaswimwear.com
+
+					h3 Bogotá, Colombia
+
+
+			///-Dirección y datos de contacto
+
+block Scripts
+	script(src="js/saha.contacto.js")

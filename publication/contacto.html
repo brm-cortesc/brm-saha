@@ -126,15 +126,85 @@
     </div>
   </header>
   <!--/-Header-->
-  <!--404-->
   <section class="container-fluid">
-    <div class="row row-404">
-      <h1 class="text-404"><img src="images/404.png" title="Contenido no encontrado" alt="Contenido no encontrado"/>Contenido no encontrado
-      </h1>
-      <h2 class="text-center">La página que está buscando no existe o fue borrada</h2><a class="btn btn-large btn-404" href="index.html">ir al home</a>
+    <h1>Contacto</h1>
+    <div class="row">
+      <!--Formulario de contacto-->
+      <form class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="contacto" method="#">
+        <p>Todos los campos son obligatorios</p>
+        <!--Asunto-->
+        <div class="form-group">
+          <label for="asunto">asunto</label>
+          <select class="form-control" name="asunto" id="asunto">
+            <option value=""></option>
+            <option value="">este</option>
+            <option value="">otro</option>
+          </select>
+        </div>
+        <!--/-Asunto-->
+        <!--Nombre-->
+        <div class="form-group">
+          <label for="nombres">nombres</label>
+          <input class="form-control" type="text" id="nombres" name="nombres">
+        </div>
+        <!--/-Nombre-->
+        <!--email-->
+        <div class="form-group">
+          <label for="email">email</label>
+          <input class="form-control" type="email" id="email" name="email">
+        </div>
+        <!--/-email-->
+        <!--Teléfono-->
+        <div class="form-group">
+          <label for="phone">teléfono</label>
+          <input class="form-control" type="number" name="phone" id="phone" min="0" maxlenght="10">
+        </div>
+        <!--/-Teléfono-->
+        <!--País-->
+        <div class="form-group">
+          <label for="pais">país</label>
+          <select class="form-control" name="pais" id="pais">
+            <option value=""> </option>
+            <option value="">este</option>
+            <option value="">otro</option>
+          </select>
+        </div>
+        <!--/-País-->
+        <!--Ciudad-->
+        <div class="form-group">
+          <label for="ciudad">ciudad</label>
+          <select class="form-control" name="ciudad" id="ciudad">
+            <option value=""> </option>
+            <option value="">este</option>
+            <option value="">otro</option>
+          </select>
+        </div>
+        <!--/-Ciudad-->
+        <!--Comentario-->
+        <div class="form-group">
+          <label for="comentario">comentario</label>
+          <textarea class="form-control" name="comentario" id="comentario"></textarea>
+        </div>
+        <!--/-Comentario-->
+        <button class="btn btn-large" id="submit-contact" type="submit">enviar</button>
+      </form>
+      <!--/-Formulario de contacto-->
+      <!--Dirección y datos de contacto-->
+      <article class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-datos">
+        <div class="container-datos">
+          <h3>oficinas</h3>
+          <p>Cra 49 #104-16</p>
+          <h3>PBX</h3>
+          <p>(571) 6171598 </p>
+          <p>(571) 2562776</p>
+          <h3>USA</h3>
+          <p>(786)4670205</p><a href="mailto:info@sahaswimwear.com" target="_blank">info@sahaswimwear.com</a>
+          <h3>Bogotá, Colombia</h3>
+        </div>
+      </article>
+      <!--/-Dirección y datos de contacto-->
     </div>
   </section>
-  <!--/-404-->
   <!--Footer-->
   <footer class="container-fluid">
     <div class="row">
@@ -176,4 +246,5 @@
   <script src="js/libs/jquery.bxslider.min.js"></script>
   <script src="js/libs/velocity.min.js"></script>
   <script src="js/saha.init.js"></script>
+  <script src="js/saha.contacto.js"></script>
 </body></html>

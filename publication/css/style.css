@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Nov 21 2016 15:50:55 GMT-0500 (COT)
+ *Mon Nov 21 2016 17:45:29 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -718,6 +718,62 @@ footer .logo {
   max-width: 20rem;
   vertical-align: middle;
 }
+#contacto {
+  margin-bottom: 2rem;
+}
+#contacto label {
+  color: #7a7a7a;
+  cursor: pointer;
+  text-transform: uppercase;
+  -o-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+#contacto select.form-control {
+  border-radius: 0 !important;
+  padding: 0;
+}
+#contacto textarea {
+  resize: none;
+  height: 15rem;
+  width: 100%;
+}
+#contacto .form-control {
+  background-color: transparent;
+  -o-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+  z-index: 2;
+}
+#contacto .form-control:focus {
+  background-color: #fff;
+  border-color: #14aab3;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#contacto .form-group {
+  margin: 0 0 2rem;
+  position: relative;
+}
+#contacto .form-group label {
+  position: absolute;
+  left: 2rem;
+  top: 0.7rem;
+  z-index: 0;
+}
+#contacto .form-group.active label {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+#contacto .form-group.active .form-control {
+  background-color: #fff;
+}
 #descuentos {
   margin: 1rem 0;
   position: relative;
@@ -747,6 +803,21 @@ footer .logo {
   border-color: #7a7a7a;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.mensaje-caso {
+  background-color: transparent;
+  color: #a94442 !important;
+  font-size: 1.3rem;
+}
+.mensaje-sistema p {
+  background-color: rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(255,255,255,0.75);
+  border-top: 1px solid rgba(255,255,255,0.75);
+  color: #a94442 !important;
+  font-size: 1.6rem !important;
+  margin: 1rem auto !important;
+  padding: 2rem 0.6rem;
+  max-width: 100% !important;
 }
 .form-control {
   border-radius: 0;
@@ -788,67 +859,6 @@ footer .logo {
 .cantidad .controls button:active {
   color: #14aab3;
 }
-.container-devoluciones {
-  clear: both;
-  margin-top: 1.5rem !important;
-}
-.container-devoluciones .col-lg-4 {
-  background-color: #f8f8f8;
-  padding: 2rem;
-  text-align: center;
-}
-.container-devoluciones .col-lg-4:nth-of-type(2) {
-  background-color: #e4e4e4;
-}
-.container-orden {
-  background-color: #f8f8f8;
-  padding: 1rem;
-}
-.container-orden h2 {
-  margin-top: 0;
-}
-.container-home article a {
-  background-color: #14aab3;
-  display: block;
-}
-.container-home article a:hover img {
-  mix-blend-mode: hard-light;
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-}
-.container-home article:nth-of-type(2) a:nth-of-type(1) {
-  margin-bottom: 2rem;
-}
-.container-home article:nth-of-type(3) {
-  margin-top: 1rem;
-}
-.container-home img {
-  height: auto;
-  max-width: 100%;
-  -o-transition: all ease-in-out 0.3s;
-  -ms-transition: all ease-in-out 0.3s;
-  -webkit-transition: all ease-in-out 0.3s;
-  -moz-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-  width: 100%;
-}
-.container-product h2 {
-  margin-bottom: 0rem;
-  margin-top: 0.5rem;
-}
-.container-product h4 {
-  font-size: 1.3rem;
-  font-weight: 300;
-}
-.container-product .ref,
-.container-product .price {
-  margin: 0;
-  font-weight: 300;
-}
-.container-product .row-top {
-  margin-bottom: 2rem;
-}
 .col-carrito .cantidad {
   display: block;
   margin: 1rem auto;
@@ -862,6 +872,14 @@ footer .logo {
 .col-carrito .item-handler:hover {
   color: #14aab3;
   text-decoration: none;
+}
+.col-datos {
+  background-image: url("../images/bg-datos.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem 2rem 8rem;
 }
 .col-highlights {
   margin-bottom: 1rem;
@@ -932,6 +950,92 @@ footer .logo {
 }
 .colores {
   margin-top: 2rem;
+}
+.container-datos {
+  background-color: #f8f8f8;
+  color: #afafaf;
+  margin: 0 auto 4rem;
+  max-width: 80%;
+  padding: 2.5rem 2rem;
+}
+.container-datos a {
+  color: #afafaf;
+  display: block;
+  margin: 0;
+}
+.container-datos a:hover {
+  color: #14aab3;
+}
+.container-datos h3 {
+  font-size: 1.7rem;
+  margin: 2rem 0 0;
+  text-transform: uppercase;
+}
+.container-datos p {
+  font-size: 1.3rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+.container-devoluciones {
+  clear: both;
+  margin-top: 1.5rem !important;
+}
+.container-devoluciones .col-lg-4 {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  text-align: center;
+}
+.container-devoluciones .col-lg-4:nth-of-type(2) {
+  background-color: #e4e4e4;
+}
+.container-orden {
+  background-color: #f8f8f8;
+  padding: 1rem;
+}
+.container-orden h2 {
+  margin-top: 0;
+}
+.container-home article a {
+  background-color: #14aab3;
+  display: block;
+}
+.container-home article a:hover img {
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.container-home article:nth-of-type(2) a:nth-of-type(1) {
+  margin-bottom: 2rem;
+}
+.container-home article:nth-of-type(3) {
+  margin-top: 1rem;
+}
+.container-home img {
+  height: auto;
+  max-width: 100%;
+  -o-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  width: 100%;
+}
+.container-product h2 {
+  margin-bottom: 0rem;
+  margin-top: 0.5rem;
+}
+.container-product h4 {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.container-product .ref,
+.container-product .price {
+  margin: 0;
+  font-weight: 300;
+}
+.container-product .row-top {
+  margin-bottom: 2rem;
 }
 .divisor {
   background-color: #cacaca;
@@ -1012,12 +1116,6 @@ footer .logo {
 }
 .share-pinterest {
   background-image: url("../images/share-pin.svg");
-}
-.bx-wrapper .bx-viewport {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 0;
-  margin: 2rem 0 0;
 }
 .container-product .bx-wrapper .bx-controls-direction a {
   background: none;
