@@ -122,6 +122,23 @@ jQuery(document).ready ($) ->
 
 			return
 
-	
+	###estado activo de los inputs###
+	$('input.form-control, select.form-control, textarea.form-control')
+		.focusin ->
+			$(@).parent().addClass('active')
+
+			return
+
+		.focusout ->
+			self = $(@)
+			
+			if $(@).val() != ''
+				self.parent().addClass('active')
+
+			else
+				self.parent().removeClass('active')
+
+			return
+
 
 	return

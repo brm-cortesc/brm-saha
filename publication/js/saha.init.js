@@ -90,6 +90,19 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     $('.menu').toggleClass('active');
   });
+
+  /*estado activo de los inputs */
+  $('input.form-control, select.form-control, textarea.form-control').focusin(function() {
+    $(this).parent().addClass('active');
+  }).focusout(function() {
+    var self;
+    self = $(this);
+    if ($(this).val() !== '') {
+      self.parent().addClass('active');
+    } else {
+      self.parent().removeClass('active');
+    }
+  });
 });
 
 //# sourceMappingURL=../maps/saha.init.js.map

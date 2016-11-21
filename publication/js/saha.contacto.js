@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
       },
       comentario: {
         required: true,
-        minlength: 250
+        minlength: 100
       }
     },
 
@@ -54,8 +54,8 @@ jQuery(document).ready(function($) {
       },
       phone: {
         required: 'debe ingresar un tel&eacute;fono de contacto',
-        minlength: 'N&uacute;mero no v&aacute;lido;',
-        maxlength: 'N&uacute;mero no v&aacute;lido;',
+        minlength: 'N&uacute;mero no v&aacute;lido',
+        maxlength: 'N&uacute;mero no v&aacute;lido',
         digits: 'Debe ingresar solo digitos'
       },
       pais: {

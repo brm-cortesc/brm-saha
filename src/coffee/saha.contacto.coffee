@@ -38,7 +38,7 @@ jQuery(document).ready ($) ->
 
 			comentario:
 				required: true
-				minlength:250
+				minlength:100
 
 
 		###Mensajes del sistema####
@@ -56,8 +56,8 @@ jQuery(document).ready ($) ->
 
 			phone:
 				required:'debe ingresar un tel&eacute;fono de contacto'
-				minlength:'N&uacute;mero no v&aacute;lido;'
-				maxlength: 'N&uacute;mero no v&aacute;lido;'
+				minlength:'N&uacute;mero no v&aacute;lido'
+				maxlength: 'N&uacute;mero no v&aacute;lido'
 				digits:'Debe ingresar solo digitos'
 
 			pais:
