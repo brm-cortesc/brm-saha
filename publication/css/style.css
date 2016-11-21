@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Fri Nov 18 2016 17:18:39 GMT-0500 (COT)
+ *Mon Nov 21 2016 15:50:55 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -63,6 +63,7 @@ input,
 select,
 textarea {
   border: none;
+  border-radius: 0;
 }
 input:focus,
 select:focus,
@@ -70,10 +71,25 @@ textarea:focus {
   outline: 0;
   outline: none;
 }
+label {
+  font-weight: 300;
+}
 .row {
   margin: 0 auto;
   max-width: 110rem;
   position: relative;
+}
+.row-404 h1 {
+  border-bottom: 2px solid #14aab3;
+  color: #14aab3;
+  padding: 1rem 0;
+}
+.row-404 h1 img {
+  margin-right: 2rem;
+}
+.row-404 h2 {
+  margin: 1rem auto 3rem;
+  max-width: 58.2rem;
 }
 .row .col-lg-1,
 .row .col-md-1,
@@ -235,6 +251,10 @@ textarea:focus {
 .btn:hover {
   background-color: #14aab3;
 }
+.btn-404 {
+  margin: 1rem auto;
+  max-width: 34rem;
+}
 .btn-add-cart {
   font-size: 2.4rem;
   display: inline-block;
@@ -249,6 +269,13 @@ textarea:focus {
   padding: 0.5rem;
   margin: 0 1rem;
 }
+.btn-color {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.btn-color:hover {
+  background-color: transparent;
+}
 .btn-love {
   margin-left: 0;
 }
@@ -258,12 +285,20 @@ textarea:focus {
   text-align: center;
   width: 100%;
 }
-.btn-color {
-  height: 2.4rem;
-  width: 2.4rem;
+.btn-go-checkout {
+  font-size: 1.8rem;
+  max-width: 18rem;
 }
-.btn-color:hover {
-  background-color: transparent;
+.btn-paypal {
+  background-color: #cacaca;
+  color: #7a7a7a;
+  max-width: 23rem;
+}
+.btn-paypal img {
+  margin-left: 1rem;
+}
+.btn-paypal:hover {
+  background-color: #fff;
 }
 .btn-size {
   background-color: #fff;
@@ -683,6 +718,43 @@ footer .logo {
   max-width: 20rem;
   vertical-align: middle;
 }
+#descuentos {
+  margin: 1rem 0;
+  position: relative;
+}
+#descuentos label {
+  display: block;
+  left: 0.5rem;
+  position: absolute;
+  text-transform: capitalize;
+  top: 0.7rem;
+  z-index: -1;
+}
+#descuentos .btn,
+#descuentos .form-control {
+  display: inline-block;
+  vertical-align: middle;
+}
+#descuentos .btn {
+  width: 40%;
+}
+#descuentos .form-control {
+  background-color: transparent;
+  width: 54%;
+}
+#descuentos .form-control:focus {
+  background-color: #fff;
+  border-color: #7a7a7a;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control {
+  border-radius: 0;
+}
+.form-control:focus {
+  outline: 0 !important;
+  outline: none !important;
+}
 .cantidad,
 .size {
   display: inline-block;
@@ -729,7 +801,7 @@ footer .logo {
   background-color: #e4e4e4;
 }
 .container-orden {
-  background-color: #e4e4e4;
+  background-color: #f8f8f8;
   padding: 1rem;
 }
 .container-orden h2 {
@@ -777,6 +849,20 @@ footer .logo {
 .container-product .row-top {
   margin-bottom: 2rem;
 }
+.col-carrito .cantidad {
+  display: block;
+  margin: 1rem auto;
+  max-width: 40%;
+}
+.col-carrito .item-handler {
+  color: #7a7a7a;
+  font-size: 1.8rem;
+  margin: 4rem 0.2rem;
+}
+.col-carrito .item-handler:hover {
+  color: #14aab3;
+  text-decoration: none;
+}
 .col-highlights {
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -794,6 +880,40 @@ footer .logo {
   clear: both;
   content: '';
   display: table;
+}
+.col-total {
+  text-transform: uppercase;
+}
+.col-total .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.col-total p.text-center {
+  margin: 0.5rem 0;
+}
+.col-total .valor {
+  border-bottom: 1px solid #cacaca;
+  color: #afafaf;
+  font-size: 1.4rem;
+  line-height: 1;
+  margin: 1rem 0;
+  padding: 1rem 0rem;
+}
+.col-total .valor p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 49%;
+}
+.col-total .valor p:nth-of-type(2) {
+  text-align: right;
+}
+.col-total .valor-total {
+  border-width: 2px;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 .col-related .product-text,
 .col-related .product-price {
@@ -1031,7 +1151,7 @@ footer .logo {
   text-align-last: left;
 }
 .table thead tr {
-  background-color: #cacaca;
+  background-color: #f8f8f8;
 }
 .table thead tr td,
 .table thead tr th {

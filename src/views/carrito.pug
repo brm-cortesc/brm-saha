@@ -31,8 +31,8 @@ block content
 							-for(x = 0; x < 3; x++)
 								tr(valign="middle")
 									td
-										a.glyphicon.glyphicon-edit(href="#")
-										a.glyphicon.glyphicon-remove(href="#")
+										a.glyphicon.glyphicon-edit.item-handler(href="#")
+										a.glyphicon.glyphicon-remove.item-handler(href="#")
 									td
 										+image('vista-1.jpg', 'producto')(class="img-responsive")
 
@@ -78,25 +78,34 @@ block content
 				div.container-orden
 					h2 Su orden
 
-					div.subtotal
+					div.valor
 						p subtotal
-						p.valor $999999
-					
+						p.precio $999999
 
-					div.total
-						p subtotal
-						p.valor $999999
+
+					div.valor
+						p IVA
+						p.precio $999999
+
+					div.valor
+						p envío
+						p.precio $999999					
+
+					div.valor.valor-total
+						p total
+						p.precio $999999
 
 
 					a#go-checkout.btn.btn-go-checkout(href="#") Pagar
 					
-					span o
+					p.text-center o
 
 					a#paypal.btn.btn-paypal(href="#")
 						| Pagar con
 						+image('paypal.svg', 'Paypal')(width="90")
 
 				form#descuentos(method="")
+	
 					label(for="coDscto") Código de descuento
 					input.form-control(type="text", name="coDscto", id="coDscto")
 

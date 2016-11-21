@@ -1,0 +1,28 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "404";
+	title Saha - Tienda en línea
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Saha - Tienda en línea" )
+
+block content
+	//404
+	section.container-fluid
+		div.row.row-404
+			h1.text-404
+				+image('404.png', 'Contenido no encontrado')
+				| Contenido no encontrado
+
+
+			h2.text-center La página que está buscando no existe o fue borrada
+
+			a.btn.btn-large.btn-404 ir al home
+
+
+
+	///-404

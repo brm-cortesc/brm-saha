@@ -47,7 +47,7 @@
 				
 
 	&-orden
-		background-color lighten($Gris, 80%)
+		background-color lighten($Gris, 95%)
 		padding 1rem
 		
 		h2
@@ -96,6 +96,23 @@
 			margin-bottom 2rem
 			
 .col
+	
+	&-carrito
+		
+			
+		.cantidad
+			display block
+			margin 1rem auto
+			max-width 40%
+			
+		.item-handler
+			color $Gris
+			font-size 1.8rem
+			margin 4rem 0.2rem
+			
+			&:hover
+				color $Verde
+				text-decoration none
 
 	&-highlights
 		margin-bottom 1rem
@@ -114,7 +131,40 @@
 			clear both
 			content ''
 			display table
+	
+	&-total
+		text-transform uppercase
+		
+		.btn
+			display block
+			margin-left auto
+			margin-right @margin-left
+			
+		p.text-center
+			margin 0.5rem 0
+			
+		.valor
+			border-bottom 1px solid lighten($Gris, 60%)
+			color lighten($Gris, 40%)
+			font-size 1.4rem
+			line-height 1
+			margin 1rem 0
+			padding 1rem 0rem
+			
+			p
+				display inline-block
+				vertical-align middle
+				margin 0
+				padding 0
+				width 49%
+				
+				&:nth-of-type(2)
+					text-align right
 
+			&-total
+				border-width 2px
+				font-size 1.8rem
+				font-weight $Bold
 	
 	&-related
 

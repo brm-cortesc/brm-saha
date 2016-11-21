@@ -1,0 +1,36 @@
+#descuentos
+	margin 1rem 0
+	position relative
+	
+	label
+		display block
+		left 0.5rem
+		position absolute
+		text-transform capitalize
+		top 0.7rem
+		z-index -1
+		
+
+	.btn, .form-control
+		display inline-block
+		vertical-align middle
+	
+	.btn
+		width 40%
+
+	.form-control
+		background-color transparent
+		width 54%
+		
+		&:focus
+			background-color #fff
+			border-color $Gris
+			box-shadow none
+		
+.form
+	&-control
+		border-radius 0
+		
+		&:focus
+			outline 0 !important
+			outline none !important
