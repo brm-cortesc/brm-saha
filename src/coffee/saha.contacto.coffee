@@ -4,7 +4,7 @@ jQuery(document).ready ($) ->
 		@optional(element) or /^[a-z" "ñÑáéíóúÁÉÍÓÚ,.;]+$/i.test(value)
 
 	$('#contacto').validate
-		debug:true
+		# debug:true
 
 		###Contenedor de mensaje de error### 
 		errorElement: 'div'

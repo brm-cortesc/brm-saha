@@ -3,7 +3,6 @@ jQuery(document).ready(function($) {
     return this.optional(element) || /^[a-z" "ñÑáéíóúÁÉÍÓÚ,.;]+$/i.test(value);
   });
   $('#contacto').validate({
-    debug: true,
 
     /*Contenedor de mensaje de error */
     errorElement: 'div',
