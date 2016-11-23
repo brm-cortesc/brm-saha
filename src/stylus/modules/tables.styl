@@ -1,8 +1,31 @@
 .table
+	position relative
+	tbody
+		tr
+			border-bottom 1px solid $Gris
+			td
+				border-top none !important
+				line-height 1
+				position relative
+				
+				p
+					line-height 1
+					margin 0.5rem 0
 	thead
 		tr
 			background-color lighten($Gris, 95%)
+			
 			td,th
 				border none !important
+				padding 0.5rem !important
+				line-height 1 !important
 				text-align center
 				text-transform uppercase
+				vertical-align middle !important
+				
+
+	.remove
+		bottom 0.7rem
+		color $Gris
+		position absolute
+		right @bottom

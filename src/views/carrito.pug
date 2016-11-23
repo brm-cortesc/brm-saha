@@ -21,18 +21,17 @@ block content
 				div.table-responsive.table-carrito
 					table.table
 						thead
-							tr
-								th(colspan="3") item
-								th precio
-								th cant.
+							tr(valign="middle")
+								th(valign="middle") View
+								th(valign="middle") item
+								th(valign="middle") precio
+								th(valign="middle") cant.
+								th(valign="middle") precio total
 
 						tbody
 							
 							-for(x = 0; x < 3; x++)
 								tr(valign="middle")
-									td
-										a.glyphicon.glyphicon-edit.item-handler(href="#")
-										a.glyphicon.glyphicon-remove.item-handler(href="#")
 									td
 										+image('vista-1.jpg', 'producto')(class="img-responsive")
 
@@ -55,7 +54,10 @@ block content
 											
 										///-Cantidad de productos
 					
-				
+									td
+										|$80.0000
+										a.remove(href="#") Remove
+
 				div.clearfix
 
 				h2 Te puede interesar
