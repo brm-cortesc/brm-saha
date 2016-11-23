@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Nov 21 2016 17:45:29 GMT-0500 (COT)
+ *Wed Nov 23 2016 15:00:23 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -826,6 +826,11 @@ footer .logo {
   outline: 0 !important;
   outline: none !important;
 }
+.bg-primary {
+  background-color: rgba(20,170,179,0.3);
+  color: #7a7a7a;
+  padding: 0.5rem;
+}
 .cantidad,
 .size {
   display: inline-block;
@@ -1044,6 +1049,9 @@ footer .logo {
   font-weight: 400;
   margin: 4rem auto !important;
   padding: 1rem 0.5rem;
+}
+.legal {
+  font-style: italic;
 }
 .logo {
   display: block;
