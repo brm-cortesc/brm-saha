@@ -1,4 +1,6 @@
-#contacto
+#contacto,
+#checkout,
+#user-login
 	margin-bottom 2rem
 	
 	label
@@ -48,6 +50,11 @@
 					background-color #fff
 					
 
+#checkout
+	
+	.btn
+		max-width 25rem
+
 #descuentos
 	margin 1rem 0
 	position relative
@@ -85,6 +92,28 @@
 			border-color $Gris
 			box-shadow none
 	
+#user-login
+	display none
+	opacity 0
+	transition opacity 0.3s ease-in-out
+	
+
+	.btn
+		background-color #fff
+		border 1px solid $Gris
+		color $Gris
+		
+		&:hover
+			background-color $Verde
+			border-color transparent
+			color #fff
+		
+	.checkbox, .btn
+		display inline-block
+		vertical-align middle
+		width 48%
+		
+		
 
 .mensaje
 	&-caso

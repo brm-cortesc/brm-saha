@@ -125,82 +125,132 @@
   </header>
   <!--/-Header-->
   <section class="container-fluid">
-    <h1>Contacto</h1>
+    <h1 class="divisor">Checkout</h1>
     <div class="row">
-      <!--Formulario de contacto-->
-      <form class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="contacto" method="#">
-        <p>Todos los campos son obligatorios</p>
-        <!--Asunto-->
-        <div class="form-group">
-          <label for="asunto">asunto</label>
-          <select class="form-control" name="asunto" id="asunto">
-            <option value=""></option>
-            <option value="123">este</option>
-            <option value="123">otro</option>
-          </select>
-        </div>
-        <!--/-Asunto-->
-        <!--Nombre-->
-        <div class="form-group">
-          <label for="nombres">nombres</label>
-          <input class="form-control" type="text" id="nombres" name="nombres">
-        </div>
-        <!--/-Nombre-->
-        <!--email-->
-        <div class="form-group">
-          <label for="email">email</label>
-          <input class="form-control" type="email" id="email" name="email">
-        </div>
-        <!--/-email-->
-        <!--Teléfono-->
-        <div class="form-group">
-          <label for="phone">teléfono</label>
-          <input class="form-control" type="number" name="phone" id="phone" min="0" maxlenght="10">
-        </div>
-        <!--/-Teléfono-->
-        <!--País-->
-        <div class="form-group">
-          <label for="pais">país</label>
-          <select class="form-control" name="pais" id="pais">
-            <option value=""> </option>
-            <option value="123">este</option>
-            <option value="1231">otro</option>
-          </select>
-        </div>
-        <!--/-País-->
-        <!--Ciudad-->
-        <div class="form-group">
-          <label for="ciudad">ciudad</label>
-          <select class="form-control" name="ciudad" id="ciudad">
-            <option value=""> </option>
-            <option value="123">este</option>
-            <option value="1231">otro</option>
-          </select>
-        </div>
-        <!--/-Ciudad-->
-        <!--Comentario-->
-        <div class="form-group">
-          <label for="comentario">comentario</label>
-          <textarea class="form-control" name="comentario" id="comentario"></textarea>
-        </div>
-        <!--/-Comentario-->
-        <button class="btn btn-large" id="submit-contact" type="submit">enviar</button>
-      </form>
-      <!--/-Formulario de contacto-->
-      <!--Dirección y datos de contacto-->
-      <article class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-datos">
-        <div class="container-datos">
-          <h3>oficinas</h3>
-          <p>Cra 49 #104-16</p>
-          <h3>PBX</h3>
-          <p>(571) 6171598 </p>
-          <p>(571) 2562776</p>
-          <h3>USA</h3>
-          <p>(786)4670205</p><a href="mailto:info@sahaswimwear.com" target="_blank">info@sahaswimwear.com</a>
-          <h3>Bogotá, Colombia</h3>
-        </div>
+      <!--Autenticación-->
+      <article class="col-lg-4 col-md-4 col-sm-8 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-2"><a class="show-login text-center" href="#">Sí ya es cliente haga click aquí</a>
+        <form id="user-login">
+          <!--email-->
+          <div class="form-group">
+            <label for="email">email</label>
+            <input class="form-control" type="email" id="email" name="email">
+          </div>
+          <!--/-email-->
+          <!--contraseña-->
+          <div class="form-group">
+            <label for="pass">contraseña</label>
+            <input class="form-control" type="password" id="pass" name="pass">
+          </div>
+          <!--/-contraseña-->
+          <div class="checkbox">
+            <label for="recordarme">
+              <input type="checkbox" name="recordarme" id="recordarme">Recordarme
+            </label>
+          </div>
+          <button class="btn btn-login" id="submit-login" type="button">login</button><a href="#">¿Olvidó su contraseña?							</a>
+        </form>
       </article>
-      <!--/-Dirección y datos de contacto-->
+      <!--/-Autenticación-->
+      <div class="clearfix"></div>
+      <form class="row" id="checkout">
+        <!--Información de cliente-->
+        <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-checkout">
+          <h2>Información</h2>
+          <!--Nombre-->
+          <div class="form-group">
+            <label for="nombres">nombres</label>
+            <input class="form-control" type="text" id="nombres" name="nombres">
+          </div>
+          <!--/-Nombre-->
+          <!--documento-->
+          <div class="form-documento">
+            <div class="form-group form-tipo">
+              <label for="tipoCC">Tipo de doc.</label>
+              <select class="form-control" name="tipoCC" id="tipoCC">
+                <option value=""></option>
+                <option value="CC">CC</option>
+                <option value="CE">CE</option>
+              </select>
+            </div>
+            <div class="form-group form-num">
+              <label for="cc">número de documento</label>
+              <input class="form-control" type="number" id="cc" name="cc" min="0">
+            </div>
+          </div>
+          <!--/-documento-->
+          <!--email-->
+          <div class="form-group">
+            <label for="email">email</label>
+            <input class="form-control" type="email" id="email" name="email">
+          </div>
+          <!--/-email-->
+          <!--Teléfono-->
+          <div class="form-group">
+            <label for="phone">teléfono</label>
+            <input class="form-control" type="number" name="phone" id="phone" min="0" maxlenght="10">
+          </div>
+          <!--/-Teléfono-->
+          <!--País-->
+          <div class="form-ubicacion">
+            <div class="form-group">
+              <label for="pais">país</label>
+              <select class="form-control" name="pais" id="pais">
+                <option value=""> </option>
+                <option value="123">este</option>
+                <option value="1231">otro</option>
+              </select>
+            </div>
+            <!--/-País-->
+            <!--Ciudad-->
+            <div class="form-group">
+              <label for="ciudad">ciudad</label>
+              <select class="form-control" name="ciudad" id="ciudad">
+                <option value=""> </option>
+                <option value="123">este</option>
+                <option value="1231">otro</option>
+              </select>
+            </div>
+            <!--/-Ciudad-->
+          </div>
+          <!--Dirección-->
+          <div class="form-group">
+            <label for="direccion">dirección</label>
+            <input class="form-control" type="text" id="direccion" name="direccion">
+          </div>
+          <!--/-Dirección-->
+          <!--info adicional-->
+          <div class="form-group">
+            <label for="infoAdicional">información adicional</label>
+            <textarea class="form-control" name="infoAdicional" id="infoAdicional"></textarea>
+          </div>
+          <!--/-info adicional-->
+        </article>
+        <!--/-Información de cliente-->
+        <!--Compra total-->
+        <article class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-total">
+          <div class="container-orden">
+            <h2>Su orden</h2>
+            <div class="valor">
+              <p>subtotal</p>
+              <p class="precio">$999999</p>
+            </div>
+            <div class="valor">
+              <p>IVA</p>
+              <p class="precio">$999999</p>
+            </div>
+            <div class="valor">
+              <p>envío</p>
+              <p class="precio">$999999					</p>
+            </div>
+            <div class="valor valor-total">
+              <p>total</p>
+              <p class="precio">$999999</p>
+            </div>
+            <button class="btn btn-go-checkout" id="go-checkout" type="submit">Finalizar compra</button>
+          </div>
+        </article>
+      </form>
+      <!--/-Compra total-->
     </div>
   </section>
   <!--Footer-->
@@ -241,5 +291,5 @@
   <script src="js/libs/jquery.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/saha.init.js"></script>
-  <script src="js/saha.contacto.js"></script>
+  <script src="js/saha.checkout.js"></script>
 </body></html>
