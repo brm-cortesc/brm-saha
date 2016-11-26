@@ -125,36 +125,12 @@
   </header>
   <!--/-Header-->
   <section class="container-fluid">
-    <h1 class="divisor">Checkout</h1>
+    <h1 class="divisor">Registro</h1>
     <div class="row">
-      <!--Autenticación-->
-      <article class="col-lg-4 col-md-4 col-sm-8 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-2"><a class="show-login text-center" href="#">Sí ya es cliente haga click aquí</a>
-        <form id="user-login">
-          <!--email-->
-          <div class="form-group">
-            <label for="email">email</label>
-            <input class="form-control" type="email" id="email" name="email">
-          </div>
-          <!--/-email-->
-          <!--contraseña-->
-          <div class="form-group">
-            <label for="pass">contraseña</label>
-            <input class="form-control" type="password" id="pass" name="pass">
-          </div>
-          <!--/-contraseña-->
-          <div class="checkbox">
-            <label for="recordarme">
-              <input type="checkbox" name="recordarme" id="recordarme">Recordarme
-            </label>
-          </div>
-          <button class="btn btn-login" id="submit-login" type="button">login</button><a href="#">¿Olvidó su contraseña?							</a>
-        </form>
-      </article>
-      <!--/-Autenticación-->
       <div class="clearfix"></div>
-      <form class="row" id="checkout">
+      <form class="row" id="registro">
         <!--Información de cliente-->
-        <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-checkout">
+        <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-registro">
           <h2>Información</h2>
           <!--Nombre-->
           <div class="form-group">
@@ -178,12 +154,6 @@
             </div>
           </div>
           <!--/-documento-->
-          <!--email-->
-          <div class="form-group">
-            <label for="email">email</label>
-            <input class="form-control" type="email" id="email" name="email">
-          </div>
-          <!--/-email-->
           <!--Teléfono-->
           <div class="form-group">
             <label for="phone">teléfono</label>
@@ -191,7 +161,7 @@
           </div>
           <!--/-Teléfono-->
           <!--País-->
-          <div class="form-ubicacion">
+          <div class="form-half">
             <div class="form-group">
               <label for="pais">país</label>
               <select class="form-control" name="pais" id="pais">
@@ -218,36 +188,29 @@
             <input class="form-control" type="text" id="direccion" name="direccion">
           </div>
           <!--/-Dirección-->
-          <!--info adicional-->
+          <div class="clearfix"></div>
+          <h2>Cuenta</h2>
+          <!--email-->
           <div class="form-group">
-            <label for="infoAdicional">información adicional</label>
-            <textarea class="form-control" name="infoAdicional" id="infoAdicional"></textarea>
+            <label for="email">email</label>
+            <input class="form-control" type="email" id="email" name="email">
           </div>
-          <!--/-info adicional-->
-        </article>
-        <!--/-Información de cliente-->
-        <!--Compra total-->
-        <article class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-total">
-          <div class="container-orden">
-            <h2>Su orden</h2>
-            <div class="valor">
-              <p>subtotal</p>
-              <p class="precio">$999999</p>
+          <!--/-email-->
+          <div class="form-half">
+            <!--contraseña-->
+            <div class="form-group">
+              <label for="pass">contraseña</label>
+              <input class="form-control" type="password" id="pass" name="pass">
             </div>
-            <div class="valor">
-              <p>IVA</p>
-              <p class="precio">$999999</p>
+            <!--/-contraseña-->
+            <!--confirmar contraseña-->
+            <div class="form-group">
+              <label for="cPassword">confirmar contraseña</label>
+              <input class="form-control" type="password" id="cPassword" name="cPassword">
             </div>
-            <div class="valor">
-              <p>envío</p>
-              <p class="precio">$999999					</p>
-            </div>
-            <div class="valor valor-total">
-              <p>total</p>
-              <p class="precio">$999999</p>
-            </div>
-            <button class="btn btn-go-checkout" id="go-checkout" type="submit">Finalizar compra</button>
+            <!--/-confirmar contraseña-->
           </div>
+          <button class="btn btn-blanco" id="submit-registro" type="submit">Registrar	</button>
         </article>
       </form>
       <!--/-Compra total-->
@@ -291,5 +254,5 @@
   <script src="js/libs/jquery.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/saha.init.js"></script>
-  <script src="js/saha.checkout.js"></script>
+  <script src="js/saha.registro.js"></script>
 </body></html>

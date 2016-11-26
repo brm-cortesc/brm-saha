@@ -1,0 +1,116 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "Registro";
+	title Saha - Tienda en línea
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Saha - Tienda en línea" )
+
+block content
+	section.container-fluid
+		h1.divisor Registro
+		
+		div.row
+
+			div.clearfix
+
+
+			form#registro.row
+
+				//Información de cliente
+				article.col-lg-8.col-md-8.col-sm-8.col-xs-12.col-lg-offset-2.col-md-offset-2.col-sm-offset-2.col-registro
+					h2 Información
+
+					//Nombre
+					div.form-group
+						label(for="nombres") nombres
+						input.form-control(type="text", id="nombres", name="nombres")
+					///-Nombre
+
+
+					//documento
+					div.form-documento
+						div.form-group.form-tipo
+							label(for="tipoCC") Tipo doc.
+							select.form-control(name="tipoCC", id="tipoCC")
+								option(value="")
+								option(value="CC") CC
+								option(value="CE") CE
+
+						div.form-group.form-num
+							label(for="cc") número de documento
+							input.form-control(type="number", id="cc", name="cc", min="0")
+					///-documento
+
+					
+					//Teléfono
+					div.form-group
+						label(for="phone") teléfono
+						input.form-control(type="number", name="phone", id="phone", min="0", maxlenght="10")
+					///-Teléfono
+
+					//País
+					div.form-half
+						div.form-group
+							label(for="pais") país
+							select.form-control(name="pais", id="pais")
+								option(value="") 
+								option(value="123") este
+								option(value="1231") otro
+						///-País
+
+						//Ciudad
+						div.form-group
+							label(for="ciudad") ciudad
+							select.form-control(name="ciudad", id="ciudad")
+								option(value="") 
+								option(value="123") este
+								option(value="1231") otro
+						///-Ciudad
+
+
+					//Dirección
+					div.form-group
+						label(for="direccion") dirección
+						input.form-control(type="text", id="direccion", name="direccion")
+					///-Dirección
+
+					div.clearfix
+
+					h2 Cuenta
+
+					//email
+					div.form-group
+						label(for="email") email
+						input.form-control(type="email", id="email", name="email")
+					///-email
+
+					div.form-half
+						//contraseña
+						div.form-group
+							label(for="pass") contraseña
+							input.form-control(type="password", id="pass", name="pass")
+						///-contraseña
+
+						//confirmar contraseña
+						div.form-group
+							label(for="cPassword") confirmar contraseña
+							input.form-control(type="password", id="cPassword", name="cPassword")
+						///-confirmar contraseña
+
+					button#submit-registro.btn.btn-blanco(type="submit") Registrar	
+
+
+				
+
+
+			///-Compra total
+
+
+block Scripts
+	script(src="js/saha.registro.js")
+

@@ -91,7 +91,8 @@ jQuery(document).ready ($) ->
 	$(document)
 		.click (e) ->
 			# if !$(e.target).is('.header-search, .header-search *') and !$(e.target).is('.cart-list, .cart-list *') and !$(e.target).is('.user-menu, .user-menu *')
-			if !$(e.target).is('.header-search, .header-search *, .cart-list, .cart-list *, .user-menu, .user-menu *, .menu, .menu *')
+			if !$(e.target).is('.header-search, .header-search *, .cart-list, .cart-list *, .user-menu, .user-menu *, .menu, .menu *, .col-filter, .col-filter *')
+				
 				$('.header-search')
 					.velocity('reverse',{
 						queue: false
@@ -109,7 +110,17 @@ jQuery(document).ready ($) ->
 						display: 'none'
 					})
 
+				if $(window).width() < 768
+					$('.col-filter .opciones').removeClass('active')
+						.velocity('fadeOut',{
+							queue: false
+							display: 'none'
+						})
+
+
 				$('.menu').removeClass('active')
+
+
 			return
 
 

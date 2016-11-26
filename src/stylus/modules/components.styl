@@ -69,17 +69,19 @@
 				text-decoration none
 				
 
-	&-checkout
+	&-checkout,
+	&-registro
 		h2
 			margin-top 0
 			
 
 		.form
 			&-documento
+				
 				.form
 					&-group
 						display inline-block
-						vertical-align middle
+						vertical-align top
 						
 					&-num
 						width 79.3%
@@ -88,19 +90,100 @@
 						width 20%
 						
 
-			&-ubicacion
+			&-half
 				.form-group
 					display inline-block
-					vertical-align middle
+					vertical-align top
 					width 49.7%
-						
-	
+					
+		
+	&-categories
+		
+		.col-lg-4		
+			margin-bottom 1.5rem
+			// min-height 45rem
+		
+		h3
+			margin 0.5rem 0
+			
+
+		.item-product
+			position relative
+			
+			
+			&:hover
+				.quick-buttons
+					opacity: 0.8
+		
+		.quick-buttons
+			bottom 0.5rem
+			left @bottom
+			opacity 0
+			position absolute
+			transitionBase(0.3s)
+			.btn
+				&-add-cart
+					padding 0.4rem 1.9rem
+					font-size 2rem
+		
+		.ticker
+			background-color $Verde
+			color #fff
+			left 1rem
+			margin 0
+			max-width 40rem
+			padding 0.5rem 1rem
+			position absolute
+			top @left
+
 	&-datos
 		path('bg-datos.jpg')
 		background-size cover
 		background-repeat no-repeat
 		padding 5rem 2rem 8rem
 		
+	
+	&-filter
+		h2,
+		h3
+			border-bottom 1px solid $Gris
+			margin-top 0
+			padding 0.5rem 0
+			
+
+		.btn-large
+			font-size 1.6rem
+
+		.filtro
+			.opciones
+				transition opacity ease-in-out 0.3s
+				
+				li
+					list-style-type none
+					position relative
+					
+					&::before
+						color $Verde
+						content '\e014'
+						display block	
+						font-family $Icons
+						left -1.5rem
+						opacity 0
+						position absolute
+						transitionBase(0.3s)
+					a
+						color $Gris
+						&:hover
+							color $Verde
+							
+
+					&.active
+						&::before
+							opacity 1
+						a
+							color $Verde
+							
+
 	&-highlights
 		margin-bottom 1rem
 		margin-top @margin-bottom
@@ -119,6 +202,12 @@
 			content ''
 			display table
 	
+	
+	&-login
+		#user-login
+			display block
+			opacity 1
+			
 	&-total
 		text-transform uppercase
 		
@@ -289,7 +378,13 @@
 		height auto
 		max-width 100%
 		width 100%
-		
+
+
+.section
+	&-desc
+		margin 1rem auto
+		max-width 60%
+		text-align center	
 
 .size
 	max-width 70%
