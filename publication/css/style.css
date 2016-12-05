@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 16:52:50 GMT-0500 (COT)
+ *Mon Dec 05 2016 17:24:47 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1705,6 +1705,18 @@ footer .logo {
 }
 .container-product .service-links {
   display: none;
+}
+.col-filter .views-exposed-widget {
+  border-bottom: 1px solid #7a7a7a;
+  margin-top: 0;
+  padding: 0.5rem 0;
+  font-size: 2.4rem;
+}
+.col-filter .form-type-bef-link {
+  padding-left: 3rem;
+}
+.col-filter .form-type-bef-link a {
+  color: #7a7a7a;
 }
 .cloud-zoom-container #wrap {
   z-index: 1 !important;
