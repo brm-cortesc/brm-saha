@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 17:24:47 GMT-0500 (COT)
+ *Mon Dec 05 2016 17:52:49 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1557,6 +1557,16 @@ footer .logo {
   position: absolute;
   right: 0.7rem;
 }
+.cart-list .views-table tr.odd .field-name-commerce-product,
+.cart-list .views-table tr.even .field-name-commerce-product {
+  max-width: 5rem;
+}
+.cart-list .views-table tr.odd .field-name-commerce-product img,
+.cart-list .views-table tr.even .field-name-commerce-product img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
 .chosen-container-single .chosen-single {
   background: #fff;
 }
@@ -1713,6 +1723,7 @@ footer .logo {
   font-size: 2.4rem;
 }
 .col-filter .form-type-bef-link {
+  font-size: 1.4rem;
   padding-left: 3rem;
 }
 .col-filter .form-type-bef-link a {
