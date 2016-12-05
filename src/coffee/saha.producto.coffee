@@ -20,7 +20,7 @@ jQuery(document).ready ($) ->
 			$(@).addClass('active')
 			
 			return
-
+				
 
 	### Config slider de producto para desktop ###
 	sliderDesktop = 

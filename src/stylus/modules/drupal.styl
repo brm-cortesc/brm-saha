@@ -31,10 +31,14 @@
 			transitionBase(0.3s)
 			width 100%
 			
+		.field-name-field-image
+			transitionBase(0.3s)
 
 		.description-selected
-			.commerce-fancy-attributes-color
+			.commerce-fancy-attributes-color,
+			.field-name-field-image
 				border-radius 0.5rem
+				transform scale(0.9)
 	
 	.commerce-product-field-field-images
 		float left
@@ -81,7 +85,7 @@
 			cuadrado(2.4rem)
 			cursor pointer
 			display block
-			font-size 1.8rem
+			font-size 1.6rem
 			text-align center
 			transitionBase(0.3s)
 
@@ -93,11 +97,11 @@
 			right 0
 			top 0
 			cuadrado(100%)
-			z-index -1
+			z-index -18
 			
 			&:checked + label
-				background-color $Gris
-				color #fff
+				background-color $Verde
+				color $Gris
 				
 			
 

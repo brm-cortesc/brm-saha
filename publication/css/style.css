@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 15:52:53 GMT-0500 (COT)
+ *Mon Dec 05 2016 16:52:50 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1022,7 +1022,13 @@ footer .logo {
   color: #7a7a7a;
 }
 .col-categories .item-product {
+  margin: 0;
   position: relative;
+}
+.col-categories .item-product img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 .col-categories .item-product:hover .quick-buttons {
   opacity: 0.8;
@@ -1582,8 +1588,21 @@ footer .logo {
   transition: all ease-in-out 0.3s;
   width: 100%;
 }
-.container-product .form-type-radio.form-item-attributes-field-color .description-selected .commerce-fancy-attributes-color {
+.container-product .form-type-radio.form-item-attributes-field-color .field-name-field-image {
+  -o-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+.container-product .form-type-radio.form-item-attributes-field-color .description-selected .commerce-fancy-attributes-color,
+.container-product .form-type-radio.form-item-attributes-field-color .description-selected .field-name-field-image {
   border-radius: 0.5rem;
+  -o-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  transform: scale(0.9);
 }
 .container-product .commerce-product-field-field-images {
   float: left;
@@ -1628,7 +1647,7 @@ footer .logo {
   width: 2.4rem;
   cursor: pointer;
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-align: center;
   -o-transition: all ease-in-out 0.3s;
   -ms-transition: all ease-in-out 0.3s;
@@ -1647,11 +1666,11 @@ footer .logo {
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: -18;
 }
 .container-product .form-type-radio input:checked + label {
-  background-color: #7a7a7a;
-  color: #fff;
+  background-color: #14aab3;
+  color: #7a7a7a;
 }
 .container-product .form-submit {
   background-color: #7a7a7a;

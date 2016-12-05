@@ -94,9 +94,9 @@ gulp.task('css', function () {
 gulp.task('minicss', function() {
   return gulp.src(['publication/css/**/*.css', '!publication/css/**/'+pkg.name+'.min.css'])
   .pipe(concat(pkg.name +'.min.css'))
-  .pipe(uncss({
-             html: ['publication/**/*.html'] //Borramos css que no se usa
-   }))
+  // .pipe(uncss({
+  //            html: ['publication/**/*.html'] //Borramos css que no se usa
+  //  }))
   .pipe(minifyCSS())
   .pipe(gulp.dest('publication/css'))
 
