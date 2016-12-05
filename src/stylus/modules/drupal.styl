@@ -3,13 +3,29 @@
 	.views-table
 		tr.odd,
 		tr.even
-			.field-name-commerce-product
-				max-width 5rem
-				
+			background-color transparent
+			padding 0
+			position relative			
+								
 				img
 					height auto
 					max-width 100%
 					width 100%
+					
+			.views-field
+				display block
+				max-width 100%
+				padding 1rem 0.5rem
+			.views-field-line-item-title	
+				width 15rem
+				
+			.field-name-commerce-product
+				width 5rem
+				
+			.views-field-edit-delete
+				position absolute
+				bottom 0.5rem
+				left @bottom
 	
 
 .chosen-container-single

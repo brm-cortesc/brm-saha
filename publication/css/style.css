@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 17:52:49 GMT-0500 (COT)
+ *Mon Dec 05 2016 18:40:20 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1557,15 +1557,36 @@ footer .logo {
   position: absolute;
   right: 0.7rem;
 }
-.cart-list .views-table tr.odd .field-name-commerce-product,
-.cart-list .views-table tr.even .field-name-commerce-product {
-  max-width: 5rem;
+.cart-list .views-table tr.odd,
+.cart-list .views-table tr.even {
+  background-color: transparent;
+  padding: 0;
 }
-.cart-list .views-table tr.odd .field-name-commerce-product img,
-.cart-list .views-table tr.even .field-name-commerce-product img {
+.cart-list .views-table tr.odd position relative img,
+.cart-list .views-table tr.even position relative img {
   height: auto;
   max-width: 100%;
   width: 100%;
+}
+.cart-list .views-table tr.odd .views-field,
+.cart-list .views-table tr.even .views-field {
+  display: block;
+  max-width: 100%;
+  padding: 1rem 0.5rem;
+}
+.cart-list .views-table tr.odd .views-field-line-item-title,
+.cart-list .views-table tr.even .views-field-line-item-title {
+  width: 15rem;
+}
+.cart-list .views-table tr.odd .field-name-commerce-product,
+.cart-list .views-table tr.even .field-name-commerce-product {
+  width: 5rem;
+}
+.cart-list .views-table tr.odd .views-field-edit-delete,
+.cart-list .views-table tr.even .views-field-edit-delete {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
 }
 .chosen-container-single .chosen-single {
   background: #fff;
