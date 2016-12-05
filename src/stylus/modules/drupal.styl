@@ -1,4 +1,7 @@
 //override styles for drupal theming
+.chosen-container-single
+	.chosen-single
+		background #fff
 
 .container-product
 	
@@ -24,7 +27,7 @@
 	
 	.commerce-product-field-field-images
 		float left
-		width 66%
+		width 50%
 		
 		&::after,
 		&::before
@@ -44,7 +47,11 @@
 				float right !important
 				
 			.cloud-zoom-gallery-thumbs
-				width 11%
+				width 20%
+				
+				a
+					display block
+					margin-bottom 1rem
 				
 	.form-type-radios.form-item-attributes-field-top-size
 		.ajax-progress
