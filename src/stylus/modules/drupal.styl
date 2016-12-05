@@ -1,0 +1,117 @@
+//override styles for drupal theming
+
+.container-product
+	
+	.form-type-radio.form-item-attributes-field-color
+		display inline-block
+		cuadrado(2.4rem)
+		
+
+		.ajax-progress
+			display none !important
+		
+		
+		.commerce-fancy-attributes-color
+			border none !important
+			height 2.4rem
+			transitionBase(0.3s)
+			width 100%
+			
+
+		.description-selected
+			.commerce-fancy-attributes-color
+				border-radius 0.5rem
+	
+	.commerce-product-field-field-images
+		float left
+		width 66%
+		
+		&::after,
+		&::before
+			clear both
+			content ''
+			display table
+			
+
+			img
+				height auto
+				max-width 100%
+				width 100%
+			
+
+		.cloud-zoom-container
+			#wrap
+				float right !important
+				
+			.cloud-zoom-gallery-thumbs
+				width 11%
+				
+	.form-type-radios.form-item-attributes-field-top-size
+		.ajax-progress
+			display none !important
+			
+	.form-type-radio
+		cursor pointer
+		display inline-block
+		position relative
+		vertical-align middle
+		max-width 30%
+		text-align center
+
+		label
+			border 1px solid $Gris
+			cuadrado(2.4rem)
+			cursor pointer
+			display block
+			font-size 1.8rem
+			text-align center
+			transitionBase(0.3s)
+
+		input 
+			bottom 0
+			left 0
+			opacity 0
+			position absolute
+			right 0
+			top 0
+			cuadrado(100%)
+			z-index -1
+			
+			&:checked + label
+				background-color $Gris
+				color #fff
+				
+			
+
+	.form-submit
+		background-color $Gris
+		border-radius 0
+		color #fff
+		display inline-block 
+		font-size 2.4rem
+		line-height 1
+		min-height 4rem
+		padding 0.8rem 3rem
+		text-align center
+		text-transform uppercase
+		transitionBase(0.3s)
+		
+		&:hover
+			background-color $Verde
+			color #000
+
+	.info-producto
+		float right
+		width 33.33333333%
+		
+	
+		&::after,
+		&::before
+			clear both
+			content ''
+			display table
+			
+
+
+	.service-links
+		display none

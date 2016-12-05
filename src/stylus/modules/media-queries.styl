@@ -54,10 +54,18 @@
 		&-add-cart
 			padding 0.8rem 1.5rem
 	
+	.container-product
+		
+		.commerce-product-field-field-images
+			width 66%
+			
+
 	.tabs
 		li
 			a
 				padding 1rem 0.6rem
+				
+
 	
 @media (max-width:800px)
 	.btn
@@ -75,7 +83,13 @@
 					a
 						&:nth-of-type(1)
 							margin-bottom 3.2%
-
+	
+		&-product			
+			.commerce-product-field-field-images
+				width 70%
+				
+			.info-producto
+				width 27%
 
 @media (max-width:768px)
 	header
@@ -189,7 +203,9 @@
 				// direction ltr
 				
 				.bx-wrapper,
-				.col-img-big
+				.col-img-big,
+				.commerce-product-field-field-images,
+				.info-producto
 					direction ltr
 					transform rotate(-180deg)
 					
@@ -220,7 +236,30 @@
 								max-width 5.1%
 					
 				.col-img-big
-					margin-top 2rem	
+					margin-top 2rem
+					
+
+			.commerce-product-field-field-images, .info-producto
+				float none
+				width 100%
+				
+			.commerce-product-field-field-images
+				.cloud-zoom-container
+					max-width 100%
+					#wrap
+						float none !important
+						
+					.mousetrap
+						width 100% !important
+						
+					.cloud-zoom-gallery-thumbs
+						width auto
+						
+						a
+							float left
+							width 33%
+
+
 	.tabs
 		li
 			a

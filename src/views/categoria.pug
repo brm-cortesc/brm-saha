@@ -160,7 +160,7 @@ block content
 
 					h3.product-price.text-center $99.99
 
-				div.clearfix
+				//- div.clearfix
 
 
 				-for(x = 1; x <= 6; x ++)
@@ -182,9 +182,9 @@ block content
 
 						h3.product-price.text-center $99.99#{x}
 
-					-if( x %3 == 0)
-						//Se usa para que no se desarme el layout no se rompa con textos largos
-						div.clearfix
+					//- -if( x %3 == 0)
+					//- 	//Se usa para que no se desarme el layout no se rompa con textos largos
+					//- 	div.clearfix
 
 				
 				div.mensaje.text-center.hidden
@@ -195,4 +195,5 @@ block content
 
 block Scripts
 	script(src="js/saha.filtros.js")
+	script(src="js/saha.template.js")
 
