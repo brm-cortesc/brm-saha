@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 14:19:50 GMT-0500 (COT)
+ *Mon Dec 05 2016 15:52:53 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1553,6 +1553,16 @@ footer .logo {
 }
 .chosen-container-single .chosen-single {
   background: #fff;
+}
+.container-product .cantidad .form-item,
+.container-product .cantidad .form-actions {
+  margin-bottom: 0;
+}
+.container-product .cantidad input {
+  text-align: center;
+}
+.container-product .field-name-commerce-price {
+  font-size: 2.4rem;
 }
 .container-product .form-type-radio.form-item-attributes-field-color {
   display: inline-block;
