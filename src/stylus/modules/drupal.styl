@@ -174,11 +174,16 @@
 	.table-carrito
 		width 66.4%
 		
-
+		
 		.commerce-product-sku,
 		.field
 			display inline-block
 			vertical-align top
+			max-width 35%
+			
+			ul
+				list-style-type none
+				padding 0
 			
 			.field-label
 				display inline
@@ -193,7 +198,30 @@
 				height auto
 				max-width 100%
 				width 100%
+		
+		.form-item
+			text-align center
+			
+		.views-field-edit-delete
+			position relative
+			
+			input
+				background-color #fff
+				path('remove.svg')
+				background-position center
+				background-repeat no-repeat
+				background-size 100%
+				bottom 0.5rem
+				color #fff
+				cuadrado(1.2rem)
+				// position absolute
+				right @bottom
+				overflow hidden
+				text-indent -100rem
+				transitionBase(0.3s)
+				
 
+				&:hover
 
 .container-product
 	
