@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 23:04:59 GMT-0500 (COT)
+ *Mon Dec 05 2016 23:10:30 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -459,6 +459,28 @@ header .col-tools .cantidad {
 }
 header .col-tools .icon {
   margin: 0 1rem;
+}
+header .container-inline .form-actions,
+header .container-inline .form-item {
+  display: inline-block;
+}
+header .container-inline .form-actions {
+  width: 18%;
+}
+header .container-inline .form-actions input {
+  background-image: url("../images/zoom.svg");
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  height: 2rem;
+  width: 2rem;
+}
+header .container-inline .form-item {
+  width: 80%;
+}
+header .container-inline .form-item input {
+  border-bottom: 1px solid #7a7a7a;
+  width: 100%;
 }
 header .currency-img,
 header .currency-name {
