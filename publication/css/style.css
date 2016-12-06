@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Tue Dec 06 2016 00:55:46 GMT-0500 (COT)
+ *Tue Dec 06 2016 01:05:29 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -907,8 +907,19 @@ footer .logo {
 #user-login div.password-confirm,
 #user-login-page div.password-confirm {
   float: none;
-  width: 10rem;
+  margin-top: 2.6rem;
   position: absolute;
+  width: 10rem;
+}
+#contacto .password-suggestions,
+#checkout .password-suggestions,
+#registro .password-suggestions,
+#user-register-form .password-suggestions,
+#user-login .password-suggestions,
+#user-login-page .password-suggestions {
+  clear: both;
+  display: block;
+  margin-top: 5rem;
 }
 #checkout .btn {
   max-width: 25rem;
@@ -1704,7 +1715,7 @@ footer .logo {
 .cart-list .views-table {
   display: block;
   max-height: 21rem;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .cart-list .views-table tbody {
   border: none;
