@@ -36,6 +36,9 @@ jQuery(document).ready(function($) {
   /* mostrar  num productos carrito */
   cantCarrito = $('.line-item-quantity .line-item-quantity-raw').text();
   $('.counter-item').text(cantCarrito);
+
+  /* Wrap para carrito de compras */
+  $('.commerce-order-handler-area-order-total, .commerce-line-item-actions').wrapAll('<div class="col-order" />');
 });
 
 //# sourceMappingURL=../maps/saha.template.js.map

@@ -52,6 +52,13 @@ jQuery(document).ready ($) ->
 	$('.counter-item').text(cantCarrito)
 
 
+	### Wrap para carrito de compras ###
+
+	$('.commerce-order-handler-area-order-total, .commerce-line-item-actions')
+		.wrapAll('<div class="col-order" />')
+		
+
+
 	return
 
 
