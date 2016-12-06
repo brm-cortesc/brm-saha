@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 22:31:10 GMT-0500 (COT)
+ *Mon Dec 05 2016 22:36:28 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -504,6 +504,18 @@ header .header-search input {
 }
 header .header-search input {
   width: 80%;
+}
+header .icon-cart .counter-item {
+  bottom: -1.6rem;
+  color: #fff;
+  display: block;
+  left: 0.5rem;
+  position: absolute;
+  text-align: center;
+}
+header .icon-cart .counter-item:active,
+header .icon-cart .counter-item:hover {
+  text-decoration: none;
 }
 header .user-menu ul {
   list-style-type: none;
@@ -1343,6 +1355,7 @@ footer .logo {
   background-image: url("../images/bag.svg");
   height: 2.4rem;
   width: 1.8rem;
+  position: relative;
 }
 .icon-comparar,
 .icon-love {
