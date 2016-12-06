@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 22:44:58 GMT-0500 (COT)
+ *Mon Dec 05 2016 23:04:59 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -344,6 +344,9 @@ header {
   position: relative;
   text-align: center;
   width: 100%;
+}
+header a {
+  color: #fff;
 }
 header p {
   margin: 0;
@@ -748,6 +751,7 @@ footer .logo {
 #contacto,
 #checkout,
 #registro,
+#user-register-form,
 #user-login,
 #user-login-page {
   margin-bottom: 2rem;
@@ -755,6 +759,7 @@ footer .logo {
 #contacto label,
 #checkout label,
 #registro label,
+#user-register-form label,
 #user-login label,
 #user-login-page label {
   color: #7a7a7a;
@@ -769,6 +774,7 @@ footer .logo {
 #contacto select.form-control,
 #checkout select.form-control,
 #registro select.form-control,
+#user-register-form select.form-control,
 #user-login select.form-control,
 #user-login-page select.form-control {
   border-radius: 0 !important;
@@ -777,6 +783,7 @@ footer .logo {
 #contacto textarea,
 #checkout textarea,
 #registro textarea,
+#user-register-form textarea,
 #user-login textarea,
 #user-login-page textarea {
   resize: none;
@@ -786,6 +793,7 @@ footer .logo {
 #contacto .form-control,
 #checkout .form-control,
 #registro .form-control,
+#user-register-form .form-control,
 #user-login .form-control,
 #user-login-page .form-control {
   background-color: transparent;
@@ -800,6 +808,7 @@ footer .logo {
 #contacto .form-control:focus,
 #checkout .form-control:focus,
 #registro .form-control:focus,
+#user-register-form .form-control:focus,
 #user-login .form-control:focus,
 #user-login-page .form-control:focus {
   background-color: #fff;
@@ -810,6 +819,7 @@ footer .logo {
 #contacto .form-group,
 #checkout .form-group,
 #registro .form-group,
+#user-register-form .form-group,
 #user-login .form-group,
 #user-login-page .form-group {
   margin: 0 0 2rem;
@@ -818,6 +828,7 @@ footer .logo {
 #contacto .form-group label,
 #checkout .form-group label,
 #registro .form-group label,
+#user-register-form .form-group label,
 #user-login .form-group label,
 #user-login-page .form-group label {
   position: absolute;
@@ -828,6 +839,7 @@ footer .logo {
 #contacto .form-group.active label,
 #checkout .form-group.active label,
 #registro .form-group.active label,
+#user-register-form .form-group.active label,
 #user-login .form-group.active label,
 #user-login-page .form-group.active label {
   opacity: 0;
@@ -837,6 +849,7 @@ footer .logo {
 #contacto .form-group.active .form-control,
 #checkout .form-group.active .form-control,
 #registro .form-group.active .form-control,
+#user-register-form .form-group.active .form-control,
 #user-login .form-group.active .form-control,
 #user-login-page .form-group.active .form-control {
   background-color: #fff;
@@ -1599,7 +1612,7 @@ footer .logo {
   color: #7a7a7a;
   display: block;
   font-size: 1.8rem;
-  margin: 1rem auto;
+  margin: 0 auto;
   max-width: 18rem;
   padding: 0.7rem 1rem;
   text-align: center;
