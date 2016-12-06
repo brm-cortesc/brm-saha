@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 23:47:07 GMT-0500 (COT)
+ *Tue Dec 06 2016 00:23:17 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -371,6 +371,9 @@ header .user-menu {
   transition: opacity 0.3s ease-in-out;
   width: 100%;
   z-index: 3;
+}
+header .cart-list a {
+  color: #7a7a7a;
 }
 header .cart-list h3 {
   color: #7a7a7a;
@@ -887,6 +890,14 @@ footer .logo {
 #user-login .form-group.active .form-control,
 #user-login-page .form-group.active .form-control {
   background-color: #fff;
+}
+#contacto .form-group .form-item,
+#checkout .form-group .form-item,
+#registro .form-group .form-item,
+#user-register-form .form-group .form-item,
+#user-login .form-group .form-item,
+#user-login-page .form-group .form-item {
+  margin: 0;
 }
 #checkout .btn {
   max-width: 25rem;
