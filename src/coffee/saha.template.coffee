@@ -23,6 +23,7 @@ jQuery(document).ready ($) ->
 	### Clearfix para resultados - filtro ###
 
 	countList = $('.col-categories .col-lg-4')
+	searchList = $('.col-result .col-lg-3')
 
 
 	if countList.length > 0 
@@ -34,8 +35,22 @@ jQuery(document).ready ($) ->
 			if i %3 is 0
 				$(val).after('<div class="clearfix" />')
 
+	if searchList.length > 0 
 
-		
+		for val, i in searchList
+
+			i = i + 1
+
+			if i %4 is 0
+				$(val).after('<div class="clearfix" />')
+
+
+	### mostrar  num productos carrito ###
+
+	cantCarrito = $('.line-item-quantity .line-item-quantity-raw').text()
+
+	$('.counter-item').text(cantCarrito)
+
 
 	return
 

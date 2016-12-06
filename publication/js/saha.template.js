@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-  var countList, i, j, len, val;
+  var cantCarrito, countList, i, j, k, len, len1, searchList, val;
   if (jQuery('body.page-node').length > 0) {
     $('.commerce-product-field-field-images').unwrap().unwrap();
     $('.commerce-product-field-commerce-price, .field-name-body, .commerce-product-extra-field, .commerce-add-to-cart, .tab-select, .tab-content, h1.field-name-title-field').wrapAll('<div class="info-producto" />');
@@ -13,6 +13,7 @@ jQuery(document).ready(function($) {
 
   /* Clearfix para resultados - filtro */
   countList = $('.col-categories .col-lg-4');
+  searchList = $('.col-result .col-lg-3');
   if (countList.length > 0) {
     for (i = j = 0, len = countList.length; j < len; i = ++j) {
       val = countList[i];
@@ -22,6 +23,19 @@ jQuery(document).ready(function($) {
       }
     }
   }
+  if (searchList.length > 0) {
+    for (i = k = 0, len1 = searchList.length; k < len1; i = ++k) {
+      val = searchList[i];
+      i = i + 1;
+      if (i % 4 === 0) {
+        $(val).after('<div class="clearfix" />');
+      }
+    }
+  }
+
+  /* mostrar  num productos carrito */
+  cantCarrito = $('.line-item-quantity .line-item-quantity-raw').text();
+  $('.counter-item').text(cantCarrito);
 });
 
 //# sourceMappingURL=../maps/saha.template.js.map

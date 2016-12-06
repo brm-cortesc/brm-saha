@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 20:22:51 GMT-0500 (COT)
+ *Mon Dec 05 2016 20:57:34 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1557,6 +1557,44 @@ footer .logo {
   position: absolute;
   right: 0.7rem;
 }
+.cart-list .line-item-total {
+  clear: both;
+  display: block;
+  font-size: 1.6rem;
+  margin: 1rem auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+.cart-list .line-item-total span {
+  display: inline-block;
+  width: 48%;
+  vertical-align: middle;
+}
+.cart-list .line-item-total .line-item-total-label {
+  text-align: left;
+}
+.cart-list .line-item-total .line-item-total-raw {
+  text-align: right;
+}
+.cart-list .line-item-total .line-item-quantity {
+  display: none;
+}
+.cart-list .line-item-total .line-item-summary-view-cart a,
+.cart-list .line-item-total .line-item-summary-checkout a {
+  background-color: #fff;
+  border: 1px solid #afafaf;
+  color: #7a7a7a;
+  display: block;
+  font-size: 1.8rem;
+  max-width: 18rem;
+  width: 100%;
+}
+.cart-list .line-item-total .line-item-summary-view-cart a:hover,
+.cart-list .line-item-total .line-item-summary-checkout a:hover {
+  background-color: #7a7a7a;
+  border-color: transparent;
+  color: #fff;
+}
 .cart-list .views-table tbody {
   border: none;
 }
@@ -1596,12 +1634,17 @@ footer .logo {
   background-image: url("../images/remove.svg");
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
   bottom: 0.5rem;
   color: #fff;
-  height: 2rem;
-  width: 2rem;
+  height: 1.2rem;
+  width: 1.2rem;
   position: absolute;
   right: 0.5rem;
+  overflow: hidden;
+  text-indent: -99999;
   -o-transition: all ease-in-out 0.3s;
   -ms-transition: all ease-in-out 0.3s;
   -webkit-transition: all ease-in-out 0.3s;
