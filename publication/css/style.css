@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 23:40:37 GMT-0500 (COT)
+ *Mon Dec 05 2016 23:47:07 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1626,7 +1626,15 @@ footer .logo {
 }
 #user-login .form-actions input,
 #user-login .checkbox input {
+  display: block;
   width: 100%;
+}
+#user-login .checkbox label {
+  position: initial;
+}
+#user-login .checkbox input {
+  margin: 0;
+  left: 0;
 }
 .cart-list .line-item-total {
   clear: both;
