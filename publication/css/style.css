@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Tue Dec 06 2016 03:06:12 GMT-0500 (COT)
+ *Tue Dec 06 2016 03:12:36 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1883,8 +1883,9 @@ footer .logo {
 .col-carrito.view-commerce-cart-form .table-carrito .commerce-product-sku,
 .col-carrito.view-commerce-cart-form .table-carrito .field {
   display: inline-block;
-  vertical-align: top;
+  margin: 0 0.8rem;
   max-width: 35%;
+  vertical-align: top;
 }
 .col-carrito.view-commerce-cart-form .table-carrito .commerce-product-sku ul,
 .col-carrito.view-commerce-cart-form .table-carrito .field ul {
@@ -1919,15 +1920,17 @@ footer .logo {
   background-image: url("../images/remove.svg");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  background-size: 100%;
+  -webkit-background-size: 80%;
+  -moz-background-size: 80%;
+  background-size: 80%;
   bottom: 0.5rem;
   color: #fff;
   height: 1.2rem;
   width: 1.2rem;
-  right: 0.5rem;
+  display: block;
+  margin: auto;
   overflow: hidden;
+  right: 0.5rem;
   text-indent: -100rem;
   -o-transition: all ease-in-out 0.3s;
   -ms-transition: all ease-in-out 0.3s;
