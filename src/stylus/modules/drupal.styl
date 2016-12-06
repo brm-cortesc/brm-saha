@@ -128,19 +128,44 @@
 		background #fff
 
 
-.col-carrito
-	.col-order,
-	.table-carrito
-		display inline-block
-		vertical-align top
-		
-	.col-order
-		background-color lighten($Gris, 95%)
-		padding 1rem
-		width 33.2%
-
-	.table-carrito
-		width 66.4%
+.view-commerce-cart-form
+	.col-carrito
+		.col-order,
+		.table-carrito
+			display inline-block
+			vertical-align top
+			
+		.col-order
+			background-color lighten($Gris, 95%)
+			padding 1rem
+			width 33.2%
+			
+			.commerce-order-handler-area-order-total .commerce-price-formatted-components
+				font-size 1.8rem
+				text-transform uppercase
+				width 100%
+				
+			.form-submit
+				background-color #fff
+				border 1px solid lighten($Gris, 40%) 
+				color $Gris
+				display block
+				font-size 1.8rem
+				margin 0 auto
+				max-width 18rem
+				padding 0.7rem 1rem
+				text-align center
+				text-transform uppercase
+				width 100%
+				
+				&:hover
+					background-color $Gris
+					border-color transparent
+					color #fff
+					text-decoration none
+				
+		.table-carrito
+			width 66.4%
 
 
 .container-product

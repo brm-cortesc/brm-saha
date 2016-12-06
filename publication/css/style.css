@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Tue Dec 06 2016 01:42:40 GMT-0500 (COT)
+ *Tue Dec 06 2016 01:56:08 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1834,17 +1834,41 @@ footer .logo {
 .chosen-container-single .chosen-single {
   background: #fff;
 }
-.col-carrito .col-order,
-.col-carrito .table-carrito {
+.view-commerce-cart-form .col-carrito .col-order,
+.view-commerce-cart-form .col-carrito .table-carrito {
   display: inline-block;
   vertical-align: top;
 }
-.col-carrito .col-order {
+.view-commerce-cart-form .col-carrito .col-order {
   background-color: #f8f8f8;
   padding: 1rem;
   width: 33.2%;
 }
-.col-carrito .table-carrito {
+.view-commerce-cart-form .col-carrito .col-order .commerce-order-handler-area-order-total .commerce-price-formatted-components {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+.view-commerce-cart-form .col-carrito .col-order .form-submit {
+  background-color: #fff;
+  border: 1px solid #afafaf;
+  color: #7a7a7a;
+  display: block;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  max-width: 18rem;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+.view-commerce-cart-form .col-carrito .col-order .form-submit:hover {
+  background-color: #7a7a7a;
+  border-color: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+.view-commerce-cart-form .col-carrito .table-carrito {
   width: 66.4%;
 }
 .container-product .cantidad .form-item,
