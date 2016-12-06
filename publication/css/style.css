@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Tue Dec 06 2016 01:05:29 GMT-0500 (COT)
+ *Tue Dec 06 2016 01:07:43 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -858,7 +858,13 @@ footer .logo {
 #registro .form-group,
 #user-register-form .form-group,
 #user-login .form-group,
-#user-login-page .form-group {
+#user-login-page .form-group,
+#contacto .form-item,
+#checkout .form-item,
+#registro .form-item,
+#user-register-form .form-item,
+#user-login .form-item,
+#user-login-page .form-item {
   margin: 0 0 2rem;
   position: relative;
 }
@@ -867,7 +873,13 @@ footer .logo {
 #registro .form-group label,
 #user-register-form .form-group label,
 #user-login .form-group label,
-#user-login-page .form-group label {
+#user-login-page .form-group label,
+#contacto .form-item label,
+#checkout .form-item label,
+#registro .form-item label,
+#user-register-form .form-item label,
+#user-login .form-item label,
+#user-login-page .form-item label {
   position: absolute;
   left: 2rem;
   top: 0.7rem;
@@ -878,7 +890,13 @@ footer .logo {
 #registro .form-group.active label,
 #user-register-form .form-group.active label,
 #user-login .form-group.active label,
-#user-login-page .form-group.active label {
+#user-login-page .form-group.active label,
+#contacto .form-item.active label,
+#checkout .form-item.active label,
+#registro .form-item.active label,
+#user-register-form .form-item.active label,
+#user-login .form-item.active label,
+#user-login-page .form-item.active label {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -888,7 +906,13 @@ footer .logo {
 #registro .form-group.active .form-control,
 #user-register-form .form-group.active .form-control,
 #user-login .form-group.active .form-control,
-#user-login-page .form-group.active .form-control {
+#user-login-page .form-group.active .form-control,
+#contacto .form-item.active .form-control,
+#checkout .form-item.active .form-control,
+#registro .form-item.active .form-control,
+#user-register-form .form-item.active .form-control,
+#user-login .form-item.active .form-control,
+#user-login-page .form-item.active .form-control {
   background-color: #fff;
 }
 #contacto .form-group .form-item,
@@ -896,7 +920,13 @@ footer .logo {
 #registro .form-group .form-item,
 #user-register-form .form-group .form-item,
 #user-login .form-group .form-item,
-#user-login-page .form-group .form-item {
+#user-login-page .form-group .form-item,
+#contacto .form-item .form-item,
+#checkout .form-item .form-item,
+#registro .form-item .form-item,
+#user-register-form .form-item .form-item,
+#user-login .form-item .form-item,
+#user-login-page .form-item .form-item {
   margin: 0;
   position: relative;
 }
