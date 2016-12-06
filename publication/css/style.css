@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 20:57:34 GMT-0500 (COT)
+ *Mon Dec 05 2016 22:04:12 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1576,11 +1576,11 @@ footer .logo {
 .cart-list .line-item-total .line-item-total-raw {
   text-align: right;
 }
-.cart-list .line-item-total .line-item-quantity {
+.cart-list .line-item-summary .line-item-quantity {
   display: none;
 }
-.cart-list .line-item-total .line-item-summary-view-cart a,
-.cart-list .line-item-total .line-item-summary-checkout a {
+.cart-list .line-item-summary-view-cart a,
+.cart-list .line-item-summary-checkout a {
   background-color: #fff;
   border: 1px solid #afafaf;
   color: #7a7a7a;
@@ -1589,8 +1589,8 @@ footer .logo {
   max-width: 18rem;
   width: 100%;
 }
-.cart-list .line-item-total .line-item-summary-view-cart a:hover,
-.cart-list .line-item-total .line-item-summary-checkout a:hover {
+.cart-list .line-item-summary-view-cart a:hover,
+.cart-list .line-item-summary-checkout a:hover {
   background-color: #7a7a7a;
   border-color: transparent;
   color: #fff;
@@ -1644,7 +1644,7 @@ footer .logo {
   position: absolute;
   right: 0.5rem;
   overflow: hidden;
-  text-indent: -99999;
+  text-indent: -100rem;
   -o-transition: all ease-in-out 0.3s;
   -ms-transition: all ease-in-out 0.3s;
   -webkit-transition: all ease-in-out 0.3s;
