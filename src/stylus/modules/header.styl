@@ -133,8 +133,17 @@ header
 			
 			input
 				path('zoom.svg')
-				background-size 100%
+				background-position center
+				background-repeat no-repeat
+				background-size 80%
 				cuadrado(2rem)
+				overflow hidden
+				text-indent -100rem
+				transitionBase(0.3s)
+				
+				&:hover
+					background-color darken($Gris, 40%)
+
 			
 		.form-item
 			width 80%
