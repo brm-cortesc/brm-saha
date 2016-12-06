@@ -1,31 +1,53 @@
 //override styles for drupal theming
 .cart-list
 	.views-table
+		tbody
+			border none
 		tr.odd,
 		tr.even
 			background-color transparent
-			padding 0
-			position relative			
+			padding 0		
 								
-				img
-					height auto
-					max-width 100%
-					width 100%
+			img
+				height auto
+				max-width 100%
+				width 100%
 					
 			.views-field
 				display block
 				max-width 100%
-				padding 1rem 0.5rem
+				padding 0.5rem
+				text-align center
 			.views-field-line-item-title	
-				width 15rem
+				width 100%
 				
 			.field-name-commerce-product
 				width 5rem
 				
 			.views-field-edit-delete
-				position absolute
-				bottom 0.5rem
-				left @bottom
+				position relative
+				
+				input
+					background-color #fff
+					path('remove.svg')
+					background-position center
+					background-repeat no-repeat
+					bottom 0.5rem
+					color #fff
+					cuadrado(2rem)
+					position absolute
+					right @bottom
+					transitionBase(0.3s)
+					
+
+					&:hover
+						opacity 0.5
+					
+					
+				
+
+			.form-submit
+				background-color transparent
 	
 
 .chosen-container-single

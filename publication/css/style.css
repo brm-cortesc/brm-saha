@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 05 2016 18:40:20 GMT-0500 (COT)
+ *Mon Dec 05 2016 20:22:51 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1557,13 +1557,16 @@ footer .logo {
   position: absolute;
   right: 0.7rem;
 }
+.cart-list .views-table tbody {
+  border: none;
+}
 .cart-list .views-table tr.odd,
 .cart-list .views-table tr.even {
   background-color: transparent;
   padding: 0;
 }
-.cart-list .views-table tr.odd position relative img,
-.cart-list .views-table tr.even position relative img {
+.cart-list .views-table tr.odd img,
+.cart-list .views-table tr.even img {
   height: auto;
   max-width: 100%;
   width: 100%;
@@ -1572,11 +1575,12 @@ footer .logo {
 .cart-list .views-table tr.even .views-field {
   display: block;
   max-width: 100%;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
 }
 .cart-list .views-table tr.odd .views-field-line-item-title,
 .cart-list .views-table tr.even .views-field-line-item-title {
-  width: 15rem;
+  width: 100%;
 }
 .cart-list .views-table tr.odd .field-name-commerce-product,
 .cart-list .views-table tr.even .field-name-commerce-product {
@@ -1584,9 +1588,35 @@ footer .logo {
 }
 .cart-list .views-table tr.odd .views-field-edit-delete,
 .cart-list .views-table tr.even .views-field-edit-delete {
-  position: absolute;
+  position: relative;
+}
+.cart-list .views-table tr.odd .views-field-edit-delete input,
+.cart-list .views-table tr.even .views-field-edit-delete input {
+  background-color: #fff;
+  background-image: url("../images/remove.svg");
+  background-position: center;
+  background-repeat: no-repeat;
   bottom: 0.5rem;
-  left: 0.5rem;
+  color: #fff;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  right: 0.5rem;
+  -o-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+.cart-list .views-table tr.odd .views-field-edit-delete input:hover,
+.cart-list .views-table tr.even .views-field-edit-delete input:hover {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.cart-list .views-table tr.odd .form-submit,
+.cart-list .views-table tr.even .form-submit {
+  background-color: transparent;
 }
 .chosen-container-single .chosen-single {
   background: #fff;
