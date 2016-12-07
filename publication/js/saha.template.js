@@ -1,5 +1,8 @@
 jQuery(document).ready(function($) {
   var cantCarrito, countList, i, j, k, len, len1, searchList, val;
+  if ($(window).width() <= 768) {
+    $(".commerce-product-field").detach().appendTo('.container-product');
+  }
   if (jQuery('body.page-node').length > 0) {
     $('.commerce-product-field-field-images').unwrap().unwrap();
     $('.commerce-product-field-commerce-price, .field-name-body, .commerce-product-extra-field, .commerce-add-to-cart, .tab-select, .tab-content, h1.field-name-title-field').wrapAll('<div class="info-producto" />');

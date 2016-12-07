@@ -1,5 +1,9 @@
 jQuery(document).ready ($) ->
 
+	if $( window ).width() <= 768 
+		$(".commerce-product-field").detach().appendTo('.container-product')
+
+
 	if jQuery('body.page-node').length>0
 		$('.commerce-product-field-field-images')
 			.unwrap()
