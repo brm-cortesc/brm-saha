@@ -45,14 +45,23 @@ jQuery(document).ready(function($) {
 
   /* Wrap para segunda prenda */
   titulo = $('.field-name-title-field');
-  sku = $('.commerce-product-extra-field-sk');
+  sku = $('.commerce-product-extra-field-sku');
   precio = $('.commerce-product-field-commerce-price');
   addCart = $('.commerce-add-to-cart');
   tabs = $('.nav-tabs');
   tabContent = $('.tab-content');
   producto = $('.container-product');
   if (producto.length > 1) {
-    $(titulo[1], sku[1], precio[1], addCart[1], tabs[1], tabContent[1]).detach().appendTo(producto[1]);
+    $(titulo[1]).detach().appendTo(producto[1]);
+    $(sku[1]).detach().appendTo(producto[1]);
+    $(precio[1]).detach().appendTo(producto[1]);
+    $(addCart[1]).detach().appendTo(producto[1]);
+    $(tabs[1]).detach().appendTo(producto[1]);
+    $(tabContent[1]).detach().appendTo(producto[1]);
+    producto[1].addClass('product-bottom');
+    setTimeout((function() {
+      $('.product-bottom .commerce-product-field-commerce-price, .product-bottom  .field-name-body, .product-bottom  .commerce-product-extra-field, .product-bottom  .commerce-add-to-cart, .product-bottom  .tab-select, .product-bottom  .tab-content, .product-bottom  h1.field-name-title-field').wrapAll('<div class="info-producto" />');
+    }), 1000);
   }
 });
 
