@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-  var cantCarrito, countList, i, j, k, len, len1, searchList, val;
+  var addCart, cantCarrito, countList, i, j, k, len, len1, precio, producto, searchList, sku, tabContent, tabs, titulo, val;
   if ($(window).width() <= 768) {
     $(".commerce-product-field").detach().appendTo('.container-product');
   }
@@ -42,6 +42,16 @@ jQuery(document).ready(function($) {
 
   /* Wrap para carrito de compras */
   $('.commerce-order-handler-area-order-total, .commerce-line-item-actions').wrapAll('<div class="col-order" />');
+
+  /* Wrap para segunda prenda */
+  titulo = $('.field-name-title-field');
+  sku = $('.commerce-product-extra-field-sk');
+  precio = $('.commerce-product-field-commerce-price');
+  addCart = $('.commerce-add-to-cart');
+  tabs = $('.nav-tabs');
+  tabContent = $('.tab-content');
+  producto = $('.container-product');
+  $(titulo[1], sku[1], precio[1], addCart[1], tabs[1], tabContent[1]).detach.appendTo(producto[1]);
 });
 
 //# sourceMappingURL=../maps/saha.template.js.map
