@@ -51,7 +51,9 @@ jQuery(document).ready(function($) {
   tabs = $('.nav-tabs');
   tabContent = $('.tab-content');
   producto = $('.container-product');
-  $(titulo[1], sku[1], precio[1], addCart[1], tabs[1], tabContent[1]).detach.appendTo(producto[1]);
+  if (producto.length > 1) {
+    $(titulo[1], sku[1], precio[1], addCart[1], tabs[1], tabContent[1]).detach().appendTo(producto[1]);
+  }
 });
 
 //# sourceMappingURL=../maps/saha.template.js.map
