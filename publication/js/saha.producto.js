@@ -1,21 +1,9 @@
 jQuery(document).ready(function($) {
 
   /*Seleccion de tamaño */
-  var imgThumbs, sliderDesktop, sliderMobile;
-  $('.btn-size').click(function(e) {
-    e.preventDefault();
-    $(this).parent().find('.btn-size').removeClass('active');
-    $(this).addClass('active');
-  });
-
-  /*Seleccion de color */
-  $('.btn-color').click(function(e) {
-    e.preventDefault();
-    $(this).parent().find('.btn-color').removeClass('active');
-    $(this).addClass('active');
-  });
 
   /* Config slider de producto para desktop */
+  var imgThumbs, sliderDesktop, sliderMobile;
   sliderDesktop = {
     mode: 'vertical',
     preloadImages: 'all',
@@ -54,13 +42,6 @@ jQuery(document).ready(function($) {
   }
 
   /*cambio de vista del producto */
-  $('.slide a').click(function(e) {
-    var dataProducto, imgSrc;
-    e.preventDefault();
-    dataProducto = $(this).parent().parent().attr('data-producto');
-    imgSrc = $(this).attr('href');
-    $('#' + dataProducto).attr('src', imgSrc);
-  });
 
   /* load slider if there is more than 3 thumbs */
   imgThumbs = $('.cloud-zoom-gallery-thumbs a');
