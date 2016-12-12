@@ -7,6 +7,16 @@ jQuery(document).ready(function($) {
       $('.info-producto, .commerce-product-field-field-images').wrapAll('<div class="producto" />');
       $('nav.menu').detach().appendTo('#block-brm-saha-headerblock .row');
     }
+  } else if (jQuery('body.page-node').length > 0) {
+    $('.commerce-product-field-field-images').unwrap().unwrap();
+    $('.commerce-product-field-commerce-price, .field-name-body, .commerce-product-extra-field, .tab-select, .tab-content, h2.field-name-title-field').wrapAll('<div class="info-producto" />');
+    setTimeout((function() {
+      $('.commerce-add-to-cart')[0].insertAfter($('.commerce-product-field-commerce-price'));
+    }), 500);
+    if ($(window).width() < 768) {
+      $('.info-producto, .commerce-product-field-field-images').wrapAll('<div class="producto" />');
+      $('nav.menu').detach().appendTo('#block-brm-saha-headerblock .row');
+    }
   }
   $('.view-taxonomy-term .entity-commerce-product .field-name-commerce-price').css('display', 'none');
   $('.view-taxonomy-term .entity-commerce-product .commerce-product-status').css('display', 'none');
