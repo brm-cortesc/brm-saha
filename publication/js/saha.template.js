@@ -4,7 +4,9 @@ jQuery(document).ready(function($) {
     $('.commerce-product-field-field-images').unwrap().unwrap();
     $('.commerce-product-field-commerce-price, .field-name-body, .commerce-product-extra-field, .tab-select, .tab-content, h2.field-name-title-field').wrapAll('<div class="info-producto" />');
     setTimeout((function() {
-      $('.commerce-add-to-cart')[0].detach().insertAfter($('.commerce-product-field-commerce-price'));
+      var product;
+      product = $('.commerce-add-to-cart')[0];
+      $(product).detach().insertAfter($('.commerce-product-field-commerce-price'));
     }), 500);
     if ($(window).width() < 768) {
       $('.info-producto, .commerce-product-field-field-images').wrapAll('<div class="producto" />');

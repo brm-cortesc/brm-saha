@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
   /*Seleccion de tamaño */
-  var sliderDesktop, sliderMobile;
+  var imgThumbs, sliderDesktop, sliderMobile;
   $('.btn-size').click(function(e) {
     e.preventDefault();
     $(this).parent().find('.btn-size').removeClass('active');
@@ -61,6 +61,16 @@ jQuery(document).ready(function($) {
     imgSrc = $(this).attr('href');
     $('#' + dataProducto).attr('src', imgSrc);
   });
+
+  /* load slider if there is more than 3 thumbs */
+  imgThumbs = $('.cloud-zoom-gallery-thumbs a');
+  if (imgThumbs.length > 3) {
+    if ($(window).width() >= 768) {
+      $('.cloud-zoom-gallery-thumbs').bxSlider(sliderDesktop);
+    } else {
+      $('.cloud-zoom-gallery-thumbs').bxSlider(sliderMobile);
+    }
+  }
 });
 
 //# sourceMappingURL=../maps/saha.producto.js.map
