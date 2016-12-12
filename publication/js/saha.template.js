@@ -63,12 +63,12 @@ jQuery(document).ready(function($) {
     $(titulo[1]).detach().appendTo(producto[1]);
     $(sku[1]).detach().appendTo(producto[1]);
     $(precio[1]).detach().appendTo(producto[1]);
-    $(addCart[1]).detach().appendTo(producto[1]);
+    $(addCart).last().detach().appendTo(producto[1]);
     $(tabs[1]).detach().appendTo(producto[1]);
     $(tabContent[1]).detach().appendTo(producto[1]);
     $(producto[1]).addClass('product-bottom');
     setTimeout((function() {
-      $('.product-bottom .commerce-product-field-commerce-price, .product-bottom  .field-name-body, .product-bottom  .commerce-product-extra-field, .product-bottom  .commerce-add-to-cart, .product-bottom  .tab-select, .product-bottom  .tab-content, .product-bottom  h2.field-name-title-field').wrapAll('<div class="info-producto" />');
+      $('.product-bottom .commerce-product-field-commerce-price, .product-bottom  .field-name-body, .product-bottom  .commerce-product-extra-field, .product-bottom .field-name-field-product  .commerce-add-to-cart, .product-bottom  .tab-select, .product-bottom  .tab-content, .product-bottom  h2.field-name-title-field').wrapAll('<div class="info-producto" />');
     }), 1000);
   }
 });
