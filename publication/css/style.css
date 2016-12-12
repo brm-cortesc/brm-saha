@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Wed Dec 07 2016 17:28:27 GMT-0500 (COT)
+ *Mon Dec 12 2016 16:08:26 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1327,6 +1327,7 @@ footer .logo {
   margin: 1rem 0;
   max-width: 48%;
   padding: 0;
+  min-height: 13rem;
   vertical-align: middle;
   width: 100%;
 }
@@ -1409,6 +1410,7 @@ footer .logo {
   transition: all ease-in-out 0.3s;
   width: 100%;
 }
+.container-product h1,
 .container-product h2 {
   margin-bottom: 0rem;
   margin-top: 0.5rem;
@@ -1424,6 +1426,9 @@ footer .logo {
 }
 .container-product .row-top {
   margin-bottom: 2rem;
+}
+.container-product.product-bottom {
+  margin-top: 1rem;
 }
 .divisor {
   background-color: #cacaca;
@@ -1834,6 +1839,13 @@ footer .logo {
 .chosen-container-single .chosen-single {
   background: #fff;
 }
+.cloud-zoom-container .bx-wrapper {
+  max-width: 20% !important;
+  float: left;
+}
+.cloud-zoom-container .bx-wrapper .image-style-large {
+  max-width: 11rem;
+}
 .col-carrito.view-commerce-cart-form .col-order,
 .col-carrito.view-commerce-cart-form .table-carrito {
   display: inline-block;
@@ -1957,6 +1969,12 @@ footer .logo {
   display: inline-block;
   height: 2.4rem;
   width: 2.4rem;
+  overflow: hidden;
+}
+.container-product .form-type-radio.form-item-attributes-field-color img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 .container-product .form-type-radio.form-item-attributes-field-color .ajax-progress {
   display: none !important;
@@ -1986,6 +2004,13 @@ footer .logo {
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
   transform: scale(0.9);
+}
+.container-product .commerce-add-to-cart .cantidad {
+  max-width: 30%;
+}
+.container-product .commerce-add-to-cart .cantidad input {
+  text-align: center;
+  width: 3rem !important;
 }
 .container-product .commerce-product-field-field-images {
   float: left;
@@ -2053,7 +2078,8 @@ footer .logo {
 }
 .container-product .form-type-radio input:checked + label {
   background-color: #14aab3;
-  color: #7a7a7a;
+  border-color: #14aab3;
+  color: #fff;
 }
 .container-product .form-submit {
   background-color: #7a7a7a;
@@ -2102,6 +2128,31 @@ footer .logo {
 .col-filter .form-type-bef-link a {
   color: #7a7a7a;
 }
+.field-items img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+.view-display-products .views-row.col-lg-3 h2 {
+  font-size: 1.6rem;
+}
+.view-display-products .views-row.col-lg-3 img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+}
+.view-display-products .views-row.col-lg-3 .field-items {
+  padding: 0;
+  list-style-type: none;
+}
+.view-display-products .views-row.col-lg-3 .field-items li {
+  display: inline-block;
+  margin: 0 0.5rem;
+  max-width: 2rem;
+  vertical-align: top;
+}
 .cloud-zoom-container #wrap {
   z-index: 1 !important;
 }
@@ -2146,6 +2197,12 @@ footer .logo {
   header.affix .menu {
     padding-left: 0;
   }
+  .container-product .commerce-product-field-field-images {
+    width: 54%;
+  }
+  .container-product .info-producto {
+    width: 40%;
+  }
 }
 @media (max-width: 1040px) {
   header.affix .col-tools {
@@ -2175,6 +2232,18 @@ footer .logo {
   header.affix .menu ul li a {
     padding: 0 1rem;
   }
+  .container-product .commerce-product-field-field-images {
+    width: 48%;
+  }
+  .container-product .commerce-product-field-field-images .cloud-zoom-container #wrap {
+    max-width: 75%;
+  }
+  .container-product .info-producto {
+    width: 45%;
+  }
+  .container-product .info-producto h1 {
+    font-size: 3rem;
+  }
 }
 @media (max-width: 865px) {
   header.affix .menu ul li a {
@@ -2185,9 +2254,6 @@ footer .logo {
   }
   .btn-add-cart {
     padding: 0.8rem 1.5rem;
-  }
-  .container-product .commerce-product-field-field-images {
-    width: 66%;
   }
   .tabs li a {
     padding: 1rem 0.6rem;
@@ -2309,6 +2375,10 @@ footer .logo {
   }
   .col-filter .filtro .opciones li::before {
     left: 1rem;
+  }
+  .col-filter .form-type-bef-link {
+    display: inline;
+    padding-left: 0.5rem;
   }
   .container-product {
     text-align: center;
@@ -2513,6 +2583,15 @@ footer .logo {
   }
   .container-product .producto .bx-wrapper .bx-next {
     right: -0.5rem;
+  }
+  .view-display-products .views-row.col-lg-3 {
+    clear: both;
+    float: none;
+    text-align: center;
+    width: 100% !important;
+  }
+  .view-display-products .views-row.col-lg-3 img {
+    margin: 0 auto 0.5rem;
   }
 }
 @media (max-width: 400px) {

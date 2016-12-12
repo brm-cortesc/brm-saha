@@ -128,6 +128,13 @@
 		background #fff
 
 
+.cloud-zoom-container
+	.bx-wrapper
+		max-width 20% !important
+		float left
+		
+		.image-style-large
+			max-width 11rem
 
 .col-carrito.view-commerce-cart-form
 	.col-order,
@@ -246,7 +253,13 @@
 	.form-type-radio.form-item-attributes-field-color
 		display inline-block
 		cuadrado(2.4rem)
+		overflow hidden
 		
+
+		img
+			height auto
+			max-width 100%
+			width 100%
 
 		.ajax-progress
 			display none !important
@@ -260,6 +273,8 @@
 			
 		.field-name-field-image
 			transitionBase(0.3s)
+			
+
 
 		.description-selected
 			.commerce-fancy-attributes-color,
@@ -267,6 +282,15 @@
 				border-radius 0.5rem
 				transform scale(0.9)
 	
+	
+	.commerce-add-to-cart
+		.cantidad
+			max-width 30%
+			
+			input
+				text-align center
+				width 3rem !important
+
 	.commerce-product-field-field-images
 		float left
 		width 50%
@@ -328,7 +352,8 @@
 			
 			&:checked + label
 				background-color $Verde
-				color $Gris
+				border-color $Verde
+				color #fff
 				
 			
 
@@ -378,3 +403,35 @@
 		
 		a
 			color $Gris
+			
+.field-items
+	img
+		height auto
+		width 100%
+		max-width 100%
+
+
+		
+.view-display-products
+	.views-row.col-lg-3
+		
+		h2
+			font-size 1.6rem
+			
+
+		img
+			display block
+			height auto
+			margin 0 auto
+			max-width 100%
+			width 100%
+			
+		.field-items
+			padding 0
+			list-style-type none
+			
+			li
+				display inline-block
+				margin 0 0.5rem
+				max-width 2rem
+				vertical-align top
