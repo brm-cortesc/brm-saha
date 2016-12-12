@@ -1,13 +1,6 @@
 jQuery(document).ready(function($) {
   var addCart, allList, cantCarrito, countList, i, j, k, l, len, len1, len2, precio, producto, searchList, sku, tabContent, tabs, titulo, val;
-  if (jQuery('body.page-node').length > 0 && $('.commerce-add-to-cart').length <= 1) {
-    $('.commerce-product-field-field-images').unwrap().unwrap();
-    $('.commerce-product-field-commerce-price, .field-name-body, .commerce-product-extra-field, .commerce-add-to-cart, .tab-select, .tab-content, h2.field-name-title-field').wrapAll('<div class="info-producto" />');
-    if ($(window).width() < 768) {
-      $('.info-producto, .commerce-product-field-field-images').wrapAll('<div class="producto" />');
-      $('nav.menu').detach().appendTo('#block-brm-saha-headerblock .row');
-    }
-  } else if (jQuery('body.page-node').length > 0) {
+  if (jQuery('body.page-node').length > 0) {
     $('.commerce-product-field-field-images').unwrap().unwrap();
     $('.commerce-product-field-commerce-price, .field-name-body, .commerce-product-extra-field, .tab-select, .tab-content, h2.field-name-title-field').wrapAll('<div class="info-producto" />');
     setTimeout((function() {
