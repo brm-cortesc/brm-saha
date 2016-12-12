@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
   titulo = $('.field-name-title-field');
   sku = $('.commerce-product-extra-field-sku');
   precio = $('.commerce-product-field-commerce-price');
-  addCart = $('.field-name-field-product .commerce-add-to-cart');
+  addCart = $('.commerce-add-to-cart');
   tabs = $('.nav-tabs');
   tabContent = $('.tab-content');
   producto = $('.container-product');
