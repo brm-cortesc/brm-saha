@@ -10,3 +10,239 @@ div#added-cart.modal.fade(tabindex="-1" role="dialog" aria-labelledby="myLargeMo
 					| Se ha añadido 
 					strong ENTERIZO REVERSIBLE CON ACCESORIOS HECHOS A MANO
 					|  al carrito
+
+div#tallaje.modal.fade(tabindex="-1" role="dialog" aria-labelledby="tallaje")
+	div.modal-dialog.modal-lg(role="document")
+		div.modal-content
+			div.modal-header
+				button.close(class="close" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") &times;
+				
+			div.modal-body
+
+				h2.text-center Guía de medidas
+				
+				p Las tallas de los brasieres tienen 2 variables:
+
+				h3 NÚMERO
+
+				p Hace referencia al contorno de la base del busto (30, 32, 34 ...)
+
+				h3 LETRA
+
+				p Hace referencia al volumen de la copa (A, B ,C ,D)
+
+
+				p
+					+image('talla-graph.jpg')
+					| ¿Cómo saber tu talla?
+				
+				ol
+					li Mide tu busto a la altura de los pezones (cms) - Medida A
+					li Mide el contorno justo debajo del busto (cms) - Medida B
+					li Encuentra la combinación de tus medidas (A y B) en el cuadro 
+					li Si es necesario busca en el cuadro de tallaje internacional para información de tu talla en otros paises
+
+
+				div.table-responsive
+
+					table.table.table-hover
+						tbody
+							tr
+								td(align='center', colspan='8') A
+							tr
+								td
+								td cm
+								td 80
+								td 85
+								td 90
+								td 95
+								td 100
+								td 105
+							tr
+								td
+								td 65
+								td 30B
+								td 30C
+								td 30D
+								td 
+								td 
+								td 
+							tr
+								td
+								td 70
+								td 32A
+								td 32B
+								td 32C
+								td 32D
+								td 
+								td 
+							tr
+								td B
+								td 75
+								td
+								td 34A
+								td 34B
+								td 34C
+								td 34D
+								td 
+							tr
+								td
+								td 80
+								td
+								td
+								td 36A
+								td 36B
+								td 36C
+								td 36D
+							tr
+								td
+								td  85
+								td
+								td
+								td
+								td 38A
+								td 38B
+								td 38C
+
+				div.table-responsive
+					table.table.table-hover
+						tbody
+							tr
+								td(align='center', colspan='6') TALLAJE INTERNACIONAL
+							tr
+								td EUR, JAP
+								td 65
+								td 70
+								td 75
+								td 80
+								td 85
+							tr
+								td ING, EUA, MEX
+								td 30
+								td 32
+								td 34
+								td 36
+								td 38
+							tr
+								td ESP, FR, PORT
+								td 80
+								td 85
+								td 90
+								td 95
+								td 100
+							tr
+								td ITA
+								td 1
+								td 2
+								td 3
+								td 4
+								td 5
+							tr
+								td KOR
+								td 70
+								td 75
+								td 80
+								td 85
+								td 90
+
+				h3.text-center Tallas &amp; equivalencias
+				h3 tops
+				div.table-responsive
+					table.table.table-hover
+						tbody
+							tr
+								td PAIS
+								td TALLA
+								td(align='center')
+									| XS
+									br
+									|  0 - 2
+								td(align='center')
+									| S
+									br
+									|  4 - 6
+								td(align='center')
+									| M
+									br
+									|  8 - 10
+								td(align='center')
+									| L
+									br
+									|  10 - 12
+							tr
+								td ING, EUA, MEX
+								td Medida Bra (")
+								td.xs(align='center') 30B - 32A
+								td.xs(align='center') 34A - 32B - 36A - 34B -32C
+								td.xs(align='center') 38A - 36B - 34C - 38B - 36C
+								td.xs(align='center') 32D - 34D - 36D - 38C
+							tr
+								td EUR, JAP
+								td Medida Bra (cm)
+								td.xs(align='center') 65B - 70A
+								td.xs(align='center') 75A - 70B - 80A - 75B -70C
+								td.xs(align='center') 85A - 80B - 75C - 85B - 80C
+								td.xs(align='center') 70D - 75D - 80D - 85C
+							tr
+								td ESP, FR, PORT
+								td 
+								td.xs(align='center') 80B - 85A
+								td.xs(align='center') 90A - 85B - 95A - 90B -85C
+								td.xs(align='center') 100A - 95B - 90C - 100B -95C
+								td.xs(align='center') 85D - 90D - 95D -100C
+
+
+				h3 tops
+				div.table-responsive
+					table.table.table-hover
+						tbody
+							tr
+								td PAIS
+								td TALLA
+								td(align='center')
+									| XS
+									br
+									|  0 - 2
+								td(align='center')
+									| S
+									br
+									|  4 - 6
+								td(align='center')
+									| M
+									br
+									|  8 - 10
+								td(align='center')
+									| L
+									br
+									|  10 - 12
+							tr
+								td ING, EUA, MEX
+								td Cintura (")
+								td.xs(align='center') 24 - 25
+								td.xs(align='center') 26 - 27
+								td.xs(align='center') 28 - 29
+								td.xs(align='center') 30,5 - 32
+							tr
+								td ING, EUA, MEX
+								td Cadera (")
+								td.xs(align='center') 34 - 35,5
+								td.xs(align='center') 36,5 - 37,5
+								td.xs(align='center') 38,5 - 39,5
+								td.xs(align='center') 41 - 42,5
+							tr
+								td EUR, JAP
+								td Cintura (cms)
+								td.xs(align='center') 61 - 64
+								td.xs(align='center') 66 - 69
+								td.xs(align='center') 71 - 74
+								td.xs(align='center') 77 - 81
+							tr
+								td EUR, JAP
+								td Cadera (cms)
+								td.xs(align='center') 87 - 90
+								td.xs(align='center') 92,5 - 95,5
+								td.xs(align='center') 98 - 100,5
+								td.xs(align='center') 104 - 108
+
+				small.bg-success *Los resultados pueden variar levemente, debido a que cada cuerpo es diferente

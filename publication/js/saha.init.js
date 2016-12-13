@@ -114,6 +114,10 @@ jQuery(document).ready(function($) {
   $('.btn-add-cart.form-submit').click(function() {
     $('#added-cart').modal('show');
   });
+  $('.tallas').click(function(e) {
+    e.preventDefault();
+    $('#tallaje').modal('show');
+  });
 });
 
 //# sourceMappingURL=../maps/saha.init.js.map

@@ -159,4 +159,11 @@ jQuery(document).ready ($) ->
 			$('#added-cart').modal 'show'
 			return
 
+	$('.tallas')
+		.click (e) ->
+			e.preventDefault()
+			$('#tallaje').modal 'show'
+			return
+
+
 	return
