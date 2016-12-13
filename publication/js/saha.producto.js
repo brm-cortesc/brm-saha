@@ -44,15 +44,11 @@ jQuery(document).ready(function($) {
       if ($('.vista-top.cloud-zoom-gallery-thumbs a').length > 3) {
         if ($(window).width() >= 768) {
           $('.vista-top.cloud-zoom-gallery-thumbs').bxSlider(sliderDesktop);
-        } else {
-          $('.vista-top.cloud-zoom-gallery-thumbs').bxSlider(sliderMobile);
         }
       }
       if ($('.vista-bottom .cloud-zoom-gallery-thumbs a').length > 3) {
         if ($(window).width() >= 768) {
           $('.vista-bottom.cloud-zoom-gallery-thumbs').bxSlider(sliderDesktop);
-        } else {
-          $('.vista-bottom.cloud-zoom-gallery-thumbs').bxSlider(sliderMobile);
         }
       }
     }), 1500);
