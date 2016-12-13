@@ -91,7 +91,7 @@ jQuery(document).ready ($) ->
 	thumbContainer = $('.cloud-zoom-gallery-thumbs')
 
 
-	if thumbContainer > 0
+	if thumbContainer.length > 0
 		setTimeout (->
 			$(thumbContainer[0]).addClass('vista-top')
 			$(thumbContainer[1]).addClass('vista-bottom')
@@ -113,6 +113,8 @@ jQuery(document).ready ($) ->
 				else
 					$('.vista-bottom.cloud-zoom-gallery-thumbs')
 						.bxSlider(sliderMobile)
+
+			return
 
 			), 1500
 

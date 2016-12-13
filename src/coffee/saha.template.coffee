@@ -9,7 +9,7 @@ jQuery(document).ready ($) ->
 			.unwrap()
 			.unwrap()
 
-		$('.commerce-product-field-commerce-price, .field-name-body, .commerce-product-extra-field, .field-name-field-product .commerce-add-to-cart, .tab-select, .tab-content, h2.field-name-title-field')
+		$('.commerce-product-field-commerce-price, .field-name-commerce-price .field-name-body, .commerce-product-extra-field, .field-name-field-product .commerce-add-to-cart, .tab-select, .tab-content, h2.field-name-title-field')
 			.wrapAll('<div class="info-producto" />')
 
 

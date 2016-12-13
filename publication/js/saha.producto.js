@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
   /* load slider if there is more than 3 thumbs */
   imgThumbs = $('.cloud-zoom-gallery-thumbs a');
   thumbContainer = $('.cloud-zoom-gallery-thumbs');
-  if (thumbContainer > 0) {
+  if (thumbContainer.length > 0) {
     setTimeout((function() {
       $(thumbContainer[0]).addClass('vista-top');
       $(thumbContainer[1]).addClass('vista-bottom');
@@ -50,9 +50,9 @@ jQuery(document).ready(function($) {
       }
       if ($('.vista-bottom .cloud-zoom-gallery-thumbs a').length > 3) {
         if ($(window).width() >= 768) {
-          return $('.vista-bottom.cloud-zoom-gallery-thumbs').bxSlider(sliderDesktop);
+          $('.vista-bottom.cloud-zoom-gallery-thumbs').bxSlider(sliderDesktop);
         } else {
-          return $('.vista-bottom.cloud-zoom-gallery-thumbs').bxSlider(sliderMobile);
+          $('.vista-bottom.cloud-zoom-gallery-thumbs').bxSlider(sliderMobile);
         }
       }
     }), 1500);
