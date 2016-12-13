@@ -9,7 +9,7 @@ jQuery(document).ready ($) ->
 			.unwrap()
 			.unwrap()
 
-		$('.commerce-product-field-commerce-price, .field-name-commerce-price .field-name-body, .commerce-product-extra-field, .field-name-field-product .commerce-add-to-cart, .tab-select, .tab-content, h2.field-name-title-field')
+		$('.commerce-product-field-commerce-price, .field-name-commerce-price, .field-name-body, .commerce-product-extra-field, .field-name-field-product .commerce-add-to-cart, .tab-select, .tab-content, h2.field-name-title-field')
 			.wrapAll('<div class="info-producto" />')
 
 
@@ -107,6 +107,13 @@ jQuery(document).ready ($) ->
 
 
 	return
+
+
+	### wrap bikinis ###
+
+	if $('body.node-type-bikini').length > 0
+
+		$('.cloud-zoom-container').wrap('<div class="commerce-product-field-field-images" />')
 
 
 	
