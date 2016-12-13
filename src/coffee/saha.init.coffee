@@ -152,4 +152,11 @@ jQuery(document).ready ($) ->
 			return
 
 
+	###Show modal on add to cart ###
+
+	$('.btn-add-cart.form-submit')
+		.click ->
+			$('#added-cart').modal 'show'
+			return
+
 	return

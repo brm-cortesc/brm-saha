@@ -173,6 +173,26 @@ header
 			max-height 2rem
 			overflow hidden
 			
+			a
+				margin 0 0.5rem
+				opacity 0.5
+				filter grayscale(1)
+				-webkit-filter  grayscale(1)
+				-moz-filter  grayscale(1)
+				-o-filter  grayscale(1)
+				-ms-filter  grayscale(1)
+					
+				&[href]
+					filter none
+					-webkit-filter none
+					-moz-filter none
+					-o-filter none
+					-ms-filter none
+					
+				&.active
+					opacity 1
+					pointer-events none
+			
 	
 	.envios
 		border-left 1px solid #fff

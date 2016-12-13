@@ -126,12 +126,17 @@
 .chosen-container-single
 	.chosen-single
 		background #fff
-
-
+		
 .cloud-zoom-container
 	.bx-wrapper
 		max-width 20% !important
 		float left
+
+		.bx-viewport
+			min-height 53rem !important
+			
+			a
+				display block
 		
 		.image-style-large
 			max-width 11rem
@@ -239,6 +244,17 @@
 
 .container-product
 	
+	// .cloud-zoom-container
+	#wrap
+		float right !important
+			
+	.cloud-zoom-gallery-thumbs
+		max-width 20%
+		
+		a
+			display block
+			margin-bottom 1rem
+	
 	.cantidad
 		.form-item,
 		.form-actions
@@ -308,16 +324,7 @@
 				width 100%
 			
 
-		// .cloud-zoom-container
-		#wrap
-			float right !important
-				
-			.cloud-zoom-gallery-thumbs
-				width 20%
-				
-				a
-					display block
-					margin-bottom 1rem
+		
 				
 	.form-type-radios.form-item-attributes-field-top-size
 		.ajax-progress

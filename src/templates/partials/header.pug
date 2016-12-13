@@ -5,12 +5,15 @@ header.container-fluid(class={'u-fixed': titulo == "Home"})
 
 			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.currency-selector
 				div.select
-					p.currency-name $COP
-					+image('flag-co.svg', 'Pesos CO')(class="currency-img")
+					//- p.currency-name $COP
+					a.active(href="#")
+						+image('flag-co.svg', 'Pesos CO')(class="currency-img")
+
+					a()
+						+image('flag-usa.svg', 'US Dollar')(class="currency-img")
 
 				div.select
 					p.currency-name USD
-					+image('flag-usa.svg', 'US Dollar')(class="currency-img")
 
 
 			div.col-lg-4.col-md-4.col-sm-4.col-xs-4.envios

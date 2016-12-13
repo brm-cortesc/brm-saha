@@ -109,6 +109,11 @@ jQuery(document).ready(function($) {
       self.parent().removeClass('active');
     }
   });
+
+  /*Show modal on add to cart */
+  $('.btn-add-cart.form-submit').click(function() {
+    $('#added-cart').modal('show');
+  });
 });
 
 //# sourceMappingURL=../maps/saha.init.js.map
