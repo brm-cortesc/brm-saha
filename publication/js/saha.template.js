@@ -71,11 +71,10 @@ jQuery(document).ready(function($) {
       $('.product-bottom .commerce-product-field-commerce-price, .product-bottom  .field-name-body, .product-bottom  .commerce-product-extra-field, .product-bottom .commerce-add-to-cart, .product-bottom  .tab-select, .product-bottom  .tab-content, .product-bottom  h2.field-name-title-field').wrapAll('<div class="info-producto" />');
     }), 1000);
   }
-  return;
 
   /* wrap bikinis */
   if ($('body.node-type-bikini').length > 0) {
-    return $('.cloud-zoom-container').wrap('<div class="commerce-product-field-field-images" />');
+    $('.cloud-zoom-container').wrap('<div class="commerce-product-field-field-images" />');
   }
 });
 

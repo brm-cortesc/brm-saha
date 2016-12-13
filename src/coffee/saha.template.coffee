@@ -106,7 +106,6 @@ jQuery(document).ready ($) ->
 
 
 
-	return
 
 
 	### wrap bikinis ###
@@ -117,3 +116,4 @@ jQuery(document).ready ($) ->
 
 
 	
+	return
