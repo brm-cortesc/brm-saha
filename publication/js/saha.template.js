@@ -75,6 +75,7 @@ jQuery(document).ready(function($) {
   /* wrap bikinis */
   if ($('body.node-type-bikini').length > 0) {
     $('.cloud-zoom-container').wrap('<div class="commerce-product-field-field-images" />');
+    $('.commerce-add-to-cart').detach().appendTo('.info-producto');
   }
 });
 
