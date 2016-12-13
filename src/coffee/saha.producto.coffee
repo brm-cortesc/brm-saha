@@ -88,15 +88,45 @@ jQuery(document).ready ($) ->
 
 	### load slider if there is more than 3 thumbs  ###
 	imgThumbs = $('.cloud-zoom-gallery-thumbs a')
+	thumbContainer = $('.cloud-zoom-gallery-thumbs')
 
-	if imgThumbs.length > 3
-		if $(window).width() >= 768
-			$('.cloud-zoom-gallery-thumbs')
-				.bxSlider(sliderDesktop)
+	##if imgThumbs.length > 3
+	##	if $(window).width() >= 768
+	##		$('.cloud-zoom-gallery-thumbs')
+	##			.bxSlider(sliderDesktop)
 
-		else
-			$('.cloud-zoom-gallery-thumbs')
-				.bxSlider(sliderMobile)
+	##	else
+	##		$('.cloud-zoom-gallery-thumbs')
+	##			.bxSlider(sliderMobile)
+
+
+	if thumbContainer > 0
+		$(thumbContainer[0]).addClass('vista-top')
+		$(thumbContainer[1]).addClass('vista-bottom')
+
+		setTimeout (->
+			if $('.vista-top .cloud-zoom-gallery-thumbs a').length >3
+				if $(window).width() >= 768
+					$('.cloud-zoom-gallery-thumbs')
+						.bxSlider(sliderDesktop)
+
+				else
+					$('.cloud-zoom-gallery-thumbs')
+						.bxSlider(sliderMobile)
+
+			if $('.vista-bottom .cloud-zoom-gallery-thumbs a').length >3
+				if $(window).width() >= 768
+					$('.cloud-zoom-gallery-thumbs')
+						.bxSlider(sliderDesktop)
+
+				else
+					$('.cloud-zoom-gallery-thumbs')
+						.bxSlider(sliderMobile)
+
+			), 500
+
+
+
 
 
 

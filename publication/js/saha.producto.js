@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
   /*Seleccion de tamaño */
 
   /* Config slider de producto para desktop */
-  var imgThumbs, sliderDesktop, sliderMobile;
+  var imgThumbs, sliderDesktop, sliderMobile, thumbContainer;
   sliderDesktop = {
     mode: 'vertical',
     preloadImages: 'all',
@@ -36,12 +36,26 @@ jQuery(document).ready(function($) {
 
   /* load slider if there is more than 3 thumbs */
   imgThumbs = $('.cloud-zoom-gallery-thumbs a');
-  if (imgThumbs.length > 3) {
-    if ($(window).width() >= 768) {
-      $('.cloud-zoom-gallery-thumbs').bxSlider(sliderDesktop);
-    } else {
-      $('.cloud-zoom-gallery-thumbs').bxSlider(sliderMobile);
-    }
+  thumbContainer = $('.cloud-zoom-gallery-thumbs');
+  if (thumbContainer > 0) {
+    $(thumbContainer[0]).addClass('vista-top');
+    $(thumbContainer[1]).addClass('vista-bottom');
+    setTimeout((function() {
+      if ($('.vista-top .cloud-zoom-gallery-thumbs a').length > 3) {
+        if ($(window).width() >= 768) {
+          $('.cloud-zoom-gallery-thumbs').bxSlider(sliderDesktop);
+        } else {
+          $('.cloud-zoom-gallery-thumbs').bxSlider(sliderMobile);
+        }
+      }
+      if ($('.vista-bottom .cloud-zoom-gallery-thumbs a').length > 3) {
+        if ($(window).width() >= 768) {
+          return $('.cloud-zoom-gallery-thumbs').bxSlider(sliderDesktop);
+        } else {
+          return $('.cloud-zoom-gallery-thumbs').bxSlider(sliderMobile);
+        }
+      }
+    }), 500);
   }
 });
 

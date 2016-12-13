@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 12 2016 17:57:18 GMT-0500 (COT)
+ *Mon Dec 12 2016 17:59:50 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -1953,7 +1953,7 @@ footer .logo {
   margin-bottom: 0;
 }
 .container-product .cantidad input {
-  text-align: center;
+  text-align: center !important;
 }
 .container-product .field-name-commerce-price {
   font-size: 2.4rem;
