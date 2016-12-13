@@ -38,9 +38,9 @@ jQuery(document).ready(function($) {
   imgThumbs = $('.cloud-zoom-gallery-thumbs a');
   thumbContainer = $('.cloud-zoom-gallery-thumbs');
   if (thumbContainer > 0) {
-    $(thumbContainer[0]).addClass('vista-top');
-    $(thumbContainer[1]).addClass('vista-bottom');
     setTimeout((function() {
+      $(thumbContainer[0]).addClass('vista-top');
+      $(thumbContainer[1]).addClass('vista-bottom');
       if ($('.vista-top .cloud-zoom-gallery-thumbs a').length > 3) {
         if ($(window).width() >= 768) {
           $('.cloud-zoom-gallery-thumbs').bxSlider(sliderDesktop);
