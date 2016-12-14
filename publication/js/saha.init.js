@@ -118,6 +118,10 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     $('#tallaje').modal('show');
   });
+  $('.col-filter .form-type-bef-link a.active').click(function(e) {
+    e.preventDefault();
+    window.location.search = '?field_top_size_tid=all';
+  });
 });
 
 //# sourceMappingURL=../maps/saha.init.js.map
