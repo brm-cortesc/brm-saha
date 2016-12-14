@@ -1,0 +1,25 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "Medios de Pago";
+	title Saha - Tienda en línea
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Saha - Tienda en línea" )
+
+block content
+	section.container-fluid
+
+		div.row
+			div.col-lg-8.col-md-8.col-sm-10.col-xs-12.col-lg-offset-2.col-md-offset-2.col-sm-1.text-center(style="padding-bottom:7rem")
+				h1 Pagos
+				
+				p Nuestros medios de pago son:
+
+				p
+					+image('payu.png', 'PayU Latam')(class='img-responsive center-block')
+
+					+image('paypal.svg', 'Paypal')(class='img-responsive center-block')
