@@ -398,18 +398,44 @@
 		display none
 		
 .col-filter
-	.views-exposed-widget
-		border-bottom 1px solid $Gris
-		margin-top 0
-		padding 0.5rem 0
-		font-size 2.4rem
-		
+	
 	.form-type-bef-link
 		font-size 1.4rem
 		padding-left 3rem
 		
 		a
 			color $Gris
+			display block
+			position relative
+			
+			&::before
+				color $Verde
+				content '\e014'
+				display block	
+				font-family $Icons
+				left -1.5rem
+				opacity 0
+				position absolute
+				transitionBase(0.3s)
+				
+			&:hover
+				color $Verde
+				
+				
+
+			&.active
+				color $Verde
+				&::before
+					opacity 1
+		
+			
+
+	.views-exposed-widget
+		border-bottom 1px solid $Gris
+		margin-top 0
+		padding 0.5rem 0
+		font-size 2.4rem
+		
 			
 .field-items
 	img

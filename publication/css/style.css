@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Mon Dec 12 2016 20:10:22 GMT-0500 (COT)
+ *Wed Dec 14 2016 07:17:18 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -514,6 +514,30 @@ header .currency-selector {
   cursor: pointer;
   max-height: 2rem;
   overflow: hidden;
+}
+header .currency-selector a {
+  margin: 0 0.5rem;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+}
+header .currency-selector a[href] {
+  filter: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+}
+header .currency-selector a.active {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  pointer-events: none;
 }
 header .envios {
   border-left: 1px solid #fff;
@@ -1473,6 +1497,19 @@ footer .logo {
   background-color: #14aab3;
   padding: 1rem 1.5rem;
 }
+.modal {
+  z-index: 10001;
+}
+.modal .close {
+  font-size: 4rem;
+  margin-top: -13px;
+}
+.modal-header {
+  border: none;
+}
+.modal strong {
+  color: #14aab3;
+}
 .icon {
   background-repeat: no-repeat;
   background-position: center;
@@ -1703,6 +1740,9 @@ footer .logo {
   position: absolute;
   right: 0.7rem;
 }
+.table .xs {
+  font-size: 1.2rem;
+}
 #user-login .form-actions,
 #user-login .checkbox {
   display: inline-block;
@@ -1843,6 +1883,12 @@ footer .logo {
   max-width: 20% !important;
   float: left;
 }
+.cloud-zoom-container .bx-wrapper .bx-viewport {
+  min-height: 53rem !important;
+}
+.cloud-zoom-container .bx-wrapper .bx-viewport a {
+  display: block;
+}
 .cloud-zoom-container .bx-wrapper .image-style-large {
   max-width: 11rem;
 }
@@ -1955,6 +2001,16 @@ footer .logo {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
 }
+.container-product #wrap {
+  float: right !important;
+}
+.container-product .cloud-zoom-gallery-thumbs {
+  max-width: 20%;
+}
+.container-product .cloud-zoom-gallery-thumbs a {
+  display: block;
+  margin-bottom: 1rem;
+}
 .container-product .cantidad .form-item,
 .container-product .cantidad .form-actions {
   margin-bottom: 0;
@@ -2027,16 +2083,6 @@ footer .logo {
   height: auto;
   max-width: 100%;
   width: 100%;
-}
-.container-product .commerce-product-field-field-images #wrap {
-  float: right !important;
-}
-.container-product .commerce-product-field-field-images #wrap .cloud-zoom-gallery-thumbs {
-  width: 20%;
-}
-.container-product .commerce-product-field-field-images #wrap .cloud-zoom-gallery-thumbs a {
-  display: block;
-  margin-bottom: 1rem;
 }
 .container-product .form-type-radios.form-item-attributes-field-top-size .ajax-progress {
   display: none !important;
@@ -2115,18 +2161,47 @@ footer .logo {
 .container-product .service-links {
   display: none;
 }
-.col-filter .views-exposed-widget {
-  border-bottom: 1px solid #7a7a7a;
-  margin-top: 0;
-  padding: 0.5rem 0;
-  font-size: 2.4rem;
-}
 .col-filter .form-type-bef-link {
   font-size: 1.4rem;
   padding-left: 3rem;
 }
 .col-filter .form-type-bef-link a {
   color: #7a7a7a;
+  display: block;
+  position: relative;
+}
+.col-filter .form-type-bef-link a::before {
+  color: #14aab3;
+  content: '\e014';
+  display: block;
+  font-family: 'Glyphicons Halflings';
+  left: -1.5rem;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: absolute;
+  -o-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+.col-filter .form-type-bef-link a:hover {
+  color: #14aab3;
+}
+.col-filter .form-type-bef-link a.active {
+  color: #14aab3;
+}
+.col-filter .form-type-bef-link a.active::before {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.col-filter .views-exposed-widget {
+  border-bottom: 1px solid #7a7a7a;
+  margin-top: 0;
+  padding: 0.5rem 0;
+  font-size: 2.4rem;
 }
 .field-items img {
   height: auto;
@@ -2382,6 +2457,12 @@ footer .logo {
   }
   .container-product {
     text-align: center;
+  }
+  .container-product #wrap {
+    float: none !important;
+  }
+  .container-product #wrap .cloud-zoom-gallery-thumbs {
+    width: 100%;
   }
   .container-product .col-img-big img {
     height: auto;

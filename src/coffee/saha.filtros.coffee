@@ -49,4 +49,12 @@ jQuery(document).ready ($) ->
 				return
 
 
+	$('.col-filter .form-type-bef-link a.active')
+		.click (e) ->
+			e.preventDefault()
+			window.location.search = '?field_top_size_tid=all'
+
+			return
+
+
 	return

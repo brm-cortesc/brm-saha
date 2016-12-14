@@ -32,6 +32,10 @@ jQuery(document).ready(function($) {
       });
     });
   }
+  $('.col-filter .form-type-bef-link a.active').click(function(e) {
+    e.preventDefault();
+    window.location.search = '?field_top_size_tid=all';
+  });
 });
 
 //# sourceMappingURL=../maps/saha.filtros.js.map
