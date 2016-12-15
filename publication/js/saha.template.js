@@ -68,14 +68,24 @@ jQuery(document).ready(function($) {
     $(tabContent[1]).detach().appendTo(producto[1]);
     $(producto[1]).addClass('product-bottom');
     setTimeout((function() {
+      var ancla1, ancla2, contenedor1, contenedor2;
       $('.product-bottom .commerce-product-field-commerce-price, .product-bottom  .field-name-body, .product-bottom  .commerce-product-extra-field, .product-bottom .commerce-add-to-cart, .product-bottom  .tab-select, .product-bottom  .tab-content, .product-bottom  h2.field-name-title-field').wrapAll('<div class="info-producto" />');
+
+      /*tabs de la segunda prenda */
+      ancla1 = $(tabs[1]).find('li a').first().attr('href');
+      ancla1 = $(tabs[1]).find('li a').first().attr('href', ancla1 + '-2');
+      ancla2 = $(tabs[1]).find('li a').last().attr('href');
+      ancla2 = $(tabs[1]).find('li a').last().attr('href', ancla2 + '-2');
+      contenedor1 = $(tabContent[1]).find('.tab-pane').first().attr('id');
+      contenedor1 = $(tabContent[1]).find('.tab-pane').first().attr('id', contenedor1 + '-2');
+      contenedor2 = $(tabContent[1]).find('.tab-pane').last().attr('id');
+      contenedor2 = $(tabContent[1]).find('.tab-pane').last().attr('id', contenedor2 + '-2');
     }), 1000);
   }
 
   /* wrap bikinis */
   if ($('body.node-type-bikini').length > 0) {
     $('.cloud-zoom-container').wrap('<div class="commerce-product-field-field-images" />');
-    $('.commerce-add-to-cart').detach().appendTo('.info-producto');
   }
 });
 
