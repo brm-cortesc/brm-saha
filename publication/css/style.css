@@ -4,7 +4,7 @@
  * @link https://github.com/cortesc/HTML
  * @link Cristian Cortés - cristian.cortes@brm.com.co
  * @license 
- *Wed Dec 14 2016 10:53:28 GMT-0500 (COT)
+ *Wed Dec 14 2016 18:48:25 GMT-0500 (COT)
  */
 ::selection {
   background: #14aab3;
@@ -2207,6 +2207,9 @@ footer .logo {
   height: auto;
   width: 100%;
   max-width: 100%;
+}
+.node-type-bikini.bikini-set .container-product .commerce-product-field-field-images .commerce-product-field-field-images {
+  width: 100%;
 }
 .view-display-products .views-row.col-lg-3 h2 {
   font-size: 1.6rem;
