@@ -87,6 +87,13 @@ jQuery(document).ready(function($) {
   if ($('body.node-type-bikini').length > 0) {
     $('.cloud-zoom-container').wrap('<div class="commerce-product-field-field-images" />');
   }
+
+  /* fix for checkout template */
+  if ($('#commerce-checkout-form-checkout').length > 0) {
+    $('#commerce-checkout-form-checkout').addClass('col-lg-12 col-md-12 col-sm-12 col-xs-12 col-carrito');
+    $('.view-commerce-cart-summary .view-content').addClass('table-responsive table-carrito');
+    $('.view-commerce-cart-summary .view-content table').removeClass('views-table cols-4').addClass('table');
+  }
 });
 
 //# sourceMappingURL=../maps/saha.template.js.map
