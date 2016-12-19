@@ -94,9 +94,9 @@ jQuery(document).ready(function($) {
     $('.view-commerce-cart-summary .view-content').addClass('table-responsive table-carrito');
     $('.view-commerce-cart-summary .view-content table').removeClass('views-table cols-4').addClass('table');
     $('.col-order').unwrap();
-    $('#commerce-checkout-form-checkout .checkout-continue.form-submit').addClass('btn btn-blanco');
-    $('#commerce-checkout-form-checkout .checkout-cancel.form-submit').addClass('btn');
   }
+  $('.checkout-continue.form-submit').addClass('btn-blanco');
+  $('.checkout-cancel.form-submit, .checkout-back.form-submit').addClass('btn');
 });
 
 //# sourceMappingURL=../maps/saha.template.js.map
