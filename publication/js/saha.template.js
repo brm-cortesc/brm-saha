@@ -95,8 +95,7 @@ jQuery(document).ready(function($) {
     $('.view-commerce-cart-summary .view-content table').removeClass('views-table cols-4').addClass('table');
     $('.col-order').unwrap();
   }
-  $('.checkout-continue.form-submit').addClass('btn-blanco');
-  $('.checkout-cancel.form-submit, .checkout-back.form-submit').addClass('btn');
+  $('.checkout-continue.form-submit, .checkout-cancel.form-submit, .checkout-back.form-submit').addClass('btn');
 });
 
 //# sourceMappingURL=../maps/saha.template.js.map
