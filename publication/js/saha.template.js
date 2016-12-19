@@ -93,6 +93,9 @@ jQuery(document).ready(function($) {
     $('#commerce-checkout-form-checkout').addClass('col-lg-12 col-md-12 col-sm-12 col-xs-12 col-carrito');
     $('.view-commerce-cart-summary .view-content').addClass('table-responsive table-carrito');
     $('.view-commerce-cart-summary .view-content table').removeClass('views-table cols-4').addClass('table');
+    $('.col-order').unwrap();
+    $('#commerce-checkout-form-checkout .checkout-continue.form-submit').addClass('btn btn-blanco');
+    $('#commerce-checkout-form-checkout .checkout-cancel.form-submit').addClass('btn');
   }
 });
 
