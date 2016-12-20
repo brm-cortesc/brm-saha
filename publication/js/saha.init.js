@@ -111,7 +111,7 @@ jQuery(document).ready(function($) {
   });
 
   /*Show modal on add to cart */
-  $('#added-cart btn.btn-add-cart.form-submit').click()(function() {
+  $('#added-cart btn.btn-add-cart.form-submit').click(function() {
     $('#added-cart .modal-body img, #added-cart .modal-body .commerce-add-to-cart').hide('fade');
     setTimeout((function() {
       $('#added-cart .modal-body').html('<h3 class="text-center">El producto se ha añadido al carrito</h3>');
