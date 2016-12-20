@@ -100,15 +100,15 @@ jQuery(document).ready(function($) {
   /* build modal add to cart */
   if ($('.col-categories .col-lg-4').length > 0) {
     $('.quick-buttons .btn.btn-add-cart').click(function(e) {
-      var add;
+      var add, img;
       e.preventDefault();
+      img = $(this).parent().parent().find('img');
       add = $(this).parent().parent().parent().parent().parent().find('.commerce-add-to-cart');
       $('#added-cart .modal-body').html('');
       add.detach().appendTo('#added-cart .modal-body');
-      add.show('fade');
-      setTimeout((function() {
-        $('#added-cart').modal('show');
-      }), 100);
+      img.clone().prependTo('#added-cart .modal-body');
+      add.show();
+      $('#added-cart').modal('show');
     });
   }
 });
