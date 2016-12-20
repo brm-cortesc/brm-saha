@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
   $('.checkout-continue.form-submit, .checkout-cancel.form-submit, .checkout-back.form-submit').addClass('btn');
 
   /* build modal add to cart */
-  if ($('.col-categories .col-lg-4').length > 0) {
+  if ($('.col-categories .col-lg-4').length > 0 && !$('body').hasClass('.node-type-bikini')) {
     $('.quick-buttons .btn.btn-add-cart').click(function(e) {
       var add, img;
       e.preventDefault();
