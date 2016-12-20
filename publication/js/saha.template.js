@@ -96,6 +96,21 @@ jQuery(document).ready(function($) {
     $('.col-order').unwrap();
   }
   $('.checkout-continue.form-submit, .checkout-cancel.form-submit, .checkout-back.form-submit').addClass('btn');
+
+  /* build modal add to cart */
+  if ($('.col-categories .col-lg-4').length > 0) {
+    $('.quick-buttons .btn .btn-add-cart').click(function(e) {
+      var add;
+      e.prevenDefault();
+      add = $(this).parent().parent().parent().parent().parent()('.commerce-add-to-cart');
+      $('#added-cart .modal-body').html('');
+      add.detach().appendTo('#added-cart .modal-body');
+      add.show('fade');
+      setTimeout((function() {
+        $('#added-cart').modal('show');
+      }), 100);
+    });
+  }
 });
 
 //# sourceMappingURL=../maps/saha.template.js.map
