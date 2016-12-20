@@ -101,8 +101,8 @@ jQuery(document).ready(function($) {
   if ($('.col-categories .col-lg-4').length > 0) {
     $('.quick-buttons .btn.btn-add-cart').click(function(e) {
       var add;
-      e.prevenDefault();
-      add = $(this).parent().parent().parent().parent().parent()('.commerce-add-to-cart');
+      e.preventDefault();
+      add = $(this).parent().parent().parent().parent().parent().find('.commerce-add-to-cart');
       $('#added-cart .modal-body').html('');
       add.detach().appendTo('#added-cart .modal-body');
       add.show('fade');
