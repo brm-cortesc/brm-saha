@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
 
   /* build modal add to cart */
   if ($('.col-categories .col-lg-4').length > 0) {
-    $('.quick-buttons .btn .btn-add-cart').click(function(e) {
+    $('.quick-buttons .btn.btn-add-cart').click(function(e) {
       var add;
       e.prevenDefault();
       add = $(this).parent().parent().parent().parent().parent()('.commerce-add-to-cart');
