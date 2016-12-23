@@ -110,6 +110,11 @@ jQuery(document).ready(function($) {
     }
   });
 
+  /*check if input has value to add class active */
+  if ($('input').val() !== '') {
+    $('input').parent().parent().parent().addClass('active');
+  }
+
   /*Show modal on add to cart */
   showAdded = function() {
     $('#added-cart .btn.btn-add-cart.form-submit').click(function() {
