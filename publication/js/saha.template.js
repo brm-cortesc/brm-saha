@@ -101,19 +101,6 @@ jQuery(document).ready(function($) {
   $('.checkout-continue.form-submit, .checkout-cancel.form-submit, .checkout-back.form-submit').addClass('btn');
 
   /* build modal add to cart */
-  if ($('.col-categories .col-lg-4').length > 0 && !$('body').hasClass('.node-type-bikini')) {
-    $('.quick-buttons .btn.btn-add-cart').click(function(e) {
-      var add, img;
-      e.preventDefault();
-      img = $(this).parent().parent().find('img');
-      add = $(this).parent().parent().parent().parent().parent().find('.commerce-add-to-cart');
-      $('#added-cart .modal-body').html('');
-      add.detach().appendTo('#added-cart .modal-body');
-      img.clone().prependTo('#added-cart .modal-body');
-      add.show();
-      $('#added-cart').modal('show');
-    });
-  }
 });
 
 //# sourceMappingURL=../maps/saha.template.js.map
