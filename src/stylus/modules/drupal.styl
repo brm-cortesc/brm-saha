@@ -1,4 +1,29 @@
 //override styles for drupal theming
+
+#commerce-checkout-form-checkout
+	.addressfield-container-inline name-block
+		width 100%
+	.form-item
+		border 1px solid $Gris
+		padding 0.5rem 1rem
+		
+
+	.street-block
+		.form-item
+			display inline-block
+			vertical-align top
+			width 48%
+			
+
+#commerce-checkout-form-review
+	&>.checkout-help
+		display none
+		
+	.pane-title
+		color $Verde
+		font-size 2rem
+		text-transform uppercase
+
 #user-login
 	.form-actions, .checkbox
 		display inline-block
@@ -18,7 +43,17 @@
 		input
 			margin 0
 			left 0
-	
+			
+
+#edit-field-top-size-tid-wrapper
+	label
+		color $Verde
+		font-weight 500
+		text-transform uppercase
+
+#views-exposed-form-secciones-page
+	.views-exposed-widget.views-submit-button
+		display none
 
 .cart-list
 	
@@ -139,106 +174,107 @@
 		.image-style-large
 			max-width 11rem
 
-.col-carrito.view-commerce-cart-form
-	.col-order,
-	.table-carrito
-		display inline-block
-		vertical-align top
-		
-	.col-order
-		background-color lighten($Gris, 95%)
-		padding 1rem
-		width 33.2%
-		
-		.commerce-order-handler-area-order-total .commerce-price-formatted-components
-			font-size 1.8rem
-			text-transform uppercase
-			width 100%
-			
-
-		.commerce-price-formatted-components
-			tbody
-				border none
-				
-			td
-				padding 1rem
-				
-		.form-submit			
-			background-color lighten($Gris, 60%)
-			color $Gris
-			display block
-			font-size 1.3rem
-			margin 1rem auto
-			max-width 23rem
-			padding 0.7rem 1rem
-			text-align center
-			text-transform uppercase
-			transitionBase(0.3s)
-			width 100%
-			
-			&:hover
-				background-color $Gris
-				color #fff
-				text-decoration none
-			
-	.table-carrito
-		width 66.4%
-		
-		
-		.commerce-product-sku,
-		.field
+.block
+	.col-carrito
+		.col-order,
+		.table-carrito
 			display inline-block
-			margin 0 0.8rem
-			max-width 35%
 			vertical-align top
 			
-			ul
-				list-style-type none
-				padding 0
+		.col-order
+			background-color lighten($Gris, 95%)
+			padding 1rem
+			width 33.2%
 			
-			.field-label
-				display inline
-				font-size 1.4rem
-			
-		.field-name-field-images
-			max-width 10rem
-			
-
-		.field-name-field-images			
-			img
-				height auto
-				max-width 100%
+			.commerce-order-handler-area-order-total .commerce-price-formatted-components
+				font-size 1.8rem
+				text-transform uppercase
 				width 100%
-		
-		.form-item
-			margin 0
-			text-align center
-			
-			input
-				text-align center
-			
-		.views-field-edit-delete
-			position relative
-			
-			input.form-submit
-				background-color #fff
-				path('remove.svg')
-				background-position center
-				background-repeat no-repeat
-				background-size 80%
-				bottom 0.5rem
-				color #fff
-				cuadrado(1.2rem)
-				display block
-				margin auto
-				overflow hidden
-				right @bottom
-				text-indent -100rem
-				transitionBase(0.3s)
 				
 
+			.commerce-price-formatted-components
+				tbody
+					border none
+					
+				td
+					padding 1rem
+					
+			.form-submit			
+				background-color lighten($Gris, 60%)
+				color $Gris
+				display block
+				font-size 1.3rem
+				margin 1rem auto
+				max-width 23rem
+				padding 0.7rem 1rem
+				text-align center
+				text-transform uppercase
+				transitionBase(0.3s)
+				width 100%
+				
 				&:hover
-					opacity 0.5
+					background-color $Gris
+					color #fff
+					text-decoration none
+				
+		.table-carrito
+			width 66.4%
+			
+			
+			.commerce-product-sku,
+			.field
+				display inline-block
+				margin 0 0.8rem
+				max-width 35%
+				vertical-align top
+				
+				ul
+					list-style-type none
+					padding 0
+				
+				.field-label
+					display inline
+					font-size 1.4rem
+				
+			.field-name-field-images
+				max-width 10rem
+				
+
+			.field-name-field-images
+				img
+					height auto
+					max-width 100%
+					width 100%
+			
+			.form-item
+				margin 0
+				text-align center
+				
+				input
+					text-align center
+				
+			.views-field-edit-delete
+				position relative
+				
+				input.form-submit
+					background-color #fff
+					path('remove.svg')
+					background-position center
+					background-repeat no-repeat
+					background-size 80%
+					bottom 0.5rem
+					color #fff
+					cuadrado(1.2rem)
+					display block
+					margin auto
+					overflow hidden
+					right @bottom
+					text-indent -100rem
+					transitionBase(0.3s)
+					
+
+					&:hover
+						opacity 0.5
 
 .container-product
 	
@@ -395,6 +431,12 @@
 	.service-links
 		display none
 		
+
+.col-categories
+	.col-lg-4
+		.commerce-add-to-cart
+			display none
+
 .col-filter
 	
 	.form-type-bef-link
@@ -433,6 +475,7 @@
 		margin-top 0
 		padding 0.5rem 0
 		font-size 2.4rem
+		width 100%
 		
 			
 .field-items
@@ -448,7 +491,17 @@
 			.commerce-product-field-field-images
 				width 100%
 
+.page-checkout
+	fieldset
+		box-shadow none !important
+
+
+table.checkout-review
+	margin 0 auto 20px
 	
+.checkout-continue.form-submit
+	@extends .btn-blanco
+
 .view-display-products
 	.views-row.col-lg-3
 		

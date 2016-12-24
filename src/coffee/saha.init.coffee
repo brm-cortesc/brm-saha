@@ -152,11 +152,34 @@ jQuery(document).ready ($) ->
 			return
 
 
+	###check if input has value to add class active###
+
+	if $('input').val() != ''
+		$('input').parent().parent().parent().addClass('active')
+
+
 	###Show modal on add to cart ###
 
-	$('.btn-add-cart.form-submit')
+	showAdded = ->
+		$('#added-cart .btn.btn-add-cart.form-submit')
+			.click ->
+
+				$('#added-cart .modal-body img, #added-cart .modal-body .commerce-add-to-cart').hide 'fade'
+
+				setTimeout (->
+
+					$('#added-cart .modal-body').html '<h3 class="text-center">El producto se ha añadido al carrito</h3>'
+					return
+					), 500
+
+				return
+		return
+
+
+	$('.container-product .btn.btn-add-cart.form-submit')
 		.click ->
 			$('#added-cart').modal 'show'
+			
 			return
 
 	$('.tallas')

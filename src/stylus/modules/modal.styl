@@ -1,3 +1,69 @@
+#added-cart
+	
+	img
+		height auto
+		max-width 100%
+		width 100%
+		
+
+	img, .commerce-add-to-cart
+		display inline-block
+		vertical-align top
+		width 48.5%
+		
+
+	.commerce-add-to-cart
+		margin-left 0.5rem
+		
+
+		img
+			width 100%
+
+		.cantidad
+			text-align center
+			max-width 30%
+			
+			.form-control
+				text-align center !important
+			.size
+				margin-bottom 0
+		
+
+	.ajax-progress
+		display none !important
+			
+	.form-type-radio
+		cursor pointer
+		display inline-block
+		position relative
+		vertical-align middle
+		max-width 30%
+		text-align center
+
+		label
+			border 1px solid $Gris
+			cuadrado(2.4rem)
+			cursor pointer
+			display block
+			font-size 1.6rem
+			text-align center
+			transitionBase(0.3s)
+
+		input 
+			bottom 0
+			left 0
+			opacity 0
+			position absolute
+			right 0
+			top 0
+			cuadrado(100%)
+			z-index -18
+			
+			&:checked + label
+				background-color $Verde
+				border-color $Verde
+				color #fff
+
 .modal
 	z-index 10001
 	.close

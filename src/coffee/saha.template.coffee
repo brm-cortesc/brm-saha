@@ -3,6 +3,12 @@ jQuery(document).ready ($) ->
 	# if $( window ).width() <= 768 
 	# 	$(".commerce-product-field").detach().appendTo('.container-product')
 
+	if $(window).width() < 768
+
+		$('nav.menu').detach().appendTo('#block-brm-saha-headerblock .row')
+
+
+
 
 	if jQuery('body.page-node').length>0
 		$('.commerce-product-field-field-images')
@@ -92,7 +98,7 @@ jQuery(document).ready ($) ->
 		$(precio[1]).detach().appendTo(producto[1])
 		$(addCart).last().detach().appendTo(producto[1])
 		$(tabs[1]).detach().appendTo(producto[1])
-		$(tabContent[1]  ).detach().appendTo(producto[1])
+		$(tabContent[1]).detach().appendTo(producto[1])
 
 		$(producto[1]).addClass('product-bottom')
 
@@ -100,21 +106,74 @@ jQuery(document).ready ($) ->
 
 			$('.product-bottom .commerce-product-field-commerce-price, .product-bottom  .field-name-body, .product-bottom  .commerce-product-extra-field, .product-bottom .commerce-add-to-cart, .product-bottom  .tab-select, .product-bottom  .tab-content, .product-bottom  h2.field-name-title-field')
 				.wrapAll('<div class="info-producto" />')
+
+			###tabs de la segunda prenda ###
+			ancla1 = $(tabs[1]).find('li a').first().attr('href')
+			ancla1 = $(tabs[1]).find('li a').first().attr('href', ancla1+'-2')
+
+			ancla2 = $(tabs[1]).find('li a').last().attr('href')
+			ancla2 = $(tabs[1]).find('li a').last().attr('href', ancla2+'-2')
+
+			contenedor1 = $(tabContent[1]).find('.tab-pane').first().attr('id')
+			contenedor1 = $(tabContent[1]).find('.tab-pane').first().attr('id', contenedor1+'-2')
+
+			contenedor2 = $(tabContent[1]).find('.tab-pane').last().attr('id')
+			contenedor2 = $(tabContent[1]).find('.tab-pane').last().attr('id', contenedor2+'-2')
+
+
 			return
 
 			), 1000
-
-
-
-
 
 	### wrap bikinis ###
 
 	if $('body.node-type-bikini').length > 0
 
 		$('.cloud-zoom-container').wrap('<div class="commerce-product-field-field-images" />')
-		$('.commerce-add-to-cart').detach().appendTo('.info-producto')
+		# $('.commerce-add-to-cart').detach().appendTo('.info-producto')
 
+
+	### fix for checkout template ###
+
+	if $('#commerce-checkout-form-checkout').length >0
+
+		$('#commerce-checkout-form-checkout').addClass('col-lg-12 col-md-12 col-sm-12 col-xs-12 col-carrito')
+		$('.view-commerce-cart-summary .view-content').addClass('table-responsive table-carrito')
+		$('.view-commerce-cart-summary .view-content table')
+			.removeClass('views-table cols-4')
+			.addClass('table')
+
+		$('.col-order').unwrap()
+
+	$('.checkout-continue.form-submit, .checkout-cancel.form-submit, .checkout-back.form-submit')
+		.addClass('btn')
 
 	
+	### build modal add to cart ###
+
+	# if $('.col-categories .col-lg-4').length > 0 and !$('body').hasClass('.node-type-bikini')
+
+	# 	$('.quick-buttons .btn.btn-add-cart')
+	# 		.click (e) ->
+
+	# 			e.preventDefault()
+
+	# 			img = $(@).parent().parent().find('img')
+
+	# 			add = $(@).parent().parent().parent().parent().parent().find('.commerce-add-to-cart')
+
+
+	# 			$('#added-cart .modal-body').html('')
+
+	# 			add.detach().appendTo('#added-cart .modal-body')
+	# 			img.clone().prependTo('#added-cart .modal-body')
+	# 			add.show()
+
+	# 			$('#added-cart').modal 'show'
+
+
+	# 			return
+
+
+
 	return

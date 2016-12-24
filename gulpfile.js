@@ -1,4 +1,4 @@
-var gulp      = require('gulp'),
+const gulp      = require('gulp'),
   browserSync = require('browser-sync').create(),
   concat      = require('gulp-concat'), 
   rename      = require('gulp-rename'),
@@ -9,22 +9,51 @@ var gulp      = require('gulp'),
   sourcemaps  = require('gulp-sourcemaps'),
   stylus      = require('gulp-stylus'),
   nib         = require('nib'),
-  fs          = require('fs'),
+  stylint     = require('gulp-stylint'),
+  path        = require('path'),
   cache       = require('gulp-cache'),
   coffee      = require('gulp-coffee'),
+  purify      = require('gulp-purifycss'),
   pug         = require('gulp-pug'),
-  uncss       = require('gulp-uncss'),
   argv        = require('yargs').argv;  
 
 //data
-var pkg   = require('./frontend.json'),
-    debug = argv.debug;
+const pkg   = require('./frontend.json'),
+      debug = argv.debug;
 
+
+//Rutas
+const routes = {
+  app: path.join(__dirname, 'publication/'),
+  src: path.join(__dirname, 'src/'),
+  css: 'css/',
+  stylus: 'stylus/',
+  views: 'views/',
+  templates: 'templates/',
+  js: 'js/',
+  coffee: 'coffee/'
+};
+
+/**Routes
+
+  routes.app + routes.js = 'publication/js/'
+  routes.src + routes.coffee = 'src/coffee/'
+  routes.app + routes.css = 'publication/css/'
+  routes.src + routes.stylus = 'src/stylus/'
+  routes.src + routes.views = 'src/views/'
+  routes.src + routes.templates = 'src/templates/'
+
+**/
 
 //Error handler//
-function onError(err) { console.log(err); this.emit('end'); };
+function onError(err) {
+  console.log(err);
+  this.emit('end');
 
-var banner = ['/**',
+};
+
+
+const banner = ['/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
   ' * @link <%= pkg.homepage %>',
@@ -36,34 +65,36 @@ var banner = ['/**',
 ].join('\n');
 
 //arreglo concatenar JS en el orden en el que se cargan
-var jsLibs = ['publication/js/libs/jquery.validate.js',
-              'publication/js/libs/jquery.bxslider.min.js',
-              'publication/js/libs/bootstrap.min.js',
-              'publication/js/libs/velocity.min.js'
+const jsLibs = [
+  routes.app + routes.js +'libs/jquery.validate.js',
+  routes.app + routes.js +'libs/bootstrap.min.js',
+  routes.app + routes.js +'libs/jquery.bxslider.min.js',
+  routes.app + routes.js +'libs/jquery.magnific-popup.min.js',
+  routes.app + routes.js +'libs/velocity.min.js'
 ];
 
 
 //Tarea para comprimir las libreriras JS
-gulp.task('libs', function() {  
+gulp.task('libs',  () =>{  
      return gulp.src(jsLibs)
         .pipe(header(banner, { pkg : pkg } ))
         .pipe(concat('concat.libs.js'))
-        .pipe(gulp.dest('publication/js'))
+        .pipe(gulp.dest(routes.app + routes.js))
         .pipe(rename('libs.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('publication/js'));
+        .pipe(gulp.dest(routes.app + routes.js));
 });
 
 //Tarea para compilar Coffeescript
-gulp.task('coffee', function () {
-  return gulp.src('src/coffee/*.coffee')
+gulp.task('coffee',  () =>{
+  return gulp.src( routes.src + routes.coffee +  '*.coffee')
   .pipe(sourcemaps.init()) //cargamos tarea de sourcemaps
   .pipe(coffee({
     bare:true
    }))
   .on('error', onError)
   .pipe(sourcemaps.write('../maps')) //creamos sourcemap aparte
-  .pipe(gulp.dest('./publication/js'))
+  .pipe(gulp.dest(routes.app + routes.js))
   .pipe(browserSync.reload({
       stream: true
   }))
@@ -71,41 +102,55 @@ gulp.task('coffee', function () {
 
 
 //tarea para compilar stylus
-gulp.task('css', function () {
-  return gulp.src('src/stylus/main.styl')
+gulp.task('css',  () =>{
+  return gulp.src(routes.src + routes.stylus + 'main.styl')
     .pipe(header(banner, { pkg : pkg } ))
     .pipe(sourcemaps.init()) //cargamos tarea de sourcemaps
   .pipe(stylus({ //iniciamos stylus
     use: nib(), // cargamos nib para uso de css3
     compress: false
-  })) 
+  }))
   .on('error', onError)
   .pipe(rename('style.css')) //renombramos el archivo
-  .pipe(gulp.dest('./publication/css')) // destino del archivo
+  .pipe(gulp.dest(routes.app + routes.css)) // destino del archivo
   .pipe(sourcemaps.write('../maps')) //creamos sourcemap aparte
-  .pipe(gulp.dest('./publication/css'))
+  .pipe(gulp.dest(routes.app + routes.css))
   .pipe(browserSync.reload({
       stream: true
     }))
 
 });
 
+gulp.task('csslint', () =>{
+  return gulp.src(routes.src + routes.stylus + '**/*.styl')
+        .pipe(stylint({
+          rules:{
+            'leadingZero': 'never',
+            'commentSpace': 'never'
+          }
+
+        }))
+         .pipe(stylint.reporter({
+          verbose: true
+         }))
+
+});
+
 //Concatenar y minificar CSS
-gulp.task('minicss', function() {
-  return gulp.src(['publication/css/**/*.css', '!publication/css/**/'+pkg.name+'.min.css'])
+gulp.task('minicss',  () =>{
+  return gulp.src([routes.app + routes.css + '**/*.css', '!'+routes.app + routes.css +'/**/'+pkg.name+'.min.css'])
   .pipe(concat(pkg.name +'.min.css'))
-  // .pipe(uncss({
-  //            html: ['publication/**/*.html'] //Borramos css que no se usa
-  //  }))
+  // .pipe(purify([ routes.src + '/**/*.**'],
+  //   {info:true} ))
   .pipe(minifyCSS())
-  .pipe(gulp.dest('publication/css'))
+  .pipe(gulp.dest(routes.app + routes.css))
 
 });
 
 
 //Render de pug
-gulp.task('views', function() {
-  return gulp.src('src/views/*.pug')
+gulp.task('views',  () =>{
+  return gulp.src(routes.src + routes.views + '*.pug')
     .pipe(data( function (file) {
       return {
         debug: debug,
@@ -116,7 +161,7 @@ gulp.task('views', function() {
     pretty: true
     }))
   .on('error', onError)
-  .pipe(gulp.dest('./publication'))
+  .pipe(gulp.dest(routes.app))
   .pipe(browserSync.reload({
       stream: true
     }))
@@ -125,27 +170,38 @@ gulp.task('views', function() {
 
 
 //Tarea base de browsersync para crear el servidor
-gulp.task('browserSync', function() {
+gulp.task('browserSync',  () =>{
   browserSync.init({
     server: {
-      baseDir: 'publication/'
+      baseDir: routes.app
     },
   })
 });
 
-gulp.task('limpiar', function (done) {
+gulp.task('limpiar', (done) =>{
   return cache.clearAll(done);
 });
 
 
 //tarea que observa cambios para recargar el navegador
-gulp.task('watch', ['browserSync', 'views', 'css'], function (){
+gulp.task('watch', ['browserSync', 'views', 'css', 'coffee'],  () =>{
 
-  gulp.watch('src/stylus/**/*.styl',  ['css']); //Stylus
-  gulp.watch('src/coffee/**/*.coffee',  ['coffee']); //Coffee
-  gulp.watch(['src/views/*.pug', 'src/templates/**/*.pug'],  ['views']); //Pug
+  gulp.watch( routes.src + routes.stylus +'**/*.styl',  ['css']); //Stylus
+  gulp.watch(routes.src + routes.coffee +'**/*.coffee',  ['coffee']); //Coffee
+  gulp.watch([routes.src + routes.views + '*.pug', routes.src + routes.templates + '**/*.pug'],  ['views']); //Pug
   // gulp.watch('publication/js/**/*.js', browserSync.reload);
-  gulp.watch('publication/images/**/*.{gif,svg,jpg,png}', browserSync.reload); //Images
-  gulp.watch('publication/fonts/**/*.{svg,eot,ttf,woff,woff2}', browserSync.reload); //Fonts
+  gulp.watch(routes.app + 'images/**/*.{gif,svg,jpg,png}', browserSync.reload); //Images
+  gulp.watch(routes.app + 'fonts/**/*.{svg,eot,ttf,woff,woff2}', browserSync.reload); //Fonts
 
 });
+
+
+//custom Build js & css
+gulp.task('watch:assets', ['browserSync',  'css', 'csslint', 'coffee', 'minicss'], () =>{
+
+  gulp.watch( routes.src + routes.stylus +'**/*.styl',  ['css', 'csslint']); //Stylus
+  gulp.watch(routes.src + routes.coffee +'**/*.coffee',  ['coffee']); //Coffee
+  gulp.watch( [routes.app + routes.css + '**/*.css', '!'+routes.app + routes.css +'/**/'+pkg.name+'.min.css'], ['minicss'] )
+
+});
+
