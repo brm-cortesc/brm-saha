@@ -159,11 +159,30 @@
 				min-heigth 21rem
 
 @media (max-width:768px)
+	#added-cart
+		.commerce-add-to-cart
+			.cantidad
+				display inline-block
+				margin 0
+				
+
+
+	#commerce-checkout-form-checkout
+		.form-item
+			width 100%
+				
+		.street-block
+			.form-item
+				width 100%
+				
+
 	
 	.table-responsive
 	.col-carrito.view-commerce-cart-form .col-order
 		width 100%!important
 	header
+		&.affix
+			position fixed
 		.col
 			&-tools
 				margin-top 2.2rem
@@ -195,7 +214,15 @@
 
 			.menu
 				padding-left 0
-							
+	
+	.block
+		.col-carrito
+			.col-order
+				width 100%
+				
+			input, select, textarea
+				max-width 100%
+										
 	.cantidad
 		max-width 30%
 	.cantidad, .size
@@ -275,15 +302,18 @@
 			.product-price, .product-text
 				min-heigth none	
 
-
+	
 	.container
 		&-product
 			text-align center
 			#wrap
 				float none !important
+				margin 0 auto
 					
 				.cloud-zoom-gallery-thumbs
 					width 100%
+					
+			.cloud-zoom-gallery-thumbs
 			.col
 				&-img-big
 					img
@@ -293,7 +323,7 @@
 					clear both
 					float none
 					width 100%
-					
+				
 			.producto
 				// transform rotate(180deg)
 				// direction ltr
@@ -335,6 +365,32 @@
 					margin-top 2rem
 					
 
+			.form-type-commerce-fancy-attributes.form-item-attributes-field-color,
+			.form-item.form-type-radios
+				display inline-block
+				margin-bottom 3rem
+				max-width 48%
+				vertical-align top
+				width 100%
+				
+				label
+					font-size 2rem
+					
+			.form-type-radio
+				label
+					cuadrado(3.3rem)
+					margin 0 auto
+			
+			.form-type-radio.form-item-attributes-field-color
+				cuadrado(3.3rem)
+				
+			.commerce-add-to-cart .cantidad
+				display inline-block
+				
+				.form-item
+					margin-top 0
+					
+
 			.commerce-product-field-field-images, .info-producto
 				float none
 				width 100%
@@ -349,11 +405,16 @@
 						width 100% !important
 						
 					.cloud-zoom-gallery-thumbs
-						width auto
+						max-width 100%
+						width 100%
 						
 						a
 							float left
-							width 33%
+							margin-top 1rem
+							max-width 15%
+							
+			&.product-bottom
+				margin-top 0
 
 
 	.tabs
@@ -361,7 +422,11 @@
 			a
 				padding 1rem 1.5rem		
 
-
+	.tab-select
+		margin-top 3rem
+		li
+			max-width 33%
+			width 100%
 	.menu
 		margin-top 0
 		
@@ -404,9 +469,39 @@
 			margin 1rem
 			
 	
+	.page-checkout
+		fieldset#edit-buttons
+			.fieldset-wrapper
+				float none
+				text-align center
+				
+			input
+				display block
+				margin 0.5rem auto !important
+				text-align center !important
+				
+
+		fieldset
+			legend
+				left 0
+
 	.section-desc
 		max-width 90%
+		
+	.u-fixed
+		position initial
 			
+@media (max-width:767px)
+	.table-responsive>.table>tbody>tr>td, .table-responsive>.table>tbody>tr>th, .table-responsive>.table>tfoot>tr>td, .table-responsive>.table>tfoot>tr>th, .table-responsive>.table>thead>tr>td, .table-responsive>.table>thead>tr>th
+		white-space normal !important
+		
+	#edit-checkout-review
+		.commerce-order-handler-area-order-total .commerce-price-formatted-components
+			width 100% !important
+			
+		table.checkout-review .pane-data-full
+			padding 0.5rem !important
+
 @media (max-width:730px)
 	.col-related
 		clear both
@@ -444,16 +539,52 @@
 				
 				.img-responsive
 					width 100%
+					
+			.item-product
+				img
+					display block
+					max-width 50%
+					margin 0 auto
+						
+			.quick-buttons
+				left 25%
+				max-width 50%
+
 	.container
 		&-devoluciones
-			.col-xs-4
+			.col-xs-4, .col-xs-6
 				clear both
 				float none
 				width 100%
 	
 
 
+@media (max-width:530px)
+	#added-cart
+		.commerce-add-to-cart
+			margin 0
+			max-width 100%
+			text-align center
+			width 100%
+			
+		img
+			display block
+			margin 0 auto
+			
+	.col
+		&-categories
+			.item-product
+				img
+					display block
+					max-width 75%
+					margin 0 auto
+			.quick-buttons
+				left ((100% - 75%) / 2)
+				max-width 75%
+
+
 @media (max-width:500px)
+
 
 	.col
 		&-checkout,
@@ -479,6 +610,13 @@
 			.quick-buttons
 				opacity 0.99
 	.container
+		&-home
+			.col-xs-6
+				float none
+				margin 1rem auto
+				width 100%
+				
+
 		&-product
 			.producto					
 				.bx
@@ -503,7 +641,21 @@
 														
 						// 	.slide
 						// 		max-width 5.1%
+	
+	.menu
+		ul
+			padding 5rem 2rem 1rem
 
+	.tab-select
+		li
+			max-width 100%
+			width 100%
+			
+			&:nth-of-type(2)
+				border none
+				border-bottom 1px solid $Gris
+				border-top @border-bottom
+	
 	.view-display-products
 		.views-row.col-lg-3
 			clear both
@@ -552,7 +704,8 @@
 			a
 				clear both
 				float none
-				max-width 100%
+				margin 1rem auto
+				max-width 50%
 	
 	
 	.menu

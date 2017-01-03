@@ -1,0 +1,194 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "Categoria";
+	title Saha - Tienda en línea
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Saha - Tienda en línea" )
+
+block content
+	section.container-fluid
+
+		div.row
+			h1.text-center Descuentos
+
+			//Filtros
+			aside.col-lg-3.col-md-3.col-sm-3.col-xs-12.col-filter
+				h2 Filtro
+
+				//talla
+				div.filtro.filtro-talla
+					h3 Talla
+
+					div.size.opciones
+						a.btn.btn-size(href="#", data-size="s") S
+						a.btn.btn-size(href="#", data-size="m") M
+						a.btn.btn-size(href="#", data-size="l") L
+						a.btn.btn-size(href="#", data-size="xl") XL
+
+
+				///-talla
+				//bikinis
+				div.filtro.filtro-bikinis
+					h3 Bikinis
+					ul.opciones
+						li: a(href="#") Roots
+						li: a(href="#") Connection
+						li: a(href="#") Delight
+						li: a(href="#") Rythm
+						li: a(href="#") Breathe
+						li: a(href="#") Essentials
+						li: a(href="#") Show all
+				///-bikinis
+				//tops
+				div.filtro.filtro-tops
+					h3 tops
+					ul.opciones
+						li: a(href="#") Triangulo
+						li: a(href="#") Strapless
+						li: a(href="#") Bustier
+						li: a(href="#") Cuello alto
+						li: a(href="#") Camisetas 
+				///-tops
+				//panties
+				div.filtro.filtro-panties
+					h3 panties
+					ul.opciones
+						li: a(href="#") Amarrar a los lados
+						li: a(href="#") Básico
+						li: a(href="#") Hipster
+						li: a(href="#") Banda
+						li: a(href="#") Tiro alto
+						li: a(href="#") Tanga
+				///-panties
+				//enterizos
+				div.filtro.filtro-enterizos
+					h3 enterizos
+					ul.opciones
+						li: a(href="#") Triangulo
+						li: a(href="#") Deportivo
+						li: a(href="#") Strapless
+						li: a(href="#") Hombros anchos 
+						li: a(href="#") Monokini
+						li: a(href="#") Cuello alto
+				///-enterizos
+				//playa
+				div.filtro.filtro-playa
+					h3 ropa de playa
+					ul.opciones
+						li: a(href="#") Tunicas
+						li: a(href="#") Vestidos
+						li: a(href="#") Enterizos Cortos
+						li: a(href="#") Enterizos Largos
+						li: a(href="#") Pareos
+						li: a(href="#") Pantalones
+				///-playa
+
+				a.btn.btn-large.btn-clear(href="#") Borrar filtros
+
+			///-Filtros
+
+
+			//Listado de productos
+			article.col-lg-9.col-md-9.col-sm-9.col-xs-12.col-categories
+
+				div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+					div.item-product
+						h4.ticker -30%
+						div.quick-buttons
+							//botones
+							a.btn.btn-add-cart(href="#")
+								| Añadir 
+								i.glyphicon.glyphicon-shopping-cart
+							a.btn.btn-comparar(href="#"): i.icon.icon-comparar
+							a.btn.btn-love(href="#"): i.icon.icon-love
+							///-botones
+
+						+image('producto-1.jpg')(class="img-responsive")
+
+					div.product-text.text-center
+						h3 Producto
+
+					h3.product-price.product-dct.text-center
+						| antes 
+						span $100.000
+					h3.product-price.text-center $70.000
+
+
+				div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+					div.item-product
+						div.quick-buttons
+							//botones
+							a.btn.btn-add-cart(href="#")
+								| Añadir 
+								i.glyphicon.glyphicon-shopping-cart
+							a.btn.btn-comparar(href="#"): i.icon.icon-comparar
+							a.btn.btn-love(href="#"): i.icon.icon-love
+							///-botones
+
+						+image('producto-1.jpg')(class="img-responsive")
+
+					div.product-text.text-center
+						h3 Producto
+
+					h3.product-price.text-center $99.99
+
+				div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+					div.item-product
+						div.quick-buttons
+							//botones
+							a.btn.btn-add-cart(href="#")
+								| Añadir 
+								i.glyphicon.glyphicon-shopping-cart
+							a.btn.btn-comparar(href="#"): i.icon.icon-comparar
+							a.btn.btn-love(href="#"): i.icon.icon-love
+							///-botones
+
+						+image('producto-1.jpg')(class="img-responsive")
+
+					div.product-text.text-center
+						h3 Producto
+
+					h3.product-price.text-center $99.99
+
+				//- div.clearfix
+
+
+				-for(x = 1; x <= 6; x ++)
+					div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+						div.item-product
+							div.quick-buttons
+								//botones
+								a.btn.btn-add-cart(href="#")
+									| Añadir 
+									i.glyphicon.glyphicon-shopping-cart
+								a.btn.btn-comparar(href="#"): i.icon.icon-comparar
+								a.btn.btn-love(href="#"): i.icon.icon-love
+								///-botones
+
+							+image('producto-1.jpg')(class="img-responsive")
+
+						div.product-text.text-center
+							h3 Producto
+
+						h3.product-price.text-center $99.99#{x}
+
+					//- -if( x %3 == 0)
+					//- 	//Se usa para que no se desarme el layout no se rompa con textos largos
+					//- 	div.clearfix
+
+				
+				div.mensaje.text-center.hidden
+					h3 No se encontraron productos con ese criterio
+
+			///-Listado de productos
+
+
+block Scripts
+	script(src="js/saha.filtros.js")
+	script(src="js/saha.template.js")
+
