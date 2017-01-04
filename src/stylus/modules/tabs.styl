@@ -42,7 +42,7 @@
 					color #000 !important
 					font-weight $Normal
 
-.tabs
+.tabs, .tab
 	list-style-type none
 	margin 1rem auto
 	padding 0
@@ -51,6 +51,8 @@
 	
 	li
 		display inline-block
+		max-width 33%
+		width 100%
 		
 		&:nth-of-type(2)
 			border-left 1px solid $Gris
@@ -61,12 +63,13 @@
 			color $Gris
 			display block
 			padding 1rem 1.5rem
+			text-align center
 			
 		&.active
 			a
+				background-color lighten($Gris, 60%)
 				border none 
 				color #000
-				font-weight $Normal
 				pointer-events none
 				
 
@@ -79,6 +82,7 @@
 			p 
 				text-align justify
 				text-align-last left
+				line-height 1.3
 			
 
 			// &.active

@@ -11,13 +11,13 @@
 	.container-product
 		
 		.commerce-product-field-field-images
-			width 54%
+			width 51%
 			
-		.info-producto
-			width 40%
-			
+		.cantidad
+			label.element-invisible
+				margin-right 28%			
 
-@media (max-width:1040px)
+@media (max-width:1060px)
 	header
 		&.affix
 			.col-tools
@@ -50,20 +50,34 @@
 			&-related
 				.item-related-img
 					max-height 40rem
+					
+	.cloud-zoom-container #wrap
+		max-width 80%
+
+	.tab li a, .tabs li a
+		padding 0.5rem
 
 @media (max-width:980px)
 	header
 		&.affix
+			
+			.col-tools
+				background-color rgba(180, 180, 180, 0.90)
+				bottom -210%
+				padding 2rem 1rem
+				right -1.7%
+
 			.menu ul li
 				a
-					padding 0 1rem
+					padding 0 0.8rem
+			
 					
 
 
 	.container-product
 		
 		.commerce-product-field-field-images
-			width 48%		
+			width 50%		
 
 			.cloud-zoom-container
 				#wrap
@@ -76,6 +90,11 @@
 				font-size 3rem
 
 @media (max-width:960px)
+	header
+		&.affix
+			
+			.col-tools
+				bottom -197%
 	.col
 		&-categories
 			.item-product
@@ -84,16 +103,35 @@
 		&-related
 			.item-related-img
 				max-height 37.8rem
+				
+	.container-product
+		.cantidad
+			label.element-invisible
+				margin-right 10%
+				
+
+	.tab li,
+	.tabs li
+		font-size 1.2rem
+		a
+			padding 1rem 0.5rem
 
 @media (max-width:865px)
 	header
 		&.affix
-			.menu ul li
-				a
-					padding 0 0.5rem
-							
-				.logo-hidden
-					max-width 17rem
+			.col-tools
+				bottom -150%
+				
+			.menu
+				margin-top 1rem
+				
+				ul li					
+					a
+						padding 0 0.2rem
+								
+					.logo-hidden
+						max-width 17rem
+		
 	.btn
 		&-add-cart
 			padding 0.8rem 1.5rem
@@ -115,6 +153,13 @@
 			.product-price, .product-text
 				min-heigth 21rem
 		
+	.menu
+		margin-top 3rem
+		ul
+			li
+				a
+					margin-top 1rem
+					padding 0 1rem
 	.tabs
 		li
 			a
@@ -123,6 +168,12 @@
 
 	
 @media (max-width:800px)
+	header
+		&.affix
+			.menu					
+				ul li
+					a
+						padding 0 0.1rem
 	.btn
 		&-add-cart
 			font-size 2rem
@@ -141,10 +192,10 @@
 	
 		&-product			
 			.commerce-product-field-field-images
-				width 70%
+				width 49%
 				
 			.info-producto
-				width 27%
+				width 49%
 				
 	.col
 		&-categories
@@ -183,11 +234,18 @@
 	header
 		&.affix
 			position fixed
+			.col
+				&-tools
+					background none
+					padding initial !important
+					position initial
+					text-align center
 		.col
 			&-tools
 				margin-top 2.2rem
+				padding-right initial !important
 				position initial
-				text-align right
+				text-align center
 				
 		.logo
 			display block
@@ -247,6 +305,11 @@
 			
 			.item-product
 				max-height none
+				
+				.quick-buttons
+					opacity 0.99
+				
+			
 
 		&-filter				
 			position relative
@@ -302,7 +365,6 @@
 			.product-price, .product-text
 				min-heigth none	
 
-	
 	.container
 		&-product
 			text-align center
@@ -323,7 +385,12 @@
 					clear both
 					float none
 					width 100%
+			.cantidad
+				margin-top 0
 				
+				label.element-invisible
+					margin-right 0
+
 			.producto
 				// transform rotate(180deg)
 				// direction ltr
@@ -393,7 +460,14 @@
 
 			.commerce-product-field-field-images, .info-producto
 				float none
+				position relative
 				width 100%
+				
+
+			.info-producto
+				z-index 10
+				
+				
 				
 			.commerce-product-field-field-images
 				.cloud-zoom-container
@@ -485,8 +559,20 @@
 			legend
 				left 0
 
+	
+	.row		
+		&-404
+			h1	
+
+				img
+					display block
+					margin 0.5rem auto
+					
+
 	.section-desc
-		max-width 90%
+		max-width 100%
+		text-align justify
+		text-align-last center
 		
 	.u-fixed
 		position initial
@@ -507,7 +593,7 @@
 		clear both
 		float none
 		margin 2rem auto
-		width 100%
+		width 75%
 		
 		img
 			width 100%
@@ -523,8 +609,10 @@
 			margin-top 2rem
 			
 		.col-xs-3
+			border none
 			clear both
 			float none
+			min-heigth initial
 			width 100%
 			
 		.icon
@@ -532,6 +620,29 @@
 	
 	.col
 		&-categories
+			h3
+				font-size 1.6rem
+				margin 1rem auto
+				max-width 50%
+				
+				a
+					overflow visible
+					text-align center
+					text-overflow initial
+					white-space normal
+					
+					&:after
+						display none
+						
+
+			.product-dct,
+			.precio-con-descuento
+				margin 0.5rem auto
+				max-width 50%
+				
+				h3
+					text-align center
+
 			.col-xs-4
 				clear both
 				float none
@@ -541,14 +652,18 @@
 					width 100%
 					
 			.item-product
+				margin 0 auto
+				max-width 50%
+				
 				img
 					display block
-					max-width 50%
-					margin 0 auto
+					
 						
 			.quick-buttons
-				left 25%
-				max-width 50%
+				max-width 100%
+				
+		&-related
+			max-width 50%
 
 	.container
 		&-devoluciones
@@ -556,6 +671,7 @@
 				clear both
 				float none
 				width 100%
+				
 	
 
 
@@ -573,14 +689,17 @@
 			
 	.col
 		&-categories
-			.item-product
-				img
-					display block
-					max-width 75%
-					margin 0 auto
-			.quick-buttons
-				left ((100% - 75%) / 2)
+			h3
 				max-width 75%
+			.item-product
+				max-width 75%
+				
+			.product-dct,
+			.precio-con-descuento
+				max-width 75%
+				
+		&-related
+			max-width 75%
 
 
 @media (max-width:500px)
@@ -618,6 +737,12 @@
 				
 
 		&-product
+			.form-submit
+				display block 
+				margin 3rem 0 0 
+				max-width 100% 
+				width 100% 
+				
 			.producto					
 				.bx
 					&-wrapper		

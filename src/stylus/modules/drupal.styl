@@ -1,27 +1,37 @@
 //override styles for drupal theming
 
 #commerce-checkout-form-checkout
+	.field-name-commerce-customer-address
+		margin-top 1.2rem
+		
 	.addressfield-container-inline name-block
 		width 100%
+		
 	.form-item
 		border 1px solid $Gris
 		padding 0.5rem 1rem
+		margin 0.5rem auto
+		width 100%
 		
 
 	.street-block
 		.form-item
 			display inline-block
 			vertical-align top
-			width 48%
+			max-width 49.8%
 			
 
 #commerce-checkout-form-review
 	&>.checkout-help
 		display none
 		
+	.checkout-help, .commerce_payment
+		margin 0 auto
+		max-width 69.4rem
+		
 	.pane-title
 		color $Verde
-		font-size 2rem
+		font-size 2.2rem
 		text-transform uppercase
 
 #user-login
@@ -50,6 +60,7 @@
 		color $Verde
 		font-weight 500
 		text-transform uppercase
+		font-size 2.2rem
 
 #views-exposed-form-secciones-page
 	.views-exposed-widget.views-submit-button
@@ -225,7 +236,7 @@
 			.field
 				display inline-block
 				margin 0 0.8rem
-				max-width 35%
+				max-width 32%
 				vertical-align top
 				
 				ul
@@ -276,6 +287,7 @@
 					&:hover
 						opacity 0.5
 
+		
 .container-product
 	
 	// .cloud-zoom-container
@@ -290,15 +302,31 @@
 			margin-bottom 1rem
 	
 	.cantidad
+		label.element-invisible
+			clip inherit
+			height auto
+			margin-right 36%
+			overflow visible
+			position initial !important
+			
 		.form-item,
 		.form-actions
 			margin-bottom 0
 			
 		input
 			text-align center !important
+			
+
+		.size
+			margin-bottom 0
+			
+
+	.form-item, .form-actions
+		margin 0.5rem 0 
 	
 	.field-name-commerce-price
 		font-size 2.4rem
+		margin 0.5rem 0
 
 	.form-type-radio.form-item-attributes-field-color
 		display inline-block
@@ -335,7 +363,8 @@
 	
 	.commerce-add-to-cart
 		.cantidad
-			max-width 30%
+			margin-bottom 0
+			max-width 34%
 			
 			input
 				text-align center
@@ -403,13 +432,15 @@
 		border-radius 0
 		color #fff
 		display inline-block 
-		font-size 2.4rem
+		font-size 2.2rem
 		line-height 1
+		max-width 66%
 		min-height 4rem
 		padding 0.8rem 3rem
 		text-align center
 		text-transform uppercase
 		transitionBase(0.3s)
+		width 100%
 		
 		&:hover
 			background-color $Verde
@@ -417,7 +448,7 @@
 
 	.info-producto
 		float right
-		width 33.33333333%
+		width 47%
 		
 	
 		&::after,
@@ -491,6 +522,11 @@
 			.commerce-product-field-field-images
 				width 100%
 
+
+.node-inner
+	.node-header
+		display none
+		
 .page-checkout
 	fieldset
 		box-shadow none !important
@@ -502,12 +538,39 @@ table.checkout-review
 	
 .checkout-continue.form-submit
 	@extends .btn-blanco
-
+	
+//Mostrar descuentos//
+.page-taxonomy-term-76
+	.col-categories
+		.product-dct
+			h3
+				display inline
+				font-size 1.1rem
+				text-decoration line-through
+			
+			span
+				display inline
+				
+		.precio-con-descuento
+			display block
+			
+		.ticker
+			display block
+				
+.vista-top .field-name-body
+	display none
+	
 .view-display-products
 	.views-row.col-lg-3
 		
 		h2
-			font-size 1.6rem
+			font-size 1.4rem
+			margin 0.5rem auto
+			max-width 100%
+			overflow hidden
+			text-overflow ellipsis
+			text-transform capitalize
+			white-space nowrap
 			
 
 		img
@@ -516,6 +579,7 @@ table.checkout-review
 			margin 0 auto
 			max-width 100%
 			width 100%
+		
 			
 		.field-items
 			padding 0
@@ -524,5 +588,7 @@ table.checkout-review
 			li
 				display inline-block
 				margin 0 0.5rem
-				max-width 2rem
+				overflow hidden
+				cuadrado(2.4rem)
 				vertical-align top
+				
